@@ -17,3 +17,4 @@ Feature: SHOULD BE ABLE TO NAVIGATE TO FAQ PAGE
     Examples:
       | userName                | password      |
       | chhabra.teena@gmail.com | Bananaapps123 |
+      | chhabra.teena@gmail.com | Bananaapps123 |
