@@ -32,7 +32,7 @@ Feature: Patient Portal MyAccount Features
 
     Examples:
       | FirstName | Surname | Relationship | password     | TelephoneNumber | Address1        | City   | Country | Postcode |
-      | Nidhi     | Bhasin  | Mother       | Meddbase1234 | 0789789789      | 1 colyton close | London | UK      | HA0 2HG  |
+      | sadaf     | hashim | Mother       | Meddbase1234 | 0789789789      | 1 colyton close | London | UK      | HA0 2HG  |
 
 
     @options
