@@ -85,12 +85,12 @@ public class accountdetailsPage extends Base {
     }
 
     public void Clickonemailcheckboxtobookappointment() {
-        ut.isChecboxSelected(emailcheckbox);
+        utils.isChecboxSelected(emailcheckbox);
         emailcheckbox.click();
     }
 
     public void Clickonsmscheckboxtobookappointment() {
-        ut.isChecboxSelected(smscheckbox);
+        utils.isChecboxSelected(smscheckbox);
         smscheckbox.click();
 
     }
