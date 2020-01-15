@@ -24,7 +24,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
 
     Examples:
       | Payer type | Appointment type |
-     #| Patient    | Consultation     |
+     | Patient    | Consultation     |
      | Patient    | Phone Consultation |
       #| Patient    | Video Conference   |
      # | Insurer    | Consultation     |
