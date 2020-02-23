@@ -10,18 +10,18 @@ import utils.Base;
 import java.io.IOException;
 
 public class MyAccount  extends Base {
-    @Given("^Patient launch the browser$")
-    public void patient_launch_the_browser() throws Throwable {
-        initializeDriver();
-        loginpage.NavigateToUrl();
-    }
+//    @Given("^Patient launch the browser$")
+//    public void patient_launch_the_browser() throws Throwable {
+//        initializeDriver();
+//        loginpage.NavigateToUrl();
+//    }
 
-    @When("^Patient enters username as \"([^\"]*)\"$")
-    public void patient_enters_username_as(String un) throws Throwable {
-
-        loginpage.enterUserName().sendKeys(un);
-
-    }
+//    @When("^Patient enters username as \"([^\"]*)\"$")
+//    public void patient_enters_username_as(String un) throws Throwable {
+//
+//        loginpage.enterUserName().sendKeys(un);
+//
+//    }
 
     @When("^password as \"([^\"]*)\"$")
     public void password_as(String pw) throws Throwable {

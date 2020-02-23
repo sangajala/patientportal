@@ -20,21 +20,21 @@ public class medicalHistorySteps extends Base {
 
     }
 
-    @When("^password as \"([^\"]*)\"$")
-    public void password_as(String pw) throws Throwable {
-        loginpage.enterPassword().sendKeys(pw);
-    }
+//    @When("^password as \"([^\"]*)\"$")
+//    public void password_as(String pw) throws Throwable {
+//        loginpage.enterPassword().sendKeys(pw);
+//    }
 
-    @When("^Patient click on  signin button$")
-    public void patient_click_on_signin_button() throws Throwable {
-        loginpage.ClickOnSignin();
-    }
+//    @When("^Patient click on  signin button$")
+//    public void patient_click_on_signin_button() throws Throwable {
+//        loginpage.ClickOnSignin();
+//    }
 
-    @Then("^Patient is navigated to patient portal home page$")
-    public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
-        navbarpage.VerifyBookAppointment();
-
-    }
+//    @Then("^Patient is navigated to patient portal home page$")
+//    public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
+//        navbarpage.VerifyBookAppointment();
+//
+//    }
     //   @When("^Patient clicks on Medical History from the left panel$")
     //public void patient_clicks_on_Medical_History_from_the_left_panel() throws Throwable {
 //navbarpage.ClickMedicalHistory();
