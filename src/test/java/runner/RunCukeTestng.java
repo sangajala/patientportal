@@ -28,7 +28,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/bookAppointment.feature"},
+		features = {"src/test/java/features/loginMeddbase.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
 		//tags = {"@sanity,@bvt"}

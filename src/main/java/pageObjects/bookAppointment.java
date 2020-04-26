@@ -145,7 +145,7 @@ public class bookAppointment extends Base {
         } catch (Exception e) {
             Assert.fail("WebElement not displayed");
         }
-        
+
         //utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
         Assert.assertTrue(utils.checkMessageIsDisplayed(driver, arg0));
     }

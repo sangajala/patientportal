@@ -1,6 +1,6 @@
 Feature:Patient Portal Invoices
 
-@first@fail
+@first@fail@smoke
   Scenario: Patient is able to generate invoice as PDF and received invoice on registered Email ID
 
       Given Patient logged in

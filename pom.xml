@@ -27,7 +27,16 @@
 			<version>1.2.5</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
+	  <!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
+	  <dependency>
+		  <groupId>com.github.tomakehurst</groupId>
+		  <artifactId>wiremock</artifactId>
+		  <version>2.26.1</version>
+		  <type>pom</type>
+	  </dependency>
+
+
+	  <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-picocontainer</artifactId>
@@ -46,7 +55,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.12.0</version>
+			<version>3.141.59</version>
 		</dependency>
 
 
@@ -54,7 +63,7 @@
      <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-server</artifactId>
-    <version>3.13.0</version>
+    <version>3.141.59</version>
     </dependency>
        
 
@@ -178,7 +187,7 @@
 	  <dependency>
 		  <groupId>io.github.bonigarcia</groupId>
 		  <artifactId>webdrivermanager</artifactId>
-		  <version>3.7.1</version>
+		  <version>3.8.1</version>
 	  </dependency>
 
 

@@ -42,7 +42,7 @@ public class utilities {
 	{
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
-	    wait.until(ExpectedConditions.presenceOfElementLocated(element));
+	  //  wait.until(ExpectedConditions.presenceOfElementLocated(element));
 	    } catch(Exception e){
 	    	
 			e.printStackTrace();
@@ -56,7 +56,7 @@ public class utilities {
 	{
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
-	    wait.until(ExpectedConditions.visibilityOf(element));
+	   // wait.until(ExpectedConditions.visibilityOf(element));
 	   
 	    } catch(Exception e){
 	    	
@@ -71,7 +71,7 @@ public class utilities {
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
 	    
-	    wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	   // wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	    } catch(Exception e){
 	    	
 			e.printStackTrace();
@@ -86,7 +86,7 @@ public class utilities {
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
 	    
-	    wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	   // wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
 	    } catch(Exception e){
 	    	
 			e.printStackTrace();
@@ -101,7 +101,7 @@ public class utilities {
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
 	    
-	    wait.until(ExpectedConditions.elementToBeClickable(element));
+	   // wait.until(ExpectedConditions.elementToBeClickable(element));
 	    } catch(Exception e){
 	    	
 			e.printStackTrace();
@@ -130,7 +130,7 @@ public class utilities {
 		    try{
 		  //  wait.until(ExpectedConditions.textToBePresentInElement(element, text));
 		    
-		    wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
+		///    wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
 		    
 		   
 		    

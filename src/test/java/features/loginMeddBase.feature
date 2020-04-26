@@ -8,7 +8,7 @@ Feature: Login to MeddBase
  
  Given I navigate to meddbase login page 
  When I enter valid username "teena@bananaapps.co.uk"
- And I enter valid password "Bananaapps123"
+ And I enter valid password "London12"
  And I click on sign in button
  Then I should be able to login successfully    
 

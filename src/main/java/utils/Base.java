@@ -77,9 +77,6 @@ public class Base {
 
 
             prop.load(fs);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
 
         String browserName = prop.getProperty("browser");
@@ -93,6 +90,7 @@ public class Base {
 //			System.setProperty("webdriver.chrome.driver",".\\drivers\\chromedriver.exe");
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
+            driver.manage().window().maximize();
 
 
         } else if (browserName.equals("firefox")) {
@@ -120,6 +118,10 @@ public class Base {
         invoicepage = PageFactory.initElements(driver, invoicePage.class);
         faqpage = PageFactory.initElements(driver, faqpage.class);
         bookappointment = PageFactory.initElements(driver, bookAppointment.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return driver;
     }
 
