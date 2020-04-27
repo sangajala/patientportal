@@ -1,32 +1,34 @@
 Feature: End to end functions of booking and viewing Appointments in patient portal
+
   Background:
     Given Patient navigates to Meddbase Patient Portal Login Page
    # When patient enters username as "lakshmi@bananaapps.co.uk" Password as "Bananaapps2"
-    When patient enters username as "mail4vijaya@gmail.com" Password as "Meddbase1234"
+    When patient enters username as "roopaworld@yahoo.com" Password as "Meddbaselogin1"
     And clicks on Signin
     Then Patient should be navigated to Meddbase Patient Portal Homepage
 
 
-  @defaultsearch
+  @defaultsearch @defaultsearch1
   Scenario Outline: Booking an appointment by default search
 
-  When Patient clicks on Book Appointment
+    When Patient clicks on Book Appointment
     And  chooses Payer Type as "<Payer type>"
     And  Appointment Type as "<Appointment type>"
     Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
     When Patient clicks on Search button
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
-    Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
+#    Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
    #Then Appointment Details page should be opened
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
 
     Examples:
       | Payer type | Appointment type |
-     #| Patient    | Consultation     |
-     | Patient    | Phone Consultation |
-      #| Patient    | Video Conference   |
+      | Patient    | Consultation     |
+     # | Patient    | Phone Consultation |
+     # | Patient    | Video Conference   |
      # | Insurer    | Consultation     |
      # | Insurer | Phone Consultation |
 
@@ -47,7 +49,8 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     When Patient clicks on Search button
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
-    Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
+#    Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
       #When Patient clicks on appointment details
    # Then Appointment Details page should be opened
     When Patient clicks on Book Appointment button on Details Page
@@ -56,7 +59,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
 
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
-      | Patient    | Consultation     | Any Clinician | Work location | Afternoon   | 10/01/2020 |
+      | Patient    | Consultation     | Any Clinician | Work location | Afternoon | 30/04/2020 |
      # | Insurer    | Consultation     | Kaaru kaaru    | Work Location | Afternoon | 03/01/2020 |
 
 
@@ -91,8 +94,10 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     When Patient clicks on Search button
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
+
    # Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
-    Then Patient sees a message "The patient will be charged at 10% of the full price plus £35.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
+   # Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
    #Then Appointment Details page should be opened
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
@@ -103,7 +108,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
 
     Examples:
       | Payer type | Appointment type |
-     | Patient    | Consultation     |
+      | Patient    | Consultation     |
      # | Patient    | Phone Consultation |
       #| Patient    | Video Conference   |
      # | Insurer    | Consultation     |

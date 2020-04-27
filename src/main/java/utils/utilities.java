@@ -98,6 +98,7 @@ public class utilities {
 	
 	public void waitForElementClickable(WebDriver driver,WebElement element)
 	{
+		System.out.println("Inside .... waitForElementClickable() method ....... ");
 	    WebDriverWait wait = new WebDriverWait(driver,20);
 	    try{
 	    
@@ -228,6 +229,7 @@ public class utilities {
 		}
 
 	public void clickOnWebElement(WebDriver driver,WebElement element){
+		System.out.println("Inside .... clickOnWebElement() method ....... ");
 		try {
 			waitForElementClickable(driver, element);
 			//System.out.println("in click on web element"+element);

@@ -122,6 +122,7 @@ public  WebDriver initializeDriver() throws IOException{
     		homepage = PageFactory.initElements(driver, homePage.class);
     		navbarpage = PageFactory.initElements(driver, navbarPage.class);
     		faqpage = PageFactory.initElements(driver, faqpage.class);
+    		bookappointment = PageFactory.initElements(driver, bookAppointment.class); //added this line
 			return driver;
     		}
         
