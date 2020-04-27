@@ -45,12 +45,12 @@ public class bookAppointmentSteps extends Base {
         // Write code here that turns the phrase above into concrete actions
        // navbarpage.gotoMenu("Book Appointment");
         utils.clickOnWebElement(driver,navbarpage.getBookappointment());
-        System.out.println("**** clicking on book appointment link");
+        //System.out.println("**** clicking on book appointment link");
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
-          System.out.println("hello I am about to select payer type ----->: "+pType);
+         // System.out.println("hello I am about to select payer type ----->: "+pType);
         // Write code here that turns the phrase above into concrete actions
           //  bookappointment.choosePayerType(pType);
         utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
