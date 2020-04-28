@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.xpath.operations.String;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -84,7 +85,7 @@ public  WebDriver initializeDriver() throws IOException{
         	
    		 
    	
-   		String browserName = prop.getProperty("browser");
+   		java.lang.String browserName = prop.getProperty("browser");
    		
 		if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
@@ -122,7 +123,10 @@ public  WebDriver initializeDriver() throws IOException{
     		homepage = PageFactory.initElements(driver, homePage.class);
     		navbarpage = PageFactory.initElements(driver, navbarPage.class);
     		faqpage = PageFactory.initElements(driver, faqpage.class);
-			return driver;
+    		invoicepage = PageFactory.initElements(driver, invoicePage.class);
+	        bookappointment = PageFactory.initElements(driver, bookAppointment.class);
+	return driver;
+
     		}
         
         

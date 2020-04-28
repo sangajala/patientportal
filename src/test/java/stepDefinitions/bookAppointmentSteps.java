@@ -50,14 +50,15 @@ public class bookAppointmentSteps extends Base {
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        bookappointment.choosePayerType(pType);
-
+        //bookappointment.choosePayerType(pType);
+        utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
     }
 
     @And("^Appointment Type as \"([^\"]*)\"$")
     public void appointmentTypeAs(String AType) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.chooseAppointmentType(AType);
+       // utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
 
     }
 

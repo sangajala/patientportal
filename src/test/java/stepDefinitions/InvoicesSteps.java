@@ -1,10 +1,17 @@
 package stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
+<<<<<<< Updated upstream
+=======
+import org.testng.Assert;
+import pageObjects.invoicePage;
+import pageObjects.navbarPage;
+>>>>>>> Stashed changes
 import utils.Base;
 import utils.utilities;
 
@@ -85,5 +92,19 @@ invoicepage.patientclicksonfirstinvoice();
     }
 
 
+    @Then("^Patient is able to see \"([^\"]*)\"$")
+    public void patientIsAbleToSee(String details) throws Throwable {
+        Assert.assertTrue(invoicepage.invoiceDetails(details));
 
+    }
+
+    @When("^patient clicks on paid invoices$")
+    public void patientClicksOnPaidInvoices() {
+        invoicepage.patiendclickonpaidinvoice();
+    }
+
+    @When("^Patient select first Paid invoice that appears on the search result$")
+    public void patientSelectFirstPaidInvoiceThatAppearsOnTheSearchResult() {
+        invoicepage.patientclicksonfirstinvoice();
+    }
 }

@@ -1,0 +1,399 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 2,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 14128836100,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Patient navigates to Meddbase Patient Portal Login Page",
+            "match": {
+              "location": "bookAppointmentSteps.patient_navigates_to_Meddbase_Patient_Portal_Login_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1101087800,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 4,
+                "value": "# When patient enters username as \"lakshmi@bananaapps.co.uk\" Password as \"Bananaapps2\""
+              }
+            ],
+            "line": 5,
+            "name": "patient enters username as \"roopaworld@yahoo.com\" Password as \"Meddbaselogin1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "roopaworld@yahoo.com",
+                  "offset": 28
+                },
+                {
+                  "val": "Meddbaselogin1",
+                  "offset": 63
+                }
+              ],
+              "location": "bookAppointmentSteps.patient_enters_username_as_Password_as(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 280917700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "clicks on Signin",
+            "match": {
+              "location": "bookAppointmentSteps.clicks_on_Signin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5063890100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Patient should be navigated to Meddbase Patient Portal Homepage",
+            "match": {
+              "location": "bookAppointmentSteps.patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5067600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 59,
+        "name": "Booking an Appointment using Appointment Filters",
+        "description": "",
+        "id": "end-to-end-functions-of-booking-and-viewing-appointments-in-patient-portal;booking-an-appointment-using-appointment-filters;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1417857500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 307513000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "Patient clicks on Book Appointment",
+            "match": {
+              "location": "bookAppointmentSteps.patient_clicks_on_Book_Appointment()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 414137700,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "chooses Payer Type as \"Patient\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Patient",
+                  "offset": 23
+                }
+              ],
+              "location": "bookAppointmentSteps.choosesPayerTypeAs(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1065218800,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Appointment Type as \"Consultation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Consultation",
+                  "offset": 21
+                }
+              ],
+              "location": "bookAppointmentSteps.appointmentTypeAs(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5122785600,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Patient should be navigated to Appointment filters page and see a message \"Please use the filters if you wish to refine your search\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Please use the filters if you wish to refine your search",
+                  "offset": 75
+                }
+              ],
+              "location": "bookAppointmentSteps.patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 151718800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Patient clicks on Preferred Clinician",
+            "match": {
+              "location": "bookAppointmentSteps.patientClicksOnPreferredClinician()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5196867200,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "chooses  Preferred Clinician  as \"Any Clinician\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Any Clinician",
+                  "offset": 34
+                }
+              ],
+              "location": "bookAppointmentSteps.choosesPreferredClinicianAs(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 169730100,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Patient clicks on Preferred Site",
+            "match": {
+              "location": "bookAppointmentSteps.patientClicksOnPreferredSite()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5255598500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "chooses Preferred Site as \"Work location\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Work location",
+                  "offset": 27
+                }
+              ],
+              "location": "bookAppointmentSteps.choosesPreferredSiteAs(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 166365600,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Patient clicks on Preferred Time and Date",
+            "match": {
+              "location": "bookAppointmentSteps.patientClicksOnPreferredTimeAndDate()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10658533300,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "chooses Preferred Time and Date as \"Afternoon\"  \"30/04/2020\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Afternoon",
+                  "offset": 36
+                },
+                {
+                  "val": "30/04/2020",
+                  "offset": 49
+                }
+              ],
+              "location": "bookAppointmentSteps.choosesPreferredTimeAndDateAs(String,String)"
+            },
+            "matchedColumns": [
+              4,
+              5
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 164953900,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Patient clicks on Search button",
+            "match": {
+              "location": "bookAppointmentSteps.patientClicksOnSearchButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1336348200,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "Appointment search Results should be displayed",
+            "match": {
+              "location": "bookAppointmentSteps.appointmentSearchResultsShouldBeDisplayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 124505600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "Patient clicks on \"1\" available appointment details",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                }
+              ],
+              "location": "bookAppointmentSteps.patientClicksOnAvailableAppointmentDetails(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5220073000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Patient sees a message \"The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours.\" on Appointment Details page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours.",
+                  "offset": 24
+                }
+              ],
+              "location": "bookAppointmentSteps.patientSeesAMessageOnAppointmentDetailsPage(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 172082400,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 51,
+                "value": "#When Patient clicks on appointment details"
+              },
+              {
+                "line": 52,
+                "value": "# Then Appointment Details page should be opened"
+              }
+            ],
+            "line": 53,
+            "name": "Patient clicks on Book Appointment button on Details Page",
+            "match": {
+              "location": "bookAppointmentSteps.patientClicksOnBookAppointmentButtonOnDetailsPage()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5109898600,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Appointment Booking Complete confirmation message \"was successfully completed\" should be displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "was successfully completed",
+                  "offset": 51
+                }
+              ],
+              "location": "bookAppointmentSteps.appointmentBookingCompleteConfirmationMessageShouldBeDisplayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 34,
+            "name": "@BookByAppointmentFilters"
+          }
+        ]
+      }
+    ],
+    "name": "End to end functions of booking and viewing Appointments in patient portal",
+    "description": "",
+    "id": "end-to-end-functions-of-booking-and-viewing-appointments-in-patient-portal",
+    "keyword": "Feature",
+    "uri": "src/test/java/features/bookAppointment.feature"
+  }
+]
