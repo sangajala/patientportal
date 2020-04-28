@@ -50,7 +50,7 @@ public class utilities {
 			Assert.assertFalse(false, "Failed the test - "+e.getMessage());
 	    }
 	}
-	
+
 	
 	public void waitForElementVisibility(WebDriver driver,WebElement element)
 	{

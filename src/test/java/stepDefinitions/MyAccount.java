@@ -10,36 +10,36 @@ import utils.Base;
 import java.io.IOException;
 
 public class MyAccount  extends Base {
-    @Given("^Patient launch the browser$")
-    public void patient_launch_the_browser() throws Throwable {
-        initializeDriver();
-        loginpage.NavigateToUrl();
-    }
+  //  @Given("^Patient launch the browser$")
+  //  public void patient_launch_the_browser() throws Throwable {
+    //    initializeDriver();
+     //   loginpage.NavigateToUrl();
+   // }
 
-    @When("^Patient enters username as \"([^\"]*)\"$")
-    public void patient_enters_username_as(String un) throws Throwable {
+  //  @When("^Patient enters username as \"([^\"]*)\"$")
+   // public void patient_enters_username_as(String un) throws Throwable {
 
-        loginpage.enterUserName().sendKeys(un);
+      //  loginpage.enterUserName().sendKeys(un);
 
-    }
+   // }
 
-    @When("^password as \"([^\"]*)\"$")
-    public void password_as(String pw) throws Throwable {
-        loginpage.enterPassword().sendKeys(pw);
-    }
+  //  @When("^password as \"([^\"]*)\"$")
+   // public void password_as(String pw) throws Throwable {
+   //     loginpage.enterPassword().sendKeys(pw);
+   // }
 
-    @When("^Patient click on  signin button$")
-    public void patient_click_on_signin_button() throws Throwable {
-        utils.click(driver,loginpage.getSignIn());
+   // @When("^Patient click on  signin button$")
+  //  public void patient_click_on_signin_button() throws Throwable {
+     //   utils.click(driver,loginpage.getSignIn());
        // loginpage.ClickOnSignin();
 
-    }
+  //  }
 
 
-    @Then("^Patient is navigated to patient portal home page$")
-    public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
-        navbarpage.VerifyBookAppointment();
-    }
+   // @Then("^Patient is navigated to patient portal home page$")
+   // public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
+   //     navbarpage.VerifyBookAppointment();
+  //  }
 
 
     @When("^Patient Choose  MyAccount$")

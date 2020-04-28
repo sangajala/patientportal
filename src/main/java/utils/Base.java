@@ -9,7 +9,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.xpath.operations.String;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,7 +84,7 @@ public  WebDriver initializeDriver() throws IOException{
         	
    		 
    	
-   		java.lang.String browserName = prop.getProperty("browser");
+   		String browserName = prop.getProperty("browser");
    		
 		if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
@@ -128,11 +127,7 @@ public  WebDriver initializeDriver() throws IOException{
 	return driver;
 
     		}
-        
-        
-        
-        
-        
+
         public void loginToMeddBase(String username,String password)
     	{
     		driver.findElement(By.id("inputEmail")).sendKeys(prop.getProperty("username"));

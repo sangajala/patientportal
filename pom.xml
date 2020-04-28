@@ -103,6 +103,11 @@
     <artifactId>commons-lang3</artifactId>
     <version>3.6</version>
 </dependency>
+	  <dependency>
+		  <groupId>org.apache.poi</groupId>
+		  <artifactId>poi</artifactId>
+		  <version>3.14</version>
+	  </dependency>
 	  <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
 	  <dependency>
 		  <groupId>org.hamcrest</groupId>
@@ -112,12 +117,6 @@
 	  </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi</artifactId>
-    <version>3.14</version>
-</dependency>
-
 	  <dependency>
 		  <groupId>org.hamcrest</groupId>
 		  <artifactId>hamcrest-core</artifactId>
@@ -133,11 +132,6 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
-<dependency>
-    <groupId>org.apache.poi</groupId>
-    <artifactId>poi-ooxml</artifactId>
-    <version>3.14</version>
-</dependency>
 
 <!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
 <dependency>
@@ -149,7 +143,7 @@
 <dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.9</version>
+			<version>3.14</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>

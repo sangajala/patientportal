@@ -164,7 +164,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5067600,
+  "duration": 4262400,
   "status": "passed"
 });
 formatter.background({
@@ -204,7 +204,7 @@ formatter.match({
   "location": "bookAppointmentSteps.patient_navigates_to_Meddbase_Patient_Portal_Login_Page()"
 });
 formatter.result({
-  "duration": 14128836100,
+  "duration": 16558265400,
   "status": "passed"
 });
 formatter.match({
@@ -221,21 +221,21 @@ formatter.match({
   "location": "bookAppointmentSteps.patient_enters_username_as_Password_as(String,String)"
 });
 formatter.result({
-  "duration": 1101087800,
+  "duration": 815326100,
   "status": "passed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.clicks_on_Signin()"
 });
 formatter.result({
-  "duration": 280917700,
+  "duration": 295365900,
   "status": "passed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage()"
 });
 formatter.result({
-  "duration": 5063890100,
+  "duration": 5090968700,
   "status": "passed"
 });
 formatter.scenario({
@@ -362,7 +362,7 @@ formatter.match({
   "location": "bookAppointmentSteps.patient_clicks_on_Book_Appointment()"
 });
 formatter.result({
-  "duration": 307513000,
+  "duration": 363086700,
   "status": "passed"
 });
 formatter.match({
@@ -375,7 +375,7 @@ formatter.match({
   "location": "bookAppointmentSteps.choosesPayerTypeAs(String)"
 });
 formatter.result({
-  "duration": 414137700,
+  "duration": 527146100,
   "status": "passed"
 });
 formatter.match({
@@ -388,7 +388,7 @@ formatter.match({
   "location": "bookAppointmentSteps.appointmentTypeAs(String)"
 });
 formatter.result({
-  "duration": 1065218800,
+  "duration": 976905000,
   "status": "passed"
 });
 formatter.match({
@@ -401,14 +401,14 @@ formatter.match({
   "location": "bookAppointmentSteps.patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String)"
 });
 formatter.result({
-  "duration": 5122785600,
+  "duration": 5131018400,
   "status": "passed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnPreferredClinician()"
 });
 formatter.result({
-  "duration": 151718800,
+  "duration": 150170800,
   "status": "passed"
 });
 formatter.match({
@@ -421,14 +421,14 @@ formatter.match({
   "location": "bookAppointmentSteps.choosesPreferredClinicianAs(String)"
 });
 formatter.result({
-  "duration": 5196867200,
+  "duration": 5148383800,
   "status": "passed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnPreferredSite()"
 });
 formatter.result({
-  "duration": 169730100,
+  "duration": 139953400,
   "status": "passed"
 });
 formatter.match({
@@ -441,14 +441,14 @@ formatter.match({
   "location": "bookAppointmentSteps.choosesPreferredSiteAs(String)"
 });
 formatter.result({
-  "duration": 5255598500,
+  "duration": 5265665400,
   "status": "passed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnPreferredTimeAndDate()"
 });
 formatter.result({
-  "duration": 166365600,
+  "duration": 176972200,
   "status": "passed"
 });
 formatter.match({
@@ -465,22 +465,21 @@ formatter.match({
   "location": "bookAppointmentSteps.choosesPreferredTimeAndDateAs(String,String)"
 });
 formatter.result({
-  "duration": 10658533300,
-  "status": "passed"
+  "duration": 408442400,
+  "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d81.0.4044.122)\nBuild info: version: \u00273.12.0\u0027, revision: \u00277c6e0b3\u0027, time: \u00272018-05-08T14:04:26.12Z\u0027\nSystem info: host: \u0027MYSWEETY\u0027, ip: \u0027192.168.0.20\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_161\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\\Users\\INDRA_~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:50538}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: d616ae7a6d30884b6e0600a54dce90e6\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy20.sendKeys(Unknown Source)\r\n\tat pageObjects.bookAppointment.choosesPreferredTimeAndDateAs(bookAppointment.java:215)\r\n\tat stepDefinitions.bookAppointmentSteps.choosesPreferredTimeAndDateAs(bookAppointmentSteps.java:199)\r\n\tat ✽.And chooses Preferred Time and Date as \"Afternoon\"  \"30/04/2020\"(src/test/java/features/bookAppointment.feature:46)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnSearchButton()"
 });
 formatter.result({
-  "duration": 164953900,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "bookAppointmentSteps.appointmentSearchResultsShouldBeDisplayed()"
 });
 formatter.result({
-  "duration": 1336348200,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -492,8 +491,7 @@ formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnAvailableAppointmentDetails(String)"
 });
 formatter.result({
-  "duration": 124505600,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -505,15 +503,13 @@ formatter.match({
   "location": "bookAppointmentSteps.patientSeesAMessageOnAppointmentDetailsPage(String)"
 });
 formatter.result({
-  "duration": 5220073000,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "location": "bookAppointmentSteps.patientClicksOnBookAppointmentButtonOnDetailsPage()"
 });
 formatter.result({
-  "duration": 172082400,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -525,11 +521,11 @@ formatter.match({
   "location": "bookAppointmentSteps.appointmentBookingCompleteConfirmationMessageShouldBeDisplayed(String)"
 });
 formatter.result({
-  "duration": 5109898600,
-  "status": "passed"
+  "status": "skipped"
 });
+formatter.embedding("image/png", "embedded0.png");
 formatter.after({
-  "duration": 1417857500,
+  "duration": 1897309200,
   "status": "passed"
 });
 });

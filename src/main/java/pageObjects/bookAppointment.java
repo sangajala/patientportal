@@ -124,9 +124,26 @@ public class bookAppointment extends Base {
 
     public void choosePayerType(String pType) {
         //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+        String toPass = "//li[contains(text(),'"+pType+"')]";
+        System.out.println("Received value = "+pType);
+        System.out.println("Find element String = "+toPass);
+        payerType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, payerType);
     }
+    //--------------------//
+    public WebElement choosePayerType2(String pType) {
+        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
+        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+        String toPass = "//li[contains(text(),'"+pType+"')]";
+        System.out.println("Received value = "+pType);
+        System.out.println("Find element String = "+toPass);
+        return driver.findElement(By.xpath(toPass));
+
+    }
+//--------------------//
 
     public void chooseAppointmentType(String aType) {
         try {

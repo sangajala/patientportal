@@ -25,12 +25,8 @@ public class invoicePage extends Base {
     WebElement backbutn;
     public @FindBy(xpath = "//li[10]//a[1]")
     WebElement invoicebutton;
-<<<<<<< Updated upstream
-    public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[2]")
-=======
    // public @FindBy(xpath = "//button[contains(@class,'btn btn-primary')][2]")
   public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[2]")
->>>>>>> Stashed changes
     WebElement unpaidinvoice;
     public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[3]")
     WebElement paidInvoice;
@@ -61,11 +57,7 @@ public class invoicePage extends Base {
     }
 
     public void patientclicksonfirstinvoice() {
-<<<<<<< Updated upstream
-
-=======
         utils.waitForElementClickable(driver,firstinvoice);
->>>>>>> Stashed changes
         try {
             Thread.sleep(3000);
         } catch (Exception e) {
@@ -81,6 +73,7 @@ public class invoicePage extends Base {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
     public void emailsentsuccessfullymsg() {
         emailsentmessage.isDisplayed();
