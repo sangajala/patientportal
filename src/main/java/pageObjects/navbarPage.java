@@ -42,8 +42,6 @@ public class navbarPage extends Base {
 
 
 
-
-
     public navbarPage() throws IOException {
         super();
     }

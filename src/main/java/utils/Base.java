@@ -60,9 +60,11 @@ public class Base {
 	public static pageObjects.faqpage faqpage;
 	public static bookAppointment bookappointment;
 	public static medicalHistoryPage medicalHistoryPage;
-	public static membershipsPage membershipsPage;
+	public static membershipsPage membershipspage;
 	public static accountdetailsPage accountdetailspage;
 	public static invoicePage invoicepage;
+	public static membershipEnrollment membershipenrollment;
+	public static allNotificationsPage allnotificationspage;
 	
 	
 public  WebDriver initializeDriver() throws IOException{
@@ -122,6 +124,13 @@ public  WebDriver initializeDriver() throws IOException{
     		homepage = PageFactory.initElements(driver, homePage.class);
     		navbarpage = PageFactory.initElements(driver, navbarPage.class);
     		faqpage = PageFactory.initElements(driver, faqpage.class);
+	invoicepage= PageFactory.initElements(driver, invoicePage.class);
+	accountdetailspage= PageFactory.initElements(driver, accountdetailsPage.class);
+	medicalHistoryPage=PageFactory.initElements(driver, medicalHistoryPage.class);
+	bookappointment=PageFactory.initElements(driver, bookAppointment.class);
+	membershipspage=PageFactory.initElements(driver,membershipsPage.class);
+	membershipenrollment=PageFactory.initElements(driver,membershipEnrollment.class);
+	allnotificationspage=PageFactory.initElements(driver,allNotificationsPage.class);
 			return driver;
     		}
         
@@ -163,14 +172,6 @@ public  WebDriver initializeDriver() throws IOException{
         	}
         	seleniumDriver = null;
         }
-        
-        
-        
-        
-    
 
-		
-		
-	
 
 }

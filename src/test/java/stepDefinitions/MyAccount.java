@@ -10,13 +10,13 @@ import utils.Base;
 import java.io.IOException;
 
 public class MyAccount  extends Base {
-    @Given("^Patient launch the browser$")
+   /* @Given("^Patient launch the browser$")
     public void patient_launch_the_browser() throws Throwable {
         initializeDriver();
         loginpage.NavigateToUrl();
-    }
+    }*/
 
-    @When("^Patient enters username as \"([^\"]*)\"$")
+   /* @When("^Patient enters username as \"([^\"]*)\"$")
     public void patient_enters_username_as(String un) throws Throwable {
 
         loginpage.enterUserName().sendKeys(un);
@@ -39,7 +39,7 @@ public class MyAccount  extends Base {
     @Then("^Patient is navigated to patient portal home page$")
     public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
         navbarpage.VerifyBookAppointment();
-    }
+    }*/
 
 
     @When("^Patient Choose  MyAccount$")

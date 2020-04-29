@@ -240,6 +240,9 @@ public class utilities {
 	{
 		element.sendKeys(text);
 	}
+
+
+
 	public boolean checkMessageIsDisplayed(WebDriver driver,String message){
 		String wholeText = driver.findElement(By.tagName("body")).getText();
 		//System.out.println("wholeText  : "+wholeText);

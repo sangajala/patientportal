@@ -47,7 +47,8 @@ public class bookAppointment extends Base {
     WebElement preferredTimeDate;
     private @FindBy(xpath = "//button[contains(text(),'Select site')]")
     WebElement selectSiteBtn;
-    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
+    //    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
+    private @FindBy(xpath = "//input[@name='date']")
     WebElement selectedDate;
     private @FindBy(xpath = "//button[contains(text(),'Confirm Time & Date')]")
     WebElement confirmTimeNDateBtn;
@@ -124,9 +125,26 @@ public class bookAppointment extends Base {
 
     public void choosePayerType(String pType) {
         //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+        String toPass = "//li[contains(text(),'"+pType+"')]";
+        System.out.println("Received value = "+pType);
+        System.out.println("Find element String = "+toPass);
+        payerType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, payerType);
     }
+
+    public WebElement choosePayerType2(String pType) {
+        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
+        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
+//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+        String toPass = "//li[contains(text(),'"+pType+"')]";
+        System.out.println("Received value = "+pType);
+        System.out.println("Find element String = "+toPass);
+        return driver.findElement(By.xpath(toPass));
+
+    }
+
 
     public void chooseAppointmentType(String aType) {
         try {
@@ -145,7 +163,8 @@ public class bookAppointment extends Base {
         } catch (Exception e) {
             Assert.fail("WebElement not displayed");
         }
-        //utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
+//        utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
+//        utils.waitForElementPresence(driver,By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[4]/div[2]/ul/li[4]/h5"));
         Assert.assertTrue(utils.checkMessageIsDisplayed(driver, arg0));
     }
 
@@ -195,12 +214,14 @@ public class bookAppointment extends Base {
         WebElement selectedTime = driver.findElement(By.xpath("//button[contains(text(),'" + time + "')]"));
         selectedTime.click();
         selectedDate.clear();
-        selectedDate.sendKeys(date);
+
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+        selectedDate.sendKeys(date);
         selectedDate.sendKeys(Keys.TAB);
         try {
             utils.waitToLoad();

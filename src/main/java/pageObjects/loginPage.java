@@ -3,6 +3,7 @@ package pageObjects;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,7 +27,7 @@ public class loginPage extends Base {
 	private WebElement signupButton;
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
-
+utilities util=new utilities();
 	
 	public loginPage() throws IOException {
 		super();
@@ -86,7 +87,9 @@ public class loginPage extends Base {
 
 		if (!value.trim().equals("")) {
 			if(key.equals("Month")){
+
 				utilities utilities = new utilities();
+				utilities.waitForlocatorVisibility(driver,By.xpath("//select[@ng-model='dob.month']"));
 				utilities.SelectUsingVisibleText(driver.findElement(By.xpath("//select[@ng-model='dob.month']")),value);
 			}else {
 
@@ -105,6 +108,7 @@ public class loginPage extends Base {
 	}
 
 	public String getErrorMessage() {
+		util.waitForElementVisibility(driver,errorMessage);
 		return errorMessage.getText();
 	}
 

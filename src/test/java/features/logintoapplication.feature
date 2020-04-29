@@ -17,5 +17,5 @@ Then I should be directed to home page
 Examples:
 
 |LoginUsername|Password|
-|teena@bananaapps.co.uk|Bananaapps123|
-|test@test123.com|testing1234|
+|lellasreelakshmiabc@gmail.com|Aanya@2016|
+|yashwantrsunkara@gmail.com|Aanya@2016|

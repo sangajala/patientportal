@@ -35,7 +35,7 @@ public class bookAppointmentSteps extends Base {
     @Then("^Patient should be navigated to Meddbase Patient Portal Homepage$")
     public void patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
+        // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
         Assert.assertTrue(loginpage.isUserLoggedIn(),"Patient not logged in succesfully");
 
     }
@@ -43,14 +43,17 @@ public class bookAppointmentSteps extends Base {
     @When("^Patient clicks on Book Appointment$")
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // navbarpage.gotoMenu("Book Appointment");
+        // navbarpage.gotoMenu("Book Appointment");
         utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        //System.out.println("**** clicking on book appointment link");
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
+        // System.out.println("hello I am about to select payer type ----->: "+pType);
         // Write code here that turns the phrase above into concrete actions
-        bookappointment.choosePayerType(pType);
+        //  bookappointment.choosePayerType(pType);
+        utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
 
     }
 
@@ -90,10 +93,10 @@ public class bookAppointmentSteps extends Base {
         //throw new PendingException();
     }
 
-     @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
+    @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
     public void patientSeesAMessageOnAppointmentDetailsPage(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-         bookappointment.navigateApp(arg0,bookappointment.getApptmtDetMsg());
+        bookappointment.navigateApp(arg0,bookappointment.getApptmtDetMsg());
 
     }
 
@@ -195,7 +198,7 @@ public class bookAppointmentSteps extends Base {
     @And("^chooses Preferred Time and Date as \"([^\"]*)\"  \"([^\"]*)\"$")
     public void choosesPreferredTimeAndDateAs(String arg0, String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-     bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
+        bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
     }
 
    /* @When("^Patient clicks on Book Appointment on Details Page$")
@@ -210,14 +213,14 @@ public class bookAppointmentSteps extends Base {
 
     @And("^gets the count of existing appointments$")
     public void getsTheCountOfExistingAppointments() {
-    countOfExistingAppointments=bookappointment.getsearchResults().size();
-    System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
+        countOfExistingAppointments=bookappointment.getsearchResults().size();
+        System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
 
     @Then("^the count of existing appointments should increase$")
     public void theCountOfExistingAppointmentsShouldIncrease() {
-     int incrementedCount=bookappointment.getsearchResults().size();
-     System.out.println("incremented Count :"+incrementedCount);
-     Assert.assertTrue(incrementedCount>countOfExistingAppointments);
+        int incrementedCount=bookappointment.getsearchResults().size();
+        System.out.println("incremented Count :"+incrementedCount);
+        Assert.assertTrue(incrementedCount>countOfExistingAppointments);
     }
 
     @Then("^the count of existing appointments should decrease$")

@@ -7,6 +7,7 @@ package runner;
 
 import java.io.File;
 
+
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -28,10 +29,12 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/regloginMeddBase.feature"},
+		features = {"src/test/java/features/membership.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		//tags = {"@sanity,@bvt"}
+		//tags = {"@login"}
+		//loginMeddBase-Done,Faqpage-it is going to faqs sometimes and it is not counting no,logintoapplication-Done,
+		//loginScenario-Done,invoices-
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
@@ -52,8 +55,6 @@ public class RunCukeTestng extends AbstractTestNGCucumberTests{
         ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.1");
 
     	    }
-	
-	
-	
+
 
 }
