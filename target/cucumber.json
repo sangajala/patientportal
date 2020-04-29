@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 7539400,
+              "duration": 3130200,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 69,
-        "name": "Patient is able to see Invoice when book an appointment",
+        "line": 46,
+        "name": "Patient is able to see Invoice Details for Paid invoice",
         "description": "",
-        "id": "patient-portal-invoices;patient-is-able-to-see-invoice-when-book-an-appointment;;2",
+        "id": "patient-portal-invoices;patient-is-able-to-see-invoice-details-for-paid-invoice;;2",
         "after": [
           {
             "result": {
-              "duration": 26311468700,
+              "duration": 1191635900,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 86369842300,
+              "duration": 11564672300,
               "status": "passed"
             },
-            "line": 46,
+            "line": 39,
             "name": "Patient logged in",
             "match": {
               "location": "InvoicesSteps.patientLoggedIn()"
@@ -46,258 +46,10 @@
           },
           {
             "result": {
-              "duration": 13289347000,
+              "duration": 1104098000,
               "status": "passed"
             },
-            "line": 47,
-            "name": "Patient clicks on Book Appointment",
-            "match": {
-              "location": "bookAppointmentSteps.patient_clicks_on_Book_Appointment()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3976427101,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "chooses Payer Type as \"Patient\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Patient",
-                  "offset": 23
-                }
-              ],
-              "location": "bookAppointmentSteps.choosesPayerTypeAs(String)"
-            },
-            "matchedColumns": [
-              0
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6391871799,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "Appointment Type as \"Health Screen\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Health Screen",
-                  "offset": 21
-                }
-              ],
-              "location": "bookAppointmentSteps.appointmentTypeAs(String)"
-            },
-            "matchedColumns": [
-              1
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6993310200,
-              "status": "passed"
-            },
-            "line": 50,
-            "name": "Patient should be navigated to Appointment filters page and see a message \"Please use the filters if you wish to refine your search\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Please use the filters if you wish to refine your search",
-                  "offset": 75
-                }
-              ],
-              "location": "bookAppointmentSteps.patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3659457999,
-              "status": "passed"
-            },
-            "line": 51,
-            "name": "Patient clicks on Preferred Clinician",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnPreferredClinician()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6641946299,
-              "status": "passed"
-            },
-            "line": 52,
-            "name": "chooses  Preferred Clinician  as \"Any Clinician\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Any Clinician",
-                  "offset": 34
-                }
-              ],
-              "location": "bookAppointmentSteps.choosesPreferredClinicianAs(String)"
-            },
-            "matchedColumns": [
-              2
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1977046200,
-              "status": "passed"
-            },
-            "line": 53,
-            "name": "Patient clicks on Preferred Site",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnPreferredSite()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 6406534601,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "chooses Preferred Site as \"Work location\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Work location",
-                  "offset": 27
-                }
-              ],
-              "location": "bookAppointmentSteps.choosesPreferredSiteAs(String)"
-            },
-            "matchedColumns": [
-              3
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1054138100,
-              "status": "passed"
-            },
-            "line": 55,
-            "name": "Patient clicks on Preferred Time and Date",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnPreferredTimeAndDate()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 15286516699,
-              "status": "passed"
-            },
-            "line": 56,
-            "name": "chooses Preferred Time and Date as \"Afternoon\"  \"30/04/2020\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Afternoon",
-                  "offset": 36
-                },
-                {
-                  "val": "30/04/2020",
-                  "offset": 49
-                }
-              ],
-              "location": "bookAppointmentSteps.choosesPreferredTimeAndDateAs(String,String)"
-            },
-            "matchedColumns": [
-              4,
-              5
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1451174600,
-              "status": "passed"
-            },
-            "line": 57,
-            "name": "Patient clicks on Search button",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnSearchButton()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1162539400,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "Appointment search Results should be displayed",
-            "match": {
-              "location": "bookAppointmentSteps.appointmentSearchResultsShouldBeDisplayed()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1658094701,
-              "status": "passed"
-            },
-            "line": 59,
-            "name": "Patient clicks on \"1\" available appointment details",
-            "match": {
-              "arguments": [
-                {
-                  "val": "1",
-                  "offset": 19
-                }
-              ],
-              "location": "bookAppointmentSteps.patientClicksOnAvailableAppointmentDetails(String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1115681500,
-              "status": "passed"
-            },
-            "line": 60,
-            "name": "Patient clicks on Book Appointment button on Details Page",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnBookAppointmentButtonOnDetailsPage()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 6463947999,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "Appointment Booking Complete confirmation message \"was successfully completed\" should be displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "was successfully completed",
-                  "offset": 51
-                }
-              ],
-              "location": "bookAppointmentSteps.appointmentBookingCompleteConfirmationMessageShouldBeDisplayed(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1728197600,
-              "status": "passed"
-            },
-            "line": 62,
+            "line": 40,
             "name": "Patient clicks on \"Invoices\" in menu",
             "match": {
               "arguments": [
@@ -312,51 +64,54 @@
           },
           {
             "result": {
-              "duration": 4153244401,
+              "duration": 3186820300,
               "status": "passed"
             },
-            "line": 63,
-            "name": "patient clicks on unpaid invoices",
+            "line": 41,
+            "name": "patient clicks on paid invoices",
             "match": {
-              "location": "InvoicesSteps.patientClicksOnUnpaidInvoices()"
+              "location": "InvoicesSteps.patientClicksOnPaidInvoices()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 4617872800,
+              "duration": 3244292100,
               "status": "passed"
             },
-            "line": 64,
-            "name": "Patient select first UnPaid invoice that appears on the search result",
+            "line": 42,
+            "name": "Patient select first Paid invoice that appears on the search result",
             "match": {
-              "location": "InvoicesSteps.patientSelectFirstUnPaidInvoiceThatAppearsOnTheSearchResult()"
+              "location": "InvoicesSteps.patientSelectFirstPaidInvoiceThatAppearsOnTheSearchResult()"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 1127205599,
+              "duration": 3060372000,
               "status": "passed"
             },
-            "line": 65,
-            "name": "Patient is able to see \"Appointment : Health Screen\"",
+            "line": 43,
+            "name": "Patient is able to see \"23/03/2020 - No: 872\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Appointment : Health Screen",
+                  "val": "23/03/2020 - No: 872",
                   "offset": 24
                 }
               ],
               "location": "InvoicesSteps.patientIsAbleToSee(String)"
             },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 44,
-            "name": "@appointments"
+            "line": 37,
+            "name": "@paidInvoice"
           }
         ]
       }

@@ -106,4 +106,6 @@ invoicepage.patientclicksonfirstinvoice();
     public void patientSelectFirstPaidInvoiceThatAppearsOnTheSearchResult() {
         invoicepage.patientclicksonfirstinvoice();
     }
+
+
 }

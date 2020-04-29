@@ -2,7 +2,6 @@ Feature:Patient Portal Invoices
 
 @first
   Scenario: Patient is able to generate invoice as PDF and received invoice on registered Email ID
-
       Given Patient logged in
       When Patient clicks on "Invoices" in menu
       When patients clicks on all invoices
@@ -15,7 +14,6 @@ Feature:Patient Portal Invoices
 
 @second
   Scenario: Patient is able to generate UnPaid invoice as PDF and received UnPaid invoice on registered Email ID
-
   Given Patient logged in
     When Patient clicks on "Invoices" in menu
     When patient clicks on unpaid invoices
@@ -26,21 +24,26 @@ Feature:Patient Portal Invoices
     When  Patient select Back button
     Then patient is navigated back to Invoice page
   @invoice
-   Scenario:Patient is able to see Invoice Details for UnPaid invoice
-
+   Scenario Outline: Patient is able to see Invoice Details for UnPaid invoice
      Given Patient logged in
      When  Patient clicks on "Invoices" in menu
      When patient clicks on unpaid invoices
      When Patient select first UnPaid invoice that appears on the search result
-     Then Patient is able to see "Invoice Details"
+     Then Patient is able to see "<Invoice Details>"
+    Examples:
+    |  Invoice Details   |
+    |25/04/2020 - No:1186 |
 
     @paidInvoice
-    Scenario: Patient is able to see Invoice Details for Paid invoice
+    Scenario Outline: Patient is able to see Invoice Details for Paid invoice
       Given  Patient logged in
       When  Patient clicks on "Invoices" in menu
       When patient clicks on paid invoices
       When Patient select first Paid invoice that appears on the search result
-      Then Patient is able to see "Invoice Details"
+      Then Patient is able to see "<Invoice Details>"
+      Examples:
+        |  Invoice Details   |
+        |23/03/2020 - No: 872    |
 
   Scenario Outline: Patient is able to see Invoice when book an appointment
     Given Patient logged in

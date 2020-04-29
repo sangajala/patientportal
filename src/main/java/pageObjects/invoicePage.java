@@ -31,8 +31,14 @@ public class invoicePage extends Base {
     public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[3]")
     WebElement paidInvoice;
 
-   public @FindBy(tagName = "body")
+   public @FindBy(xpath="//p[@class='ng-binding']")
    WebElement InvoiceDetails;
+    public @FindBy(xpath = "//div[@class='ng-binding ng-scope']")
+    WebElement itemDetails;
+    public @FindBy(xpath = "//div[@class='col-md-6 ng-binding'][1]")
+    WebElement CreditDetails;
+    public @FindBy(xpath = "//div[@class='col-md-6 ng-binding'][2]]")
+    WebElement DebitDetails;
 
 
 
@@ -40,9 +46,6 @@ public class invoicePage extends Base {
 
         super();
     }
-
-
-
 
 	public void patientsclickonall() {
         //(webdriver,webelement)
@@ -107,10 +110,14 @@ public class invoicePage extends Base {
         Assert.assertTrue(firstinvoice.isDisplayed(),"msgnotdisplayed");
     }
 
-    public boolean invoiceDetails(String details){
-        utils.waitForElementPresence(driver,By.tagName("body"));
+   public boolean invoiceDetails(String details){
+       try {
+           Thread.sleep(3000);
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
         return InvoiceDetails.getText().contains(details);
-    }
+   }
 
 
     public void patiendclickonunpaidinvoice(){
