@@ -212,12 +212,13 @@ public class bookAppointment extends Base {
         WebElement selectedTime = driver.findElement(By.xpath("//button[contains(text(),'" + time + "')]"));
         selectedTime.click();
         selectedDate.clear();
-        selectedDate.sendKeys(date);
+
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        selectedDate.sendKeys(date);
         selectedDate.sendKeys(Keys.TAB);
         try {
             utils.waitToLoad();

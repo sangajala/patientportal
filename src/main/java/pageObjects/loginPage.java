@@ -105,6 +105,7 @@ public class loginPage extends Base {
 	}
 
 	public String getErrorMessage() {
+		utils.waitForElementPresence(driver,By.tagName("body"));
 		return errorMessage.getText();
 	}
 

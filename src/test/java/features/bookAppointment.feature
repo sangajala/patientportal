@@ -27,7 +27,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
      #| Patient    | Consultation     |
      | Patient    | Phone Consultation |
       #| Patient    | Video Conference   |
-     # | Insurer    | Consultation     |
+     # | Insurer    | Consultation     |Patient clicks on Book Appointment
      # | Insurer | Phone Consultation |
 
 

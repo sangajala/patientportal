@@ -28,16 +28,15 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/bookAppointment.feature"},
+		features = {"src/test/java/features/invoice.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@BookByAppointmentFilters"},
+		//tags = {"@appointments"},
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
 		)
 public class RunCukeTestng extends AbstractTestNGCucumberTests{
-	
 
 	@BeforeClass
     public static void setup() {
