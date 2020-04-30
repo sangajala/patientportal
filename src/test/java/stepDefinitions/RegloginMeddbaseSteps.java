@@ -61,4 +61,8 @@ public class RegloginMeddbaseSteps extends Base {
         Assert.assertTrue(loginpage.getErrorMessage().contains(errormessage));
     }
 
+    @Then("^User should be in Confirm details page$")
+    public void userShouldBeInConfirmDetailsPage() {
+        Assert.assertTrue(loginpage.confirmButton());
+    }
 }

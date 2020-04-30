@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3130200,
+              "duration": 3505700,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 46,
-        "name": "Patient is able to see Invoice Details for Paid invoice",
+        "line": 25,
+        "name": "Validations",
         "description": "",
-        "id": "patient-portal-invoices;patient-is-able-to-see-invoice-details-for-paid-invoice;;2",
+        "id": "registration;validations;;2",
         "after": [
           {
             "result": {
-              "duration": 1191635900,
+              "duration": 1502196200,
               "status": "passed"
             },
             "match": {
@@ -34,92 +34,2844 @@
         "steps": [
           {
             "result": {
-              "duration": 11564672300,
+              "duration": 10284800700,
               "status": "passed"
             },
-            "line": 39,
-            "name": "Patient logged in",
+            "line": 6,
+            "name": "user is in login page",
             "match": {
-              "location": "InvoicesSteps.patientLoggedIn()"
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1104098000,
+              "duration": 361802800,
               "status": "passed"
             },
-            "line": 40,
-            "name": "Patient clicks on \"Invoices\" in menu",
+            "line": 7,
+            "name": "navigate to registration page",
             "match": {
-              "arguments": [
-                {
-                  "val": "Invoices",
-                  "offset": 19
-                }
-              ],
-              "location": "InvoicesSteps.patientClicksOnInMenu(String)"
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 3186820300,
+              "duration": 221073400,
               "status": "passed"
             },
-            "line": 41,
-            "name": "patient clicks on paid invoices",
+            "line": 8,
+            "name": "provide below details",
             "match": {
-              "location": "InvoicesSteps.patientClicksOnPaidInvoices()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3244292100,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "Patient select first Paid invoice that appears on the search result",
-            "match": {
-              "location": "InvoicesSteps.patientSelectFirstPaidInvoiceThatAppearsOnTheSearchResult()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3060372000,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "Patient is able to see \"23/03/2020 - No: 872\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "23/03/2020 - No: 872",
-                  "offset": 24
-                }
-              ],
-              "location": "InvoicesSteps.patientIsAbleToSee(String)"
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
             },
             "matchedColumns": [
-              0
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  ""
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  ""
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  ""
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  ""
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  ""
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  ""
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  ""
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3255676000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Please enter an invite code\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Please enter an invite code",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
             ],
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 37,
-            "name": "@paidInvoice"
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 140900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 978306900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8063869900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 736271900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1054932800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  ""
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  ""
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  ""
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  ""
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  ""
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 249001400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3129849600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Name isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Name isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 84100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 1064183500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8245085100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 333710400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1150299000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "keerthi"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  ""
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  ""
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  ""
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  ""
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 253177400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3158779300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Surname isn\u0027t set\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Surname isn\u0027t set",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 106100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 1132708500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7400427200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 339480300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1424501800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$sssdfgghh"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myneni"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  ""
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  ""
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 171558100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3130048900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Date of birth isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Date of birth isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 70500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 1003086900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7363040100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 337569500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1709795000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  ""
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 192609900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3136035800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Date of birth isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Date of birth isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 82000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 1040722300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7471363200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 307233900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1819371000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  ""
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  ""
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 219106300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3142635700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Date of birth isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Date of birth isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 96900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 1025386200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7384550300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 620648300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2212891500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  ""
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 198545400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3123756300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Email address isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email address isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 117400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;9",
+        "after": [
+          {
+            "result": {
+              "duration": 942268800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7257950700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 302107100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1802242600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  ""
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 169487700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3141657700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Post code isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Post code isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 55100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;10",
+        "after": [
+          {
+            "result": {
+              "duration": 1169287500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7360389000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 631953700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2119010200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  ""
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 244708500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3155535700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Phone number isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Phone number isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 79100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;11",
+        "after": [
+          {
+            "result": {
+              "duration": 935387900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7665060400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 329988400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2343194200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "keerthi.allagmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 236586200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3130364300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Email address isn\u0027t valid.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email address isn\u0027t valid.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 66800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;12",
+        "after": [
+          {
+            "result": {
+              "duration": 1021437500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7530343600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 664964100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2264124300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  ""
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 203419100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3145539300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Password isn\u0027t set.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password isn\u0027t set.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 103300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;13",
+        "after": [
+          {
+            "result": {
+              "duration": 1106823200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7393793500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 653947000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2491670400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Banana"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 254322600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3146160500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Password should be at least 8 characters long.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Password should be at least 8 characters long.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 81100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;14",
+        "after": [
+          {
+            "result": {
+              "duration": 1109135600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7803193200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 680576500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2599963800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Sahithi0416"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 261821500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3165544600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"This account is already registered on our system\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "This account is already registered on our system",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 185100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;15",
+        "after": [
+          {
+            "result": {
+              "duration": 970598900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7852166900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 385888500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2631531900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "mun"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "indramails@gmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw77rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "sdfghjjkkhgffghh"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 227127000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3120354000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"The phone number includes unexpected characters.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "The phone number includes unexpected characters.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 72400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeActionsHook.setUp()"
+            }
+          }
+        ],
+        "line": 39,
+        "name": "Validations",
+        "description": "",
+        "id": "registration;validations;;16",
+        "after": [
+          {
+            "result": {
+              "duration": 1795263500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "AfterActionsHook.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 7401669800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user is in login page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.user_is_in_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 552446200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "navigate to registration page",
+            "match": {
+              "location": "RegloginMeddbaseSteps.navigate_to_registration_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2080985600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "provide below details",
+            "match": {
+              "location": "RegloginMeddbaseSteps.provide_below_details(DataTable)"
+            },
+            "matchedColumns": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Invite code",
+                  "b0dc8"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "Password",
+                  "Bananaapps123$"
+                ],
+                "line": 10
+              },
+              {
+                "cells": [
+                  "First Name",
+                  "myn"
+                ],
+                "line": 11
+              },
+              {
+                "cells": [
+                  "Last Name",
+                  "myn"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "Day",
+                  "23"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "Month",
+                  "Jun"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "Year",
+                  "1986"
+                ],
+                "line": 15
+              },
+              {
+                "cells": [
+                  "Email Address",
+                  "keerthi.allagmail.com"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "Postcode",
+                  "tw7 7rw"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "Mobile Phone Number (required)",
+                  "07834771592"
+                ],
+                "line": 18
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 172272600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "click on Next button",
+            "match": {
+              "location": "RegloginMeddbaseSteps.click_on_Next_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3139108600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "should  be able to see the \"Email address isn\u0027t valid.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Email address isn\u0027t valid.",
+                  "offset": 28
+                }
+              ],
+              "location": "RegloginMeddbaseSteps.should_be_able_to_see_the(String)"
+            },
+            "matchedColumns": [
+              10
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Reg"
           }
         ]
       }
     ],
-    "name": "Patient Portal Invoices",
+    "name": "Registration",
     "description": "",
-    "id": "patient-portal-invoices",
+    "id": "registration",
     "keyword": "Feature",
-    "uri": "src/test/java/features/invoice.feature"
+    "uri": "src/test/java/features/regloginMeddBase.feature"
   }
 ]

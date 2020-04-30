@@ -26,6 +26,7 @@ public class loginPage extends Base {
 	private WebElement signupButton;
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
+	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']") WebElement confirm;
 
 	
 	public loginPage() throws IOException {
@@ -101,11 +102,17 @@ public class loginPage extends Base {
 	}
 
 	public void gotoNext() {
-		next.click();
+        utils.waitForElementClickable(driver, next);
+	    next.click();
 	}
 
 	public String getErrorMessage() {
 		utils.waitForElementPresence(driver,By.tagName("body"));
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 		return errorMessage.getText();
 	}
 
@@ -127,6 +134,10 @@ public class loginPage extends Base {
 		userName.sendKeys(prop.getProperty("username"));
 		passWord.sendKeys(prop.getProperty("password"));
 		utils.clickOnWebElement(driver,signIn);
+	}
+	public boolean confirmButton(){
+		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
+		return confirm.isDisplayed();
 	}
 	/*
 	

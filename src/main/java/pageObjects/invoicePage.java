@@ -118,7 +118,12 @@ public class invoicePage extends Base {
        }
         return InvoiceDetails.getText().contains(details);
    }
-
+  // public boolean creditDetails(String c){
+      // return CreditDetails.getText().contains(c);
+  // }
+   // public boolean debitDetails(String d){
+      //  return DebitDetails.getText().contains(d);
+   // }
 
     public void patiendclickonunpaidinvoice(){
         utils.waitForElementPresence(driver,By.xpath("//div[@class='page ng-scope']/div[4]/div/button[2]"));

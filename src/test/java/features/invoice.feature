@@ -30,9 +30,9 @@ Feature:Patient Portal Invoices
      When patient clicks on unpaid invoices
      When Patient select first UnPaid invoice that appears on the search result
      Then Patient is able to see "<Invoice Details>"
-    Examples:
+     Examples:
     |  Invoice Details   |
-    |25/04/2020 - No:1186 |
+    |25/04/2020 - No: 1186|
 
     @paidInvoice
     Scenario Outline: Patient is able to see Invoice Details for Paid invoice

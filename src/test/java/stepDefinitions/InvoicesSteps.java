@@ -14,6 +14,9 @@ import pageObjects.navbarPage;
 import utils.Base;
 import utils.utilities;
 
+import java.util.List;
+import java.util.Map;
+
 public class InvoicesSteps extends Base {
 
 
@@ -93,7 +96,7 @@ invoicepage.patientclicksonfirstinvoice();
 
     @Then("^Patient is able to see \"([^\"]*)\"$")
     public void patientIsAbleToSee(String details) throws Throwable {
-        Assert.assertTrue(invoicepage.invoiceDetails(details));
+       Assert.assertTrue(invoicepage.invoiceDetails(details));
 
     }
 
@@ -108,4 +111,8 @@ invoicepage.patientclicksonfirstinvoice();
     }
 
 
+    // @Then("^Patient should able to see \"([^\"]*)\"$")
+   // public void patientShouldAbleToSee(String c) throws Throwable {
+    //    Assert.assertTrue(invoicepage.creditDetails(c));
+   // }
 }
