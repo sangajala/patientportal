@@ -16,8 +16,7 @@ public class bookAppointment extends Base {
     private WebElement appointmentType;
     private WebElement serviceType;
     private WebElement selectservicesType;
-    //  private @FindBy(xpath = "//ul[@class='list-group list-group-bordered ng-scope']/li") WebElement searchResultsList;
-    // private  @FindBy(xpath = "//*[id=\"ng-app\"]/body/div[1]/div[2]/div[4]/div[2]/ul[1]/li") WebElement list;
+
     private List<WebElement> searchResultsList;
 
 
@@ -49,7 +48,6 @@ public class bookAppointment extends Base {
     WebElement preferredTimeDate;
     private @FindBy(xpath = "//button[contains(text(),'Select site')]")
     WebElement selectSiteBtn;
-//    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
     private @FindBy(xpath = "//input[@name='date']")
     WebElement selectedDate;
     private @FindBy(xpath = "//button[contains(text(),'Confirm Time & Date')]")
@@ -69,7 +67,7 @@ public class bookAppointment extends Base {
     // WebElement for Cancel Appointment on cancel info page
     private @FindBy(xpath = "//button[contains(text(),'Cancel appointment')]")
     WebElement cancelApptmtBtn2;
-    //Webelement for cancel appointment confirmation message
+
     private @FindBy(xpath = "//div[@ng-show='cancelConfirm']")
     WebElement cancelConfirmMsg;
 
@@ -135,27 +133,18 @@ public class bookAppointment extends Base {
     }
 
     public void choosePayerType(String pType) {
-        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
-//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
         String toPass = "//li[contains(text(),'"+pType+"')]";
-        System.out.println("Received value = "+pType);
-        System.out.println("Find element String = "+toPass);
         payerType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, payerType);
     }
-//--------------------//
+
     public WebElement choosePayerType2(String pType) {
-        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
-//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+
         String toPass = "//li[contains(text(),'"+pType+"')]";
-        System.out.println("Received value = "+pType);
-        System.out.println("Find element String = "+toPass);
         return driver.findElement(By.xpath(toPass));
 
     }
-//<<<<<<<<<<<<<<<Added for sevrices for phone cunsulation>>>>>>>>>>>>>>>>>>>>
+
     public  void chooseServiceType(String sType)  {
         String toPass = "//li[contains(text(),'"+sType+"')]";
         serviceType= driver.findElement(By.xpath(toPass));
@@ -196,8 +185,7 @@ public class bookAppointment extends Base {
         } catch (Exception e) {
             Assert.fail("WebElement not displayed");
         }
-//        utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
-//        utils.waitForElementPresence(driver,By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[4]/div[2]/ul/li[4]/h5"));
+
         Assert.assertTrue(utils.checkMessageIsDisplayed(driver, arg0));
     }
 
@@ -226,13 +214,12 @@ public class bookAppointment extends Base {
         }
         WebElement element = driver.findElement(By.xpath("//li[contains(text(), '" + clinician + "')]"));
         System.out.println("in choose prefereed clinician " + element);
-        // element.click();
         utils.clickOnWebElement(driver, element);
 
     }
 
     public void choosePreferredSiteAs(String site) {
-        //not selecting by site as there is only one site (work location)
+
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -263,25 +250,11 @@ public class bookAppointment extends Base {
         }
         confirmTimeNDateBtn.click();
 
-        //JavascriptExecutor executor = (JavascriptExecutor)driver;
-        //executor.executeScript("arguments[0].click();", confirmTimeNDateBtn);
 
     }
 
 
-         /*   if(payerType.isDisplayed()){
-                payerType.click();
-            }
-            else {
-                throw new Exception("Menu link not present "+menu);
-            }
-        }
-        catch (NoSuchFrameException e){
-            Assert.fail("Menu link not present "+menu);
-        }
-        catch (java.lang.Exception e){
-            Assert.fail("Menu link not present "+menu);
-        }*/
+
 
 }
 

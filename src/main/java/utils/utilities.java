@@ -244,7 +244,6 @@ public class utilities {
 	}
 	public boolean checkMessageIsDisplayed(WebDriver driver,String message){
 		String wholeText = driver.findElement(By.tagName("body")).getText();
-		//System.out.println("wholeText  : "+wholeText);
 		return wholeText.contains(message);
 	}
 

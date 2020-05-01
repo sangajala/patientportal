@@ -36,7 +36,7 @@ public class bookAppointmentSteps extends Base {
     @Then("^Patient should be navigated to Meddbase Patient Portal Homepage$")
     public void patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
+
         Assert.assertTrue(loginpage.isUserLoggedIn(),"Patient not logged in succesfully");
 
     }
@@ -44,16 +44,13 @@ public class bookAppointmentSteps extends Base {
     @When("^Patient clicks on Book Appointment$")
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // navbarpage.gotoMenu("Book Appointment");
+
         utils.clickOnWebElement(driver,navbarpage.getBookappointment());
-        //System.out.println("**** clicking on book appointment link");
+
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
-         // System.out.println("hello I am about to select payer type ----->: "+pType);
-        // Write code here that turns the phrase above into concrete actions
-          //  bookappointment.choosePayerType(pType);
         utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
 
     }
@@ -91,7 +88,7 @@ public class bookAppointmentSteps extends Base {
         int pos=Integer.parseInt(arg0);
         bookappointment.clickOnSpecificAvailableAppointment(pos);
 
-        //throw new PendingException();
+
     }
 
      @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
@@ -101,10 +98,7 @@ public class bookAppointmentSteps extends Base {
 
     }
 
-   /* @When("^Patient clicks on Book Appointment button$")
-    public void patientClicksOnBookAppointmentButton() {
-        utils.clickOnWebElement(driver,bookappointment.getBookAppointmentBtn());
-    }*/
+
 
 
     @Then("^Appointment Booking Complete confirmation message \"([^\"]*)\" should be displayed$")
@@ -202,10 +196,7 @@ public class bookAppointmentSteps extends Base {
      bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
     }
 
-   /* @When("^Patient clicks on Book Appointment on Details Page$")
-    public void patientClicksOnBookAppointmentOnDetailsPage() {
-        utils.clickOnWebElement(driver,bookappointment.getBookAppointmentBtn());
-    }*/
+
 
     @When("^Patient clicks on Book Appointment button on Details Page$")
     public void patientClicksOnBookAppointmentButtonOnDetailsPage() {
@@ -266,13 +257,6 @@ public class bookAppointmentSteps extends Base {
 
     }
 
-//    @Then("^Patient selects \"([^\"]*)\" and click on next$")
-//    public void patientSelectsAndClickOnNext(String sType)  {
-//
-//        bookappointment.chooseServiceType(sType);
-//        // Write code here that turns the phrase above into concrete actions
-//
-//    }
 
     @Then("^Patient selects \"([^\"]*)\" and \"([^\"]*)\" and click on next button$")
     public void patientSelectsAndAndClickOnNextButton(String sType, String selcetserType) {
