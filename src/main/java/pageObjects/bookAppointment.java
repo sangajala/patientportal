@@ -14,6 +14,8 @@ public class bookAppointment extends Base {
     //Page Objects
     private WebElement payerType;
     private WebElement appointmentType;
+    private WebElement serviceType;
+    private WebElement selectservicesType;
     //  private @FindBy(xpath = "//ul[@class='list-group list-group-bordered ng-scope']/li") WebElement searchResultsList;
     // private  @FindBy(xpath = "//*[id=\"ng-app\"]/body/div[1]/div[2]/div[4]/div[2]/ul[1]/li") WebElement list;
     private List<WebElement> searchResultsList;
@@ -55,6 +57,8 @@ public class bookAppointment extends Base {
     private @FindBy(xpath = "//button[contains(text(),'Cancel Appointment')]")
     WebElement cancelApptmtBtn;
 
+    private @FindBy(xpath = "//p[contains(text(),'Please select your required services')]")
+    WebElement serviceMessage;
 
     private @FindBy(xpath = "//p[contains(text(),'In the list below you will find your existing appo')]")
     WebElement existingApptmtMsg;
@@ -69,6 +73,11 @@ public class bookAppointment extends Base {
     private @FindBy(xpath = "//div[@ng-show='cancelConfirm']")
     WebElement cancelConfirmMsg;
 
+    private @FindBy(xpath = "//button[contains(text(), 'Next')]")
+    WebElement nextBtn;
+
+
+
     //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
         return bookingCompleteMsg;
@@ -81,7 +90,9 @@ public class bookAppointment extends Base {
     public WebElement getApptmtDetMsg() {
         return apptmtDetMsg;
     }
-
+    /////
+    public WebElement getServiceMessage(){ return serviceMessage; }
+    //
     public WebElement getApptmtFiltersMsg() {
         return apptmtFiltersMsg;
     }
@@ -144,6 +155,28 @@ public class bookAppointment extends Base {
         return driver.findElement(By.xpath(toPass));
 
     }
+//<<<<<<<<<<<<<<<Added for sevrices for phone cunsulation>>>>>>>>>>>>>>>>>>>>
+    public  void chooseServiceType(String sType)  {
+        String toPass = "//li[contains(text(),'"+sType+"')]";
+        serviceType= driver.findElement(By.xpath(toPass));
+        utils.clickOnWebElement(driver, serviceType);
+
+    }
+
+    public void selectsrcivecfronServicetype(String selcetserType){
+        selectservicesType= driver.findElement(By.xpath("//li[contains(text(),'"+selcetserType+"')]"));
+        try {
+            utils.waitToLoad();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        utils.clickOnWebElement(driver, selectservicesType);
+
+        nextBtn.click();
+
+    }
+
+
 //--------------------//
 
     public void chooseAppointmentType(String aType) {

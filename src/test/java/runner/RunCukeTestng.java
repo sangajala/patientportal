@@ -32,9 +32,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		glue = {"stepDefinitions"},
 		monochrome = true,
 		//tags = {"@sanity,@bvt"}
-		//tags ={"@chkForDecreaseinCountOfExistingApptmntAndCountOfUpcomingAppointmentsAfterCancelApptmt"},
-		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
-				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
+		tags ={"@BookByAppointmentFilters"},
+		//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
+				plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
 		)
 public class RunCukeTestng extends AbstractTestNGCucumberTests{

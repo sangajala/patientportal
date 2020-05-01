@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -256,5 +257,34 @@ public class bookAppointmentSteps extends Base {
         System.out.println("decremented CountApp :"+decrementedCountApp);
         Assert.assertTrue(decrementedCountApp<countOfUpcomingApptmt);
 
+    }
+
+    @Then("^Patient should be navigated to Service filters and see a message \"([^\"]*)\"$")
+    public void patientShouldBeNavigatedToServiceFiltersAndSeeAMessage(String arg0)  {
+        // Write code here that turns the phrase above into concrete actions
+        bookappointment.navigateApp(arg0,bookappointment.getServiceMessage());
+
+    }
+
+//    @Then("^Patient selects \"([^\"]*)\" and click on next$")
+//    public void patientSelectsAndClickOnNext(String sType)  {
+//
+//        bookappointment.chooseServiceType(sType);
+//        // Write code here that turns the phrase above into concrete actions
+//
+//    }
+
+    @Then("^Patient selects \"([^\"]*)\" and \"([^\"]*)\" and click on next button$")
+    public void patientSelectsAndAndClickOnNextButton(String sType, String selcetserType) {
+        bookappointment.chooseServiceType(sType);
+        bookappointment.selectsrcivecfronServicetype(selcetserType);
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+
+
+    @When("^Patient enters account credentials who has all the accounts setup$")
+    public void patientEntersAccountCredentialsWhoHasAllTheAccountsSetup() {
+        loginpage.loginToMeddBase();
     }
 }
