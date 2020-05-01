@@ -1,12 +1,10 @@
 package stepDefinitions;
 
-import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import pageObjects.medicalHistoryPage;
 import utils.Base;
 
 import java.util.List;
@@ -107,24 +105,40 @@ public class MedicalHistorySteps extends Base {
 
     @Given("^patient with all full medical history logs into the portal$")
     public void patientWithAllFullMedicalHistoryLogsIntoThePortal() {
-        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"),prop.getProperty("full_medical_history_password"));
+        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"), prop.getProperty("full_medical_history_password"));
     }
 
     @Then("^the medical history page should have below options$")
     public void theMedicalHistoryPageShouldHaveBelowOptions(List<String> dataTable) throws InterruptedException {
 
-        utils.waitToLoad();
+        // utils.waitToLoad();
         boolean flag = false;
-        for(String option:dataTable){
-            if(medicalHistoryPage.isOptionAvailable(option)){
-                flag= true;
-            }
-
+        for (String option : dataTable) {
+            Assert.assertTrue((medicalHistoryPage.isOptionAvailable(option)));
         }
-        Assert.assertTrue(flag);
 
     }
 
 
+    @Then("^he should see record with title \"([^\"]*)\"$")
+    public void heShouldSeeRecordWithTitle(String title) throws Throwable {
+        if(!title.equals(""))
+            Assert.assertTrue(medicalHistoryPage.checkRecordExist(title));
+
+    }
+
+    @When("^he navigate to \"([^\"]*)\"$")
+    public void heNavigateTo(String title) throws Throwable {
+        medicalHistoryPage.gotoSection(title);
+    }
+
+    @Then("^he should see record with detail \"([^\"]*)\"$")
+    public void heShouldSeeRecordWithDetail(String detail) throws Throwable {
+        if (detail.equalsIgnoreCase("download")) {
+            Assert.assertTrue(medicalHistoryPage.checkLinkExist(detail));
+        } else {
+            Assert.assertTrue(medicalHistoryPage.checkRecordExist(detail));
+        }
+    }
 }
 

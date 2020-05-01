@@ -77,6 +77,22 @@ public class medicalHistoryPage extends Base {
         return  false;
 
     }
+
+    public void gotoSection(String section) throws Exception {
+        utils.clickOnText(driver,section);
+    }
+
+    public boolean checkRecordExist(String title) throws Exception {
+        return utils.checkSectionWithTextExists(driver,title);
+    }
+
+
+
+    public boolean checkLinkExist(String link) throws Exception {
+            return utils.checkLinkWithTextExists(driver,link);
+    }
+
+
     // public void messagedisplayed() {
 
         //msgdisplay.isDisplayed();

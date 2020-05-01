@@ -245,4 +245,47 @@ public class utilities {
 
         }
     }
+
+    public void clickOnText(WebDriver driver,String text) throws Exception {
+        getElementFromText(driver,text).click();
+    }
+
+    public WebElement getElementFromText(WebDriver driver,String text) throws Exception {
+        return getElement(driver,By.xpath("//span[contains(text(),'"+text+"')]"));
+    }
+
+
+    public WebElement getElement(WebDriver driver,By by) throws Exception {
+        List<WebElement> elements = driver.findElements(by);
+        if(elements.size()==0){
+            throw new Exception("Given element not present");
+        }
+        else {
+            return elements.get(0);
+        }
+
+    }
+
+    public List<WebElement> getElements(WebDriver driver,By by) throws Exception {
+        List<WebElement> elements = driver.findElements(by);
+        if(elements.size()==0){
+            throw new Exception("Given element not present");
+        }
+        else {
+            return elements;
+        }
+
+    }
+
+    public boolean checkSectionWithTextExists(WebDriver driver,String text) throws Exception {
+        return getElementFromText(driver,text).isDisplayed();
+    }
+
+    public boolean checkLinkWithTextExists(WebDriver driver, String linkText) throws Exception {
+        return getElementFromLinkText(driver,linkText).isDisplayed();
+    }
+
+    private WebElement getElementFromLinkText(WebDriver driver, String linkText) throws Exception {
+        return getElement(driver,By.linkText(linkText));
+    }
 }
