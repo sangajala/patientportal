@@ -123,8 +123,12 @@ public class loginPage extends Base {
 
 	public void loginToMeddBase() {
 
-		userName.sendKeys(prop.getProperty("username"));
-		passWord.sendKeys(prop.getProperty("password"));
+		loginToMeddBase(prop.getProperty("username"),prop.getProperty("password"));
+	}
+	public void loginToMeddBase(String username,String password) {
+
+		userName.sendKeys(username);
+		passWord.sendKeys(password);
 		utils.clickOnWebElement(driver,signIn);
 	}
 	/*

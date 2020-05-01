@@ -21,14 +21,13 @@ public class membershipsPage extends Base {
 
     }
 
-    public void membershipsPagedetails() {
+    public void membershipsPagedetails() throws InterruptedException {
         //details.isDisplayed();
-        try {
+
             details.isDisplayed();
             utils.waitToLoad();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+
 
     }
 }

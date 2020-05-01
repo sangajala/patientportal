@@ -73,8 +73,9 @@ public class navbarPage extends Base {
     }
 
 
-    public void gotoMenu(String menu) {
+    public void gotoMenu(String menu) throws InterruptedException {
 
+        utils.waitToLoad();
         try {
             WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
             if (menuLink.isDisplayed()) {
