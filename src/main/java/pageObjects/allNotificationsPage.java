@@ -14,11 +14,13 @@ public class allNotificationsPage extends Base {
     private @FindBy(xpath = "//h1[contains(text(),'Notifications')]")
     WebElement notificationTitle;
 
+    private @FindBy(xpath="//div[@class='page-content container-fluid ng-scope']/ul/li")
+    List<WebElement> countOfNotifications;
+
     public int getCountOfNotifiactions(WebDriver driver) {
         utils.waitForElementVisibility(driver, notificationTitle);
-        List<WebElement> count = driver.findElements(By.xpath("//div[@class='page-content container-fluid ng-scope']/ul/li"));
-        System.out.println("No of notifications are : " + count.size());
-        return count.size();
+        System.out.println("No of notifications are : " + countOfNotifications.size());
+        return countOfNotifications.size();
     }
 
 

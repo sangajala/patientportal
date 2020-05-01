@@ -17,7 +17,10 @@ public class membershipEnrollment extends Base {
     private @FindBy(xpath = "//button[contains(text(),'Apply for Membership')]")
     WebElement ApplyForMembershipButton;
     private @FindBy(xpath = "//h4[contains(text(),'Disclaimer')]")
-    WebElement DisclaimerTitle;
+    WebElement disclaimer;
+    private @FindBy(xpath = "//h4[contains(text(),'Fees')]")
+    WebElement fees;
+
     private @FindBy(xpath = "//input[@ng-model='checkbox3']")
     WebElement checkbox1;
     private @FindBy(xpath = "//input[@ng-model='marketing']")
@@ -34,10 +37,13 @@ public class membershipEnrollment extends Base {
 
     }
 
-    public boolean isMembershipPageDisplayed() {
+    public boolean isMembershipPageDisplayed(String text) {
 
-        return membershipTitle.isDisplayed();
-
+        if(membershipTitle.getText().equals(text))
+        {
+            return true;
+        }
+        return false;
     }
 
     public boolean ismonthlySchemeDisplayed() {
@@ -46,16 +52,28 @@ public class membershipEnrollment extends Base {
 
     }
 
-    public boolean isDisclaimerPageDisplayed() {
+    public boolean isDisclaimerPageDisplayed(String text1,String text2) {
 
-        return DisclaimerTitle.isDisplayed();
+       if(disclaimer.getText().equals(text1)) {
+           if (fees.getText().equals(text2)) {
+               return true;
+           }
+       }
+               return false;
 
-    }
+       }
 
-    public boolean isRegisterPageDisplayed() {
 
-        return RegisterTitle.isDisplayed();
 
+
+
+    public boolean isRegisterPageDisplayed(String text) {
+
+        if(RegisterTitle.getText().equals(text))
+        {
+            return true;
+        }
+        return false;
     }
 
 

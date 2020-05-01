@@ -29,10 +29,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/membership.feature"},
+		features = {"src/test/java/features/notifications.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		//tags = {"@login"}
+		//tags = {"@details"},
 		//loginMeddBase-Done,Faqpage-it is going to faqs sometimes and it is not counting no,logintoapplication-Done,
 		//loginScenario-Done,invoices-
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}

@@ -1,20 +1,20 @@
-Feature:Verify user can enroll for  monthly membership while Registration
-As a user
-  I will enroll for monthly membership while Registration
-  then I should be able to see monthly LGP membership scheme in membership page
+Feature:Verify Patient can enroll for  monthly membership while Registration
+
+  Patient will enroll for monthly membership while Registration
+  then Patient should be able to see monthly LGP membership scheme in membership page
 
   Scenario Outline:
-    Given As end user I was on login page
-    When I click on signup button
-    Then I should be navigated to invite code page and able to see "see our memberships scheme" option
-    When I click on see our membership scheme button
-    Then I should be navigated to membership page
-    When I click on LGP membership scheme button
-    Then I should be able to view monthly membership scheme
-    When I select monthly scheme and click on Apply for Membership button
-    Then I should be navigated to disclaimer page with "Disclaimer" and "Fees"
-    When I accept conditions and click on Apply for Membership
-    Then I should be navigated to register page with title "Register"
+    Given Patient was on login page
+    When Patient click on signup button
+    Then Patient should be navigated to invite code page and able to see "see our memberships scheme" option
+    When Patient click on see our membership scheme button
+    Then Patient should be navigated to membership page with "Memberships" title
+    When  Click on LGP membership scheme button
+    Then Patient should be able to view monthly membership scheme
+    When Patient select monthly scheme and click on Apply for Membership button
+    Then Patient should be navigated to disclaimer page with "Disclaimer" and "Fees"
+    When Patient accept conditions and click on Apply for Membership
+    Then Patient should be navigated to register page with title "Register"
     And provide below details for registration
 
       | Password            | <Password>            |
@@ -36,9 +36,13 @@ As a user
       | Verify invite code  |Bananaapps123$  |    sree    | lella     |  20 |   Aug | 1985 | lellasreelakshmiabc@gmail.com  |SL3 8DD |                    |Online Portal page is opened|
 
 
+@details
+Scenario:verify Patient can view membership details
 
-Scenario:As I subscribed for monthly membership scheme I can able to view the monthly membership details
-
-  #Given I logged in and I was on homePage
- # When  I click on "Memberships" in menu
-  #Then I should be able to view current monthly membership scheme in membership page
+  Given Patient was on homepage
+  When Patient clicks on "Memberships" in menu
+  Then he should be able to view the following details with title "Current Membership"
+    |Billing frequency: Monthly|
+    |Net Price: 50 £|
+    |  VAT: 0 £     |
+    |Gross Price: 50 £|

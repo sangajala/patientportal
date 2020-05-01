@@ -10,8 +10,9 @@ import utils.Base;
 public class notificationsSteps extends Base {
 
     int homePageCount = 0;
-    int notifCountBeforeBookingApp = 0;
-    int notifCountAfterBookingApp;
+    int notifCountBefore = 0;
+    int notifCountAfter=0;
+
 
     @Given("^Patient was on homepage$")
     public void patient_was_on_homepage() throws Throwable {
@@ -25,7 +26,7 @@ public class notificationsSteps extends Base {
     public void gets_the_count_of_notifications_by_accessing_notification_icon() throws Throwable {
         homepage.clickOnNotificationIcon();
         homepage.clickOnAllNotificationLink();
-        notifCountBeforeBookingApp = allnotificationspage.getCountOfNotifiactions(driver);
+        notifCountBefore = allnotificationspage.getCountOfNotifiactions(driver);
     }
 
     @Given("^gets the count of notifications in home page notification panel$")
@@ -53,20 +54,30 @@ public class notificationsSteps extends Base {
 
     @Then("^Patient should view appointment notification and invoice for newly booked appointment in notifications$")
     public void patient_should_view_appointment_notification_and_invoice_for_newly_booked_appointment_in_notifications() throws Throwable {
-        notifCountBeforeBookingApp = notifCountBeforeBookingApp + 2;
-        notifCountAfterBookingApp = allnotificationspage.getCountOfNotifiactions(driver);
-        System.out.println("Before booking " + notifCountBeforeBookingApp);
-        Assert.assertEquals(notifCountBeforeBookingApp, notifCountAfterBookingApp);
-        System.out.println("After booking " + notifCountAfterBookingApp);
+
+        System.out.println("Before booking " + notifCountBefore);
+        notifCountBefore= notifCountBefore + 2;
+        notifCountAfter = allnotificationspage.getCountOfNotifiactions(driver);
+        Assert.assertEquals(notifCountBefore, notifCountAfter);
+        System.out.println("After booking " + notifCountAfter);
     }
 
-    @Then("^Patient should not view appointment notification and invoice for cancelled appointment$")
-    public void patient_should_not_view_appointment_notification_and_invoice_for_cancelled_appointment() throws Throwable {
+    @Then("^Patient should not view appointment notification and invoice for cancelled appointment in all notifications$")
+    public void patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInAllNotifications() {
+        homepage.reload();
 
+        System.out.println("Before cancelling " + notifCountBefore);
+        //notifCountBefore= notifCountBefore - 2;
+        notifCountAfter = allnotificationspage.getCountOfNotifiactions(driver);
+        Assert.assertTrue(notifCountBefore>notifCountAfter);
+        System.out.println("After cancelling " + notifCountAfter);
     }
 
-    @Then("^Patient should not view appointment notification and invoice for newly booked appointment in notifications$")
-    public void patient_should_not_view_appointment_notification_and_invoice_for_newly_booked_appointment_in_notifications() throws Throwable {
+
+
+
+    @Then("^Patient should not view appointment notification and invoice for cancelled appointment in homepage$")
+    public void patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInHomepage() {
 
     }
 

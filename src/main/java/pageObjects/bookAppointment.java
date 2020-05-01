@@ -69,6 +69,10 @@ public class bookAppointment extends Base {
     private @FindBy(xpath = "//div[@ng-show='cancelConfirm']")
     WebElement cancelConfirmMsg;
 
+
+
+
+
     //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
         return bookingCompleteMsg;
@@ -236,19 +240,6 @@ public class bookAppointment extends Base {
     }
 
 
-         /*   if(payerType.isDisplayed()){
-                payerType.click();
-            }
-            else {
-                throw new Exception("Menu link not present "+menu);
-            }
-        }
-        catch (NoSuchFrameException e){
-            Assert.fail("Menu link not present "+menu);
-        }
-        catch (java.lang.Exception e){
-            Assert.fail("Menu link not present "+menu);
-        }*/
 
 }
 

@@ -65,7 +65,7 @@ public class Base {
 	public static invoicePage invoicepage;
 	public static membershipEnrollment membershipenrollment;
 	public static allNotificationsPage allnotificationspage;
-	
+	public static AppointmentDetails appointmentdetails;
 	
 public  WebDriver initializeDriver() throws IOException{
 		
@@ -131,6 +131,9 @@ public  WebDriver initializeDriver() throws IOException{
 	membershipspage=PageFactory.initElements(driver,membershipsPage.class);
 	membershipenrollment=PageFactory.initElements(driver,membershipEnrollment.class);
 	allnotificationspage=PageFactory.initElements(driver,allNotificationsPage.class);
+
+
+	 appointmentdetails=PageFactory.initElements(driver,AppointmentDetails.class);
 			return driver;
     		}
         

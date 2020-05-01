@@ -39,13 +39,24 @@ public class homePage extends Base {
 	private @FindBy(css ="i.icon.wb-bell") WebElement notificationIcon;
 	private @FindBy(linkText ="All notifications") WebElement AllNotificationLink;
 	private @FindBy(css ="span.icon.fa.fa-home") WebElement homePageIcon;
+	private @FindBy(xpath="//div[@class='panel-body']/ul/li") List<WebElement> notificationList;
+
+
+
+
+
+	public void clickOnfirstNotification()
+	{
+		notificationList.get(1).click();
+	}
+
 
 	public void clickOnNotificationIcon()
 	{
 		utils.clickOnWebElement( driver,notificationIcon);
 	}
-	public void clickOnAllNotificationLink()
-	{
+	public void clickOnAllNotificationLink() throws InterruptedException {
+		utils.waitToLoad();
 		utils.clickOnWebElement( driver,AllNotificationLink);
 	}
 	public void clickOnhomePageIcon()

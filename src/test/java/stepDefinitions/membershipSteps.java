@@ -9,68 +9,72 @@ import org.testng.Assert;
 import pageObjects.membershipEnrollment;
 import utils.Base;
 
+import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 
 import static utils.Base.loginpage;
 
 public class membershipSteps extends Base {
 
-    @Given("^As end user I was on login page$")
-    public void as_end_user_I_was_on_login_page() throws Throwable {
+
+    @Given("^Patient was on login page$")
+    public void patientWasOnLoginPage() throws IOException {
         initializeDriver();
         loginpage.NavigateToUrl();
     }
 
-    @When("^I click on signup button$")
-    public void i_click_on_signup_button() throws Throwable {
+
+    @When("^Patient click on signup button$")
+    public void patient_click_on_signup_button() throws Throwable {
         loginpage.clicksignupbutton();
     }
 
-    @Then("^I should be navigated to invite code page and able to see \"([^\"]*)\" option$")
-    public void iShouldBeNavigatedToInviteCodePageAndAbleToSeeOption(String arg0) throws Throwable {
+    @Then("^Patient should be navigated to invite code page and able to see \"([^\"]*)\" option$")
+    public void patientShouldBeNavigatedToInviteCodePageAndAbleToSeeOption(String arg0) throws Throwable {
         Assert.assertTrue(membershipenrollment.isSeeOurMembershipSchemeButtonDisplayed());
     }
 
-    @When("^I click on see our membership scheme button$")
-    public void iClickOnSeeOurMembershipSchemeButton() {
+    @When("^Patient click on see our membership scheme button$")
+    public void patientClickOnSeeOurMembershipSchemeButton() {
         membershipenrollment.clickonSeeOurMembershipSchemeButton();
 //utils.click(driver,membershipenrollment.seeOurMembershipSchemeButton);
     }
 
-    @Then("^I should be navigated to membership page$")
-    public void iShouldBeNavigatedToMembershipPage() {
-        Assert.assertTrue(membershipenrollment.isMembershipPageDisplayed());
+    @Then("^Patient should be navigated to membership page with \"([^\"]*)\" title$")
+    public void patientShouldBeNavigatedToMembershipPageWithTitle(String arg0) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isMembershipPageDisplayed(arg0));
     }
 
 
-    @When("^I click on LGP membership scheme button$")
-    public void i_click_on_LGP_membership_scheme_button() throws Throwable {
+    @When("^Click on LGP membership scheme button$")
+    public void click_on_LGP_membership_scheme_button() throws Throwable {
         membershipenrollment.clickonLGPScheme();
     }
 
-    @Then("^I should be able to view monthly membership scheme$")
-    public void i_should_be_able_to_view_monthly_membership_scheme() throws Throwable {
+    @Then("^Patient should be able to view monthly membership scheme$")
+    public void patient_should_be_able_to_view_monthly_membership_scheme() throws Throwable {
         Assert.assertTrue(membershipenrollment.ismonthlySchemeDisplayed());
     }
 
-    @Then("^I select monthly scheme and click on Apply for Membership button$")
-    public void i_select_monthly_scheme_and_click_on_Apply_for_Membership_button() throws Throwable {
+    @Then("^Patient select monthly scheme and click on Apply for Membership button$")
+    public void patient_select_monthly_scheme_and_click_on_Apply_for_Membership_button() throws Throwable {
         membershipenrollment.clickonApplyMembershipSchemeButton();
     }
 
-    @Then("^I should be navigated to disclaimer page with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void iShouldBeNavigatedToDisclaimerPageWithAnd(String arg0, String arg1) throws Throwable {
-        Assert.assertTrue(membershipenrollment.isDisclaimerPageDisplayed());
+    @Then("^Patient should be navigated to disclaimer page with \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void patientShouldBeNavigatedToDisclaimerPageWithAnd(String arg0, String arg1) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isDisclaimerPageDisplayed(arg0, arg1));
     }
 
-    @When("^I accept conditions and click on Apply for Membership$")
-    public void i_accept_conditions_and_click_on_Apply_for_Membership() throws Throwable {
+    @When("^Patient accept conditions and click on Apply for Membership$")
+    public void patient_accept_conditions_and_click_on_Apply_for_Membership() throws Throwable {
         membershipenrollment.clickonCheckboxesandApplyMembership();
     }
 
-    @Then("^I should be navigated to register page with title \"([^\"]*)\"$")
-    public void iShouldBeNavigatedToRegisterPageWithTitle(String arg0) throws Throwable {
-        Assert.assertTrue(membershipenrollment.isRegisterPageDisplayed());
+    @Then("^Patient should be navigated to register page with title \"([^\"]*)\"$")
+    public void patientShouldBeNavigatedToRegisterPageWithTitle(String arg0) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isRegisterPageDisplayed(arg0));
     }
 
     @Then("^provide below details for registration$")
@@ -87,10 +91,27 @@ public class membershipSteps extends Base {
 
     }
 
-    @Then("^I should be able to register successfully$")
+    @Then("^patient should be able to register successfully$")
     public void i_should_be_able_to_register_successfully() throws Throwable {
 
     }
 
 
+    @Then("^he should be able to view the following details with title \"([^\"]*)\"$")
+    public void heShouldBeAbleToViewTheFollowingDetailsWithTitle(String arg0, List<String> dataTable) throws Throwable {
+       Assert.assertTrue(membershipspage.isCurrentMembershipDisplayed(arg0));
+
+
+        boolean flag = false;
+        for (String data : dataTable) {
+            if (membershipspage.areMembershipDetailsDisplayed(data)) {
+                flag = true;
+            }
+            Assert.assertTrue(flag);
+        }
+
+    }
+
+
 }
+

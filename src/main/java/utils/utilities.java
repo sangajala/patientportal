@@ -217,7 +217,7 @@ public class utilities {
 	
 	//wait
 	public void waitToLoad() throws InterruptedException{
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 
 	

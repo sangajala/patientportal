@@ -54,14 +54,12 @@ public class bookAppointmentSteps extends Base {
         // Write code here that turns the phrase above into concrete actions
         //  bookappointment.choosePayerType(pType);
         utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
-
     }
 
     @And("^Appointment Type as \"([^\"]*)\"$")
     public void appointmentTypeAs(String AType) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.chooseAppointmentType(AType);
-
     }
 
 
@@ -69,8 +67,6 @@ public class bookAppointmentSteps extends Base {
     public void patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.navigateApp(arg0,bookappointment.getApptmtFiltersMsg())  ;
-
-
     }
 
     @When("^Patient clicks on Search button$")

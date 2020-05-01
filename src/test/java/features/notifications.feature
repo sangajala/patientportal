@@ -31,8 +31,9 @@ Feature:Verifying notifications generated under notifications icon and in home p
   Scenario:Patient can not view appointment notification and invoice of existing appointment in notifications
   when he/she cancel that appointment
     When Patient was on homepage
-    And gets the count of notifications by accessing notification icon
     And gets the count of notifications in home page notification panel
+    And gets the count of notifications by accessing notification icon
+    When Patient clicks on Online Portal
     When Patient clicks on Existing Appointments
     Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed."
     And gets the count of existing appointments
@@ -42,7 +43,7 @@ Feature:Verifying notifications generated under notifications icon and in home p
     Then Cancel Info Page with a message "Cancellation fee" should be displayed
     When Patient clicks on Cancel Appointment button on Cancel Info page
     Then Appointment successfully cancelled message "successfully cancelled"should be displayed
-    Then Patient clicks on HomePage icon
-    Then Patient should not view appointment notification and invoice for cancelled appointment
+    When Patient clicks on Online Portal
+    Then Patient should not view appointment notification and invoice for cancelled appointment in homepage
     When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
-    Then Patient should not view appointment notification and invoice for newly booked appointment in notifications
+    Then Patient should not view appointment notification and invoice for cancelled appointment in all notifications
