@@ -39,11 +39,8 @@ public class membershipEnrollment extends Base {
 
     public boolean isMembershipPageDisplayed(String text) {
 
-        if(membershipTitle.getText().equals(text))
-        {
-            return true;
-        }
-        return false;
+        return membershipTitle.getText().equals(text);
+
     }
 
     public boolean ismonthlySchemeDisplayed() {
@@ -58,6 +55,7 @@ public class membershipEnrollment extends Base {
            if (fees.getText().equals(text2)) {
                return true;
            }
+
        }
                return false;
 

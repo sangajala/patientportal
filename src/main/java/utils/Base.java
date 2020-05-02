@@ -66,6 +66,7 @@ public class Base {
 	public static membershipEnrollment membershipenrollment;
 	public static allNotificationsPage allnotificationspage;
 	public static AppointmentDetails appointmentdetails;
+	public static ExistingAppointments existingappointments;
 	
 public  WebDriver initializeDriver() throws IOException{
 		
@@ -97,8 +98,6 @@ public  WebDriver initializeDriver() throws IOException{
 //			System.setProperty("webdriver.chrome.driver",".\\drivers\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 		 driver = new ChromeDriver(options);
-
-		 
 		}
 		else if(browserName.equals("firefox")){
 			// uncomment below line in windows pc
@@ -124,16 +123,15 @@ public  WebDriver initializeDriver() throws IOException{
     		homepage = PageFactory.initElements(driver, homePage.class);
     		navbarpage = PageFactory.initElements(driver, navbarPage.class);
     		faqpage = PageFactory.initElements(driver, faqpage.class);
-	invoicepage= PageFactory.initElements(driver, invoicePage.class);
-	accountdetailspage= PageFactory.initElements(driver, accountdetailsPage.class);
-	medicalHistoryPage=PageFactory.initElements(driver, medicalHistoryPage.class);
-	bookappointment=PageFactory.initElements(driver, bookAppointment.class);
-	membershipspage=PageFactory.initElements(driver,membershipsPage.class);
-	membershipenrollment=PageFactory.initElements(driver,membershipEnrollment.class);
-	allnotificationspage=PageFactory.initElements(driver,allNotificationsPage.class);
-
-
-	 appointmentdetails=PageFactory.initElements(driver,AppointmentDetails.class);
+    		invoicepage= PageFactory.initElements(driver, invoicePage.class);
+			accountdetailspage= PageFactory.initElements(driver, accountdetailsPage.class);
+			medicalHistoryPage=PageFactory.initElements(driver, medicalHistoryPage.class);
+			bookappointment=PageFactory.initElements(driver, bookAppointment.class);
+			membershipspage=PageFactory.initElements(driver,membershipsPage.class);
+			membershipenrollment=PageFactory.initElements(driver,membershipEnrollment.class);
+			allnotificationspage=PageFactory.initElements(driver,allNotificationsPage.class);
+			existingappointments=PageFactory.initElements(driver,ExistingAppointments.class);
+			appointmentdetails=PageFactory.initElements(driver,AppointmentDetails.class);
 			return driver;
     		}
         

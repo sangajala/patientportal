@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+
 import cucumber.api.java.en.When;
 import utils.Base;
 
@@ -19,10 +20,8 @@ public void i_enter_password_as(String pw) throws Throwable {
 
 @When("^I click on log out button$")
 public void i_click_on_log_out_button() throws Throwable {
-	
 	homepage.ClickUserIcon();
 	homepage.ClickLogOut();
-    
 }
 
 }

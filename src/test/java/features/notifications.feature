@@ -36,7 +36,7 @@ Feature:Verifying notifications generated under notifications icon and in home p
     When Patient clicks on Online Portal
     When Patient clicks on Existing Appointments
     Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed."
-    And gets the count of existing appointments
+    And  gets the count of existing appointments
     When Patient clicks on "1" available existing Appointment details
     Then Cancel Appointment button should be visible
     When Patient clicks Cancel Appointment button

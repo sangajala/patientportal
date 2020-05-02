@@ -10,12 +10,12 @@ import utils.Base;
 import java.util.List;
 
 public class bookAppointment extends Base {
-
     //Page Objects
     private WebElement payerType;
     private WebElement appointmentType;
-    //  private @FindBy(xpath = "//ul[@class='list-group list-group-bordered ng-scope']/li") WebElement searchResultsList;
-    // private  @FindBy(xpath = "//*[id=\"ng-app\"]/body/div[1]/div[2]/div[4]/div[2]/ul[1]/li") WebElement list;
+    private WebElement serviceType;
+    private WebElement selectservicesType;
+
     private List<WebElement> searchResultsList;
 
 
@@ -47,7 +47,6 @@ public class bookAppointment extends Base {
     WebElement preferredTimeDate;
     private @FindBy(xpath = "//button[contains(text(),'Select site')]")
     WebElement selectSiteBtn;
-    //    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
     private @FindBy(xpath = "//input[@name='date']")
     WebElement selectedDate;
     private @FindBy(xpath = "//button[contains(text(),'Confirm Time & Date')]")
@@ -55,6 +54,8 @@ public class bookAppointment extends Base {
     private @FindBy(xpath = "//button[contains(text(),'Cancel Appointment')]")
     WebElement cancelApptmtBtn;
 
+    private @FindBy(xpath = "//p[contains(text(),'Please select your required services')]")
+    WebElement serviceMessage;
 
     private @FindBy(xpath = "//p[contains(text(),'In the list below you will find your existing appo')]")
     WebElement existingApptmtMsg;
@@ -65,11 +66,12 @@ public class bookAppointment extends Base {
     // WebElement for Cancel Appointment on cancel info page
     private @FindBy(xpath = "//button[contains(text(),'Cancel appointment')]")
     WebElement cancelApptmtBtn2;
-    //Webelement for cancel appointment confirmation message
+
     private @FindBy(xpath = "//div[@ng-show='cancelConfirm']")
     WebElement cancelConfirmMsg;
 
-
+    private @FindBy(xpath = "//button[contains(text(), 'Next')]")
+    WebElement nextBtn;
 
 
 
@@ -85,7 +87,9 @@ public class bookAppointment extends Base {
     public WebElement getApptmtDetMsg() {
         return apptmtDetMsg;
     }
-
+    /////
+    public WebElement getServiceMessage(){ return serviceMessage; }
+    //
     public WebElement getApptmtFiltersMsg() {
         return apptmtFiltersMsg;
     }
@@ -128,27 +132,40 @@ public class bookAppointment extends Base {
     }
 
     public void choosePayerType(String pType) {
-        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
-//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
         String toPass = "//li[contains(text(),'"+pType+"')]";
-        System.out.println("Received value = "+pType);
-        System.out.println("Find element String = "+toPass);
         payerType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, payerType);
     }
 
     public WebElement choosePayerType2(String pType) {
-        //make sure the pType which is sent through examples in feature file  is exactly the same as it is displayed in the webpage
-        //payerType = driver.findElement(By.xpath("//li[contains(text(),'" + pType + "')]"));
-//        payerType = driver.findElement(By.xpath("//li[text(),'" + pType + "')]"));
+
         String toPass = "//li[contains(text(),'"+pType+"')]";
-        System.out.println("Received value = "+pType);
-        System.out.println("Find element String = "+toPass);
         return driver.findElement(By.xpath(toPass));
 
     }
 
+    public  void chooseServiceType(String sType)  {
+        String toPass = "//li[contains(text(),'"+sType+"')]";
+        serviceType= driver.findElement(By.xpath(toPass));
+        utils.clickOnWebElement(driver, serviceType);
+
+    }
+
+    public void selectsrcivecfronServicetype(String selcetserType){
+        selectservicesType= driver.findElement(By.xpath("//li[contains(text(),'"+selcetserType+"')]"));
+        try {
+            utils.waitToLoad();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        utils.clickOnWebElement(driver, selectservicesType);
+
+        nextBtn.click();
+
+    }
+
+
+//--------------------//
 
     public void chooseAppointmentType(String aType) {
         try {
@@ -167,8 +184,7 @@ public class bookAppointment extends Base {
         } catch (Exception e) {
             Assert.fail("WebElement not displayed");
         }
-//        utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
-//        utils.waitForElementPresence(driver,By.xpath("//*[@id=\"ng-app\"]/body/div/div[2]/div[4]/div[2]/ul/li[4]/h5"));
+
         Assert.assertTrue(utils.checkMessageIsDisplayed(driver, arg0));
     }
 
@@ -197,13 +213,12 @@ public class bookAppointment extends Base {
         }
         WebElement element = driver.findElement(By.xpath("//li[contains(text(), '" + clinician + "')]"));
         System.out.println("in choose prefereed clinician " + element);
-        // element.click();
         utils.clickOnWebElement(driver, element);
 
     }
 
     public void choosePreferredSiteAs(String site) {
-        //not selecting by site as there is only one site (work location)
+
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -234,12 +249,10 @@ public class bookAppointment extends Base {
         }
         confirmTimeNDateBtn.click();
 
-        //JavascriptExecutor executor = (JavascriptExecutor)driver;
-        //executor.executeScript("arguments[0].click();", confirmTimeNDateBtn);
 
     }
 
 
 
-}
 
+}

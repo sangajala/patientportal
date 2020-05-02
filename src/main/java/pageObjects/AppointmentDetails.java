@@ -6,16 +6,16 @@ import utils.Base;
 
 public class AppointmentDetails extends Base {
 
-    private @FindBy(xpath = "//h4[@class='ng-binding')]")
+    private @FindBy(xpath = "//h4[@class='ng-binding']")
     WebElement appointmentType;
-    private @FindBy(xpath = "//p[@class='ng-binding')]")
+    private @FindBy(xpath = "//p[@class='ng-binding']")
     WebElement appointmentSchedule;
-    private @FindBy(xpath = "//strong[@class='ng-binding')]")
+    private @FindBy(xpath = "//strong[@class='ng-binding']")
     WebElement appointmentSite;
 
-    private @FindBy(xpath = "//span[@ng-show='appointmentData.Clinician.FullName')]")
+    private @FindBy(xpath = "//span[@ng-show='appointmentData.Clinician.FullName']")
     WebElement appointmentClinician;
-    private @FindBy(xpath = "//span[@ng-show='appointmentData.Invoice.TotalGross')]")
+    private @FindBy(xpath = "//span[@ng-show='appointmentData.Invoice.TotalGross']")
     WebElement appointmentPrice;
 
 public String getAppointType(){

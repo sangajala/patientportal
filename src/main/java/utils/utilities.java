@@ -144,9 +144,40 @@ public class utilities {
 		
 		
 		/*****************Verify element is displayed ***************/
-		
-		
-		
+		public void clickOnText(WebDriver driver,String text) throws Exception {
+			getElementFromText(driver,text).click();
+		}
+
+	public WebElement getElementFromText(WebDriver driver,String text) throws Exception {
+		return getElement(driver,By.xpath("//span[contains(text(),'"+text+"')]"));
+	}
+
+
+	public WebElement getElement(WebDriver driver,By by) throws Exception {
+		List<WebElement> elements = driver.findElements(by);
+		if(elements.size()==0){
+			throw new Exception("Given element not present");
+		}
+		else {
+			return elements.get(0);
+		}
+
+	}
+	public boolean checkSectionWithTextExists(WebDriver driver,String text) throws Exception {
+		return getElementFromText(driver,text).isDisplayed();
+	}
+
+
+	public List<WebElement> getElements(WebDriver driver,By by) throws Exception {
+		List<WebElement> elements = driver.findElements(by);
+		if (elements.size() == 0) {
+			throw new Exception("Given element not present");
+		} else {
+			return elements;
+		}
+	}
+
+
 		public static ExpectedCondition<Boolean> isElementDisplayed(final WebElement element){
 			return new ExpectedCondition<Boolean> (){
 				public Boolean apply(WebDriver driver){

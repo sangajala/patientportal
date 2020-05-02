@@ -57,12 +57,6 @@ utilities util=new utilities();
 		driver.navigate().to(prop.getProperty("url"));
 		
 	}
-	
-	
-	
-	
-	
-	
 
 	public WebElement enterUserName(){
 		return userName;

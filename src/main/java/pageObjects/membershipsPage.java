@@ -14,7 +14,7 @@ public class membershipsPage extends Base {
 
     private @FindBy(xpath = "//h2[contains(text(),'Current Membership')]")
     WebElement currentMembershipTitle;
-    private @FindBy(xpath = "//span[@class='ng-binding']")
+    private @FindBy(xpath = "//div[@class='panel-body']/span")
     List<WebElement> membershipDetails;
 
     public boolean areMembershipDetailsDisplayed(String text) {

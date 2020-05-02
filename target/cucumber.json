@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1537900,
+              "duration": 1188800,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 29,
-        "name": "Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel",
-        "description": "when he/she book new appointment",
-        "id": "verifying-notifications-generated-under-notifications-icon-and-in-home-page-notification-panel;patient-can-view-appointment-notification-and-invoice-in-notifications-icon-and--in-home-page-notifications-panel;;2",
+        "line": 27,
+        "name": "Patient can view the recently booked appointment in the homepage",
+        "description": "",
+        "id": "view-appointment-notification-in-meddbase-patient-portal;patient-can-view-the-recently-booked-appointment-in-the-homepage;;2",
         "after": [
           {
             "result": {
-              "duration": 773875900,
+              "duration": 731047500,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 11982904700,
+              "duration": 12488536200,
               "status": "passed"
             },
-            "line": 9,
+            "line": 7,
             "name": "Patient was on homepage",
             "match": {
               "location": "notificationsSteps.patient_was_on_homepage()"
@@ -46,58 +46,22 @@
           },
           {
             "result": {
-              "duration": 31596100,
+              "duration": 159315700,
               "status": "passed"
             },
-            "line": 10,
-            "name": "gets the count of notifications in home page notification panel",
+            "line": 8,
+            "name": "Patient clicks on Book Appointment",
             "match": {
-              "location": "notificationsSteps.gets_the_count_of_notifications_in_home_page_notification_panel()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3734148000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "gets the count of notifications by accessing notification icon",
-            "match": {
-              "location": "notificationsSteps.gets_the_count_of_notifications_by_accessing_notification_icon()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3402496800,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "Patient clicks on Online Portal",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnOnlinePortal()"
+              "location": "bookAppointmentSteps.patient_clicks_on_Book_Appointment()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 240378300,
+              "duration": 433182100,
               "status": "passed"
             },
-            "line": 13,
-            "name": "Patient clicks on Book Appointment",
-            "match": {
-              "location": "bookAppointmentSteps.patient_clicks_on_Book_Appointment()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 333651600,
-              "status": "passed"
-            },
-            "line": 14,
+            "line": 9,
             "name": "chooses Payer Type as \"Patient\"",
             "match": {
               "arguments": [
@@ -115,10 +79,10 @@
           },
           {
             "result": {
-              "duration": 836571800,
+              "duration": 878230200,
               "status": "passed"
             },
-            "line": 15,
+            "line": 10,
             "name": "Appointment Type as \"Consultation\"",
             "match": {
               "arguments": [
@@ -136,10 +100,10 @@
           },
           {
             "result": {
-              "duration": 3161648500,
+              "duration": 3126635500,
               "status": "passed"
             },
-            "line": 16,
+            "line": 11,
             "name": "Patient should be navigated to Appointment filters page and see a message \"Please use the filters if you wish to refine your search\"",
             "match": {
               "arguments": [
@@ -154,10 +118,10 @@
           },
           {
             "result": {
-              "duration": 260599200,
+              "duration": 199573800,
               "status": "passed"
             },
-            "line": 17,
+            "line": 12,
             "name": "Patient clicks on Search button",
             "match": {
               "location": "bookAppointmentSteps.patientClicksOnSearchButton()"
@@ -166,10 +130,10 @@
           },
           {
             "result": {
-              "duration": 1087781200,
+              "duration": 1155009500,
               "status": "passed"
             },
-            "line": 18,
+            "line": 13,
             "name": "Appointment search Results should be displayed",
             "match": {
               "location": "bookAppointmentSteps.appointmentSearchResultsShouldBeDisplayed()"
@@ -178,10 +142,10 @@
           },
           {
             "result": {
-              "duration": 182060400,
+              "duration": 189470700,
               "status": "passed"
             },
-            "line": 19,
+            "line": 14,
             "name": "Patient clicks on \"1\" available appointment details",
             "match": {
               "arguments": [
@@ -196,10 +160,10 @@
           },
           {
             "result": {
-              "duration": 3175364200,
+              "duration": 3146874600,
               "status": "passed"
             },
-            "line": 20,
+            "line": 15,
             "name": "Patient sees a message \"The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours.\" on Appointment Details page",
             "match": {
               "arguments": [
@@ -214,10 +178,22 @@
           },
           {
             "result": {
-              "duration": 199960200,
+              "duration": 197015700,
               "status": "passed"
             },
-            "line": 21,
+            "line": 16,
+            "name": "get appointment details",
+            "match": {
+              "location": "appointmentNotificationSteps.get_appointment_details()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 143295200,
+              "status": "passed"
+            },
+            "line": 17,
             "name": "Patient clicks on Book Appointment button on Details Page",
             "match": {
               "location": "bookAppointmentSteps.patientClicksOnBookAppointmentButtonOnDetailsPage()"
@@ -226,10 +202,10 @@
           },
           {
             "result": {
-              "duration": 3125513500,
+              "duration": 3114596500,
               "status": "passed"
             },
-            "line": 22,
+            "line": 18,
             "name": "Appointment Booking Complete confirmation message \"was successfully completed\" should be displayed",
             "match": {
               "arguments": [
@@ -244,10 +220,10 @@
           },
           {
             "result": {
-              "duration": 3313578300,
+              "duration": 3262554500,
               "status": "passed"
             },
-            "line": 23,
+            "line": 19,
             "name": "Patient clicks on Online Portal",
             "match": {
               "location": "bookAppointmentSteps.patientClicksOnOnlinePortal()"
@@ -256,138 +232,28 @@
           },
           {
             "result": {
-              "duration": 608138200,
+              "duration": 1005079700,
               "status": "passed"
             },
-            "line": 24,
-            "name": "Patient should view appointment notification and invoice for newly booked appointment in homepage notifications panel",
+            "line": 20,
+            "name": "Patient clicks on \"1\" notification in notification panel",
             "match": {
-              "location": "notificationsSteps.patientShouldViewAppointmentNotificationAndInvoiceForNewlyBookedAppointmentInHomepageNotificationsPanel()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3639565300,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu",
-            "match": {
-              "location": "notificationsSteps.patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 91673100,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "Patient should view appointment notification and invoice for newly booked appointment in notifications",
-            "match": {
-              "location": "notificationsSteps.patient_should_view_appointment_notification_and_invoice_for_newly_booked_appointment_in_notifications()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 142400,
-              "status": "passed"
-            },
-            "match": {
-              "location": "BeforeActionsHook.setUp()"
-            }
-          }
-        ],
-        "line": 31,
-        "name": "Patient can not view appointment notification and invoice of existing appointment in notifications",
-        "description": "when he/she cancel that appointment",
-        "id": "verifying-notifications-generated-under-notifications-icon-and-in-home-page-notification-panel;patient-can-not-view-appointment-notification-and-invoice-of-existing-appointment-in-notifications",
-        "after": [
-          {
-            "result": {
-              "duration": 723540800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "AfterActionsHook.tearDown(Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 10874993600,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "Patient was on homepage",
-            "match": {
-              "location": "notificationsSteps.patient_was_on_homepage()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 26303700,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "gets the count of notifications in home page notification panel",
-            "match": {
-              "location": "notificationsSteps.gets_the_count_of_notifications_in_home_page_notification_panel()"
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 19
+                }
+              ],
+              "location": "appointmentNotificationSteps.patient_clicks_on_notification_in_notification_panel(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3739696600,
+              "duration": 3154929900,
               "status": "passed"
             },
-            "line": 35,
-            "name": "gets the count of notifications by accessing notification icon",
-            "match": {
-              "location": "notificationsSteps.gets_the_count_of_notifications_by_accessing_notification_icon()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3350630900,
-              "status": "passed"
-            },
-            "line": 36,
-            "name": "Patient clicks on Online Portal",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnOnlinePortal()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1565428300,
-              "status": "passed"
-            },
-            "line": 37,
-            "name": "Patient clicks on Existing Appointments",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnExistingAppointments()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3199465800,
-              "status": "passed"
-            },
-            "line": 38,
+            "line": 21,
             "name": "Patient should be able to view recently Booked Appointments with a message \"In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed.\"",
             "match": {
               "arguments": [
@@ -402,22 +268,11 @@
           },
           {
             "result": {
-              "duration": 24498100,
-              "status": "passed"
+              "duration": 41436400,
+              "error_message": "java.lang.AssertionError: Element not clickable[[ChromeDriver: chrome on WINDOWS (5c7cf01790d994c43de22b0826d9a5ca)] -\u003e xpath: //ul[@class\u003d\u0027list-group list-group-bordered ng-scope\u0027]/li]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat utils.utilities.clickOnWebElement(utilities.java:267)\r\n\tat pageObjects.bookAppointment.clickOnSpecificAvailableAppointment(bookAppointment.java:203)\r\n\tat stepDefinitions.bookAppointmentSteps.patientClicksOnAvailableExistingAppointmentDetails(bookAppointmentSteps.java:131)\r\n\tat ✽.When Patient clicks on \"1\" available existing Appointment details(src/test/java/features/appointmentNotification.feature:22)\r\n",
+              "status": "failed"
             },
-            "line": 39,
-            "name": "gets the count of existing appointments",
-            "match": {
-              "location": "bookAppointmentSteps.getsTheCountOfExistingAppointments()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 103708200,
-              "status": "passed"
-            },
-            "line": 40,
+            "line": 22,
             "name": "Patient clicks on \"1\" available existing Appointment details",
             "match": {
               "arguments": [
@@ -432,132 +287,28 @@
           },
           {
             "result": {
-              "duration": 44819300,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 41,
-            "name": "Cancel Appointment button should be visible",
+            "line": 23,
+            "name": "Patient should be able to view the recently booked appointment",
             "match": {
-              "location": "bookAppointmentSteps.cancelAppointmentButtonShouldBeVisible()"
+              "location": "appointmentNotificationSteps.patient_should_be_able_to_view_the_recently_booked_appointment()"
             },
             "keyword": "Then "
-          },
+          }
+        ],
+        "tags": [
           {
-            "result": {
-              "duration": 226374000,
-              "status": "passed"
-            },
-            "line": 42,
-            "name": "Patient clicks Cancel Appointment button",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksCancelAppointmentButton()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3194845600,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "Cancel Info Page with a message \"Cancellation fee\" should be displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Cancellation fee",
-                  "offset": 33
-                }
-              ],
-              "location": "bookAppointmentSteps.cancelInfoPageWithAMessageShouldBeDisplayed(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 182233700,
-              "status": "passed"
-            },
-            "line": 44,
-            "name": "Patient clicks on Cancel Appointment button on Cancel Info page",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnCancelAppointmentButtonOnCancelInfoPage()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 3187990100,
-              "status": "passed"
-            },
-            "line": 45,
-            "name": "Appointment successfully cancelled message \"successfully cancelled\"should be displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "successfully cancelled",
-                  "offset": 44
-                }
-              ],
-              "location": "bookAppointmentSteps.appointmentSuccessfullyCancelledMessageShouldBeDisplayed(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3377210400,
-              "status": "passed"
-            },
-            "line": 46,
-            "name": "Patient clicks on Online Portal",
-            "match": {
-              "location": "bookAppointmentSteps.patientClicksOnOnlinePortal()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 47200,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "Patient should not view appointment notification and invoice for cancelled appointment in homepage",
-            "match": {
-              "location": "notificationsSteps.patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInHomepage()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 3468777400,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu",
-            "match": {
-              "location": "notificationsSteps.patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1023856000,
-              "error_message": "java.lang.AssertionError: expected [17] but found [16]\r\n\tat org.testng.Assert.fail(Assert.java:94)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:513)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:135)\r\n\tat org.testng.Assert.assertEquals(Assert.java:116)\r\n\tat org.testng.Assert.assertEquals(Assert.java:389)\r\n\tat org.testng.Assert.assertEquals(Assert.java:399)\r\n\tat stepDefinitions.notificationsSteps.patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInAllNotifications(notificationsSteps.java:72)\r\n\tat ✽.Then Patient should not view appointment notification and invoice for cancelled appointment in all notifications(src/test/java/features/notifications.feature:49)\r\n",
-              "status": "failed"
-            },
-            "line": 49,
-            "name": "Patient should not view appointment notification and invoice for cancelled appointment in all notifications",
-            "match": {
-              "location": "notificationsSteps.patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInAllNotifications()"
-            },
-            "keyword": "Then "
+            "line": 5,
+            "name": "@first"
           }
         ]
       }
     ],
-    "name": "Verifying notifications generated under notifications icon and in home page notification panel",
-    "description": "when booking and cancelling appointments and when receiving message from admin portal.",
-    "id": "verifying-notifications-generated-under-notifications-icon-and-in-home-page-notification-panel",
+    "name": "View Appointment Notification in MedDbase Patient portal",
+    "description": "",
+    "id": "view-appointment-notification-in-meddbase-patient-portal",
     "keyword": "Feature",
-    "uri": "src/test/java/features/notifications.feature"
+    "uri": "src/test/java/features/appointmentNotification.feature"
   }
 ]

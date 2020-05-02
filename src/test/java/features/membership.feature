@@ -23,13 +23,11 @@ Feature:Verify Patient can enroll for  monthly membership while Registration
       | Day                 | <Day>                 |
       | Month               | <Month>               |
       | Year                | <Year>                |
-      | Email Address        | <Email address>       |
+      | Email Address       |  <Email address>     |
       | Postcode            | <Postcode>            |
       | Mobile Phone Number (required) | <Mobile Phone Number> |
     And click on Next button
     Then should  be able to see the "<Error Message>"
-
-
 
     Examples:
       | Test cases          | Password       | First Name | Last Name | Day | Month | Year |          Email address         | Postcode | Mobile Phone Number |Error Message|

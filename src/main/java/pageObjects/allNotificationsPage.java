@@ -17,6 +17,8 @@ public class allNotificationsPage extends Base {
     private @FindBy(xpath="//div[@class='page-content container-fluid ng-scope']/ul/li")
     List<WebElement> countOfNotifications;
 
+
+
     public int getCountOfNotifiactions(WebDriver driver) {
         utils.waitForElementVisibility(driver, notificationTitle);
         System.out.println("No of notifications are : " + countOfNotifications.size());

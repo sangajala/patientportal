@@ -3,7 +3,7 @@ Feature:  View Appointment Notification in MedDbase Patient portal
 
 
    @first
-    Scenario:Patient can view the recently booked appointment in the homepage
+    Scenario Outline:Patient can view the recently booked appointment in the homepage
      Given Patient was on homepage
      When Patient clicks on Book Appointment
      And  chooses Payer Type as "<Payer type>"
@@ -22,8 +22,6 @@ Feature:  View Appointment Notification in MedDbase Patient portal
      When Patient clicks on "1" available existing Appointment details
      Then Patient should be able to view the recently booked appointment
 
-  @sriram
-  Scenario: Appointment notification icon and the count validation
-    When then reads the count of the icon
-    When The patient logs off and login again
-    And  The count in the icon should be increased by one
+    Examples:
+     | Payer type | Appointment type |
+     | Patient    | Consultation |
