@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -110,9 +111,10 @@ invoicepage.patientclicksonfirstinvoice();
         invoicepage.patientclicksonfirstinvoice();
     }
 
+    @When("^Then Patient is navigated to Invoice Details page with number \"([^\"]*)\"$")
+    public void thenPatientIsNavigatedToInvoiceDetailsPageWithNumber(String inv) throws Throwable {
+        invoicepage.selectParticularInvoice(inv);
+    }
 
-    // @Then("^Patient should able to see \"([^\"]*)\"$")
-   // public void patientShouldAbleToSee(String c) throws Throwable {
-    //    Assert.assertTrue(invoicepage.creditDetails(c));
-   // }
+
 }

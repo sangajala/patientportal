@@ -26,16 +26,6 @@ import com.relevantcodes.extentreports.LogStatus;
  * 
  */
 public class utilities {
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
     /********************Explicit Wait/Expected Conditions*******************************/
 	
 	public void waitForElementPresence(WebDriver driver,By element)
@@ -211,13 +201,13 @@ public class utilities {
 		}
 		return valueList;
 	}
-	
-	    
-
-	
 	//wait
 	public void waitToLoad() throws InterruptedException{
-		Thread.sleep(5000);
+		try {
+			Thread.sleep(3000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	

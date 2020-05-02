@@ -28,10 +28,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/regloginMeddBase.feature"},
+		features = {"src/test/java/features/invoice.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@Reg"},
+		tags = {"@invoice"},
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 

@@ -35,10 +35,10 @@ public class invoicePage extends Base {
    WebElement InvoiceDetails;
     public @FindBy(xpath = "//div[@class='ng-binding ng-scope']")
     WebElement itemDetails;
-    public @FindBy(xpath = "//div[@class='col-md-6 ng-binding'][1]")
-    WebElement CreditDetails;
-    public @FindBy(xpath = "//div[@class='col-md-6 ng-binding'][2]]")
-    WebElement DebitDetails;
+    public @FindBy(xpath = "//h4[contains(text(),'Creditor details')]")
+    WebElement CreditorDetails;
+    public @FindBy(xpath = "//h4[contains(text(),'Debtor details')]")
+    WebElement DebtorDetails;
 
 
 
@@ -61,69 +61,43 @@ public class invoicePage extends Base {
 
     public void patientclicksonfirstinvoice() {
         utils.waitForElementClickable(driver,firstinvoice);
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         firstinvoice.click();
     }
 
     public void emailbutton() {
+        utils.waitForElementPresence(driver, By.xpath( "//button[contains(@class,'btn btn-primary ng-scope')][2]"));
         emailbtn.click();
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
     public void emailsentsuccessfullymsg() {
-        emailsentmessage.isDisplayed();
+
         utils.waitForElementPresence(driver, By.xpath("//div[contains(@class,'alert alert-success dark ng-scope')]"));
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-
+        emailsentmessage.isDisplayed();
     }
     public void selectbackbutton() {
-
-        utils.waitForElementClickable(driver, backbutn);
-        // WebElement element=driver.findElement(By.xpath("//button[contains(text(),'Back')]"));
-        //Actions actions=new Actions((driver));
-        //actions.moveToElement(element).click().perform();
         try {
             Thread.sleep(3000);
-            backbutn.click();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-       // backbutn.click();
+        backbutn.click();
     }
     public void patientnavigatesbacktohomepage()
     {
         firstinvoice.isDisplayed();
         Assert.assertTrue(firstinvoice.isDisplayed(),"msgnotdisplayed");
     }
-
+   public void selectParticularInvoice(String inv) throws InterruptedException {
+       utils.waitToLoad();
+    WebElement invoice=driver.findElement(By.xpath("//li[contains(text(),'"+inv+"')]"));
+      //utils.waitToLoad();
+    invoice.click();
+   }
    public boolean invoiceDetails(String details){
-       try {
-           Thread.sleep(3000);
-       } catch (Exception e) {
-           e.printStackTrace();
-       }
+       utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-binding']"));
+       System.out.println(InvoiceDetails.getText());
         return InvoiceDetails.getText().contains(details);
    }
-  // public boolean creditDetails(String c){
-      // return CreditDetails.getText().contains(c);
-  // }
-   // public boolean debitDetails(String d){
-      //  return DebitDetails.getText().contains(d);
-   // }
 
     public void patiendclickonunpaidinvoice(){
         utils.waitForElementPresence(driver,By.xpath("//div[@class='page ng-scope']/div[4]/div/button[2]"));
@@ -139,12 +113,7 @@ public class invoicePage extends Base {
     public void patiendclickonpaidinvoice(){
         utils.waitForElementPresence(driver,By.xpath("//div[@class='page ng-scope']/div[4]/div/button[3]"));
         System.out.println("before wait for element clickable" );
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         paidInvoice.click();
     }
 
-}
+   }

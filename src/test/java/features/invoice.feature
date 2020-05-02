@@ -28,22 +28,23 @@ Feature:Patient Portal Invoices
      Given Patient logged in
      When  Patient clicks on "Invoices" in menu
      When patient clicks on unpaid invoices
-     When Patient select first UnPaid invoice that appears on the search result
+     When Then Patient is navigated to Invoice Details page with number "1186"
      Then Patient is able to see "<Invoice Details>"
      Examples:
     |  Invoice Details   |
     |25/04/2020 - No: 1186|
 
-    @paidInvoice
+  @paidInvoice
     Scenario Outline: Patient is able to see Invoice Details for Paid invoice
       Given  Patient logged in
       When  Patient clicks on "Invoices" in menu
       When patient clicks on paid invoices
-      When Patient select first Paid invoice that appears on the search result
+      When Then Patient is navigated to Invoice Details page with number "872"
       Then Patient is able to see "<Invoice Details>"
       Examples:
         |  Invoice Details   |
-        |23/03/2020 - No: 872    |
+        | 23/03/2020 - No: 872|
+
 
   Scenario Outline: Patient is able to see Invoice when book an appointment
     Given Patient logged in

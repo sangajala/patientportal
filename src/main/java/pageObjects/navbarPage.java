@@ -76,6 +76,7 @@ public class navbarPage extends Base {
     public void gotoMenu(String menu) {
 
         try {
+            utils.waitForElementPresence(driver,By.xpath("//span[contains(text(),'" + menu + "')]"));
             WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
             if (menuLink.isDisplayed()) {
                 menuLink.click();

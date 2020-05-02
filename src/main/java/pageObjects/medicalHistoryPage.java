@@ -5,12 +5,13 @@ import org.openqa.selenium.support.FindBy;
 import utils.Base;
 
 import java.io.IOException;
+import java.util.List;
 
 public class medicalHistoryPage extends Base {
     public @FindBy(xpath = "//a[contains(text(),'Home')]")
     WebElement homelink;
     //public @FindBy(xpath = " //div[@class='alert alert-info alert-icon ng-scope']")
-   // WebElement msgdisplay;
+    // WebElement msgdisplay;
     public @FindBy(xpath = "//span[contains(text(),'Prescription (Acute)')]")
     WebElement Prescriptionacute;
     public @FindBy(xpath = "//*[@id=\"ng-app\"]/body/div/div[2]/div[4]/ul/li[1]/h5/span")
@@ -20,6 +21,9 @@ public class medicalHistoryPage extends Base {
     public @FindBy(xpath = "//span[@class='ng-binding']")
     WebElement prescriptiondetails;
 
+    public @FindBy(xpath = "//span[@ng-bind-html='medicalHistoryItem.Label']")
+    List<WebElement> options;
+
     public medicalHistoryPage() throws IOException {
         super();
     }
@@ -28,52 +32,62 @@ public class medicalHistoryPage extends Base {
 
         homelink.click();
     }
-   public void ClickonPrescription() {
-      utils.waitForElementClickable(driver,Prescriptionacute);
-       Prescriptionacute.click();
+    public void ClickonPrescription() {
+        utils.waitForElementClickable(driver,Prescriptionacute);
+        Prescriptionacute.click();
 
-   }
-   public void prescriptionmessagedisplayed()
-   {
-       try {
-           utils.waitToLoad();
-           prescriptionlist1.isDisplayed();
-           prescriptionlist2.isDisplayed();
-           utils.waitToLoad();
-       }catch (InterruptedException e) {
-           e.printStackTrace();
-       }
-
-   }
-   public void viewprescriptiondetails()
-   { try {
-       prescriptiondetails.isDisplayed();
-       utils.waitToLoad();
-   } catch (InterruptedException e){
-       e.printStackTrace();
-   }
-   }
-   public void clickonprescription1()
-   { try {
-
-
-       prescriptionlist1.click();
-       utils.waitToLoad();
-   } catch (InterruptedException e){
-       e.printStackTrace();
-   }
-   }
-   // public void messagedisplayed() {
-
-        //msgdisplay.isDisplayed();
-        //try {
-           // msgdisplay.isDisplayed();
-            //utils.waitToLoad();
-
-        //} catch (InterruptedException e) {
-           // e.printStackTrace();
-        //}
     }
+    public void prescriptionmessagedisplayed()
+    {
+        try {
+            utils.waitToLoad();
+            prescriptionlist1.isDisplayed();
+            prescriptionlist2.isDisplayed();
+            utils.waitToLoad();
+        }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void viewprescriptiondetails()
+    { try {
+        prescriptiondetails.isDisplayed();
+        utils.waitToLoad();
+    } catch (InterruptedException e){
+        e.printStackTrace();
+    }
+    }
+    public void clickonprescription1()
+    { try {
+
+
+        prescriptionlist1.click();
+        utils.waitToLoad();
+    } catch (InterruptedException e){
+        e.printStackTrace();
+    }
+    }
+
+    public boolean isOptionAvailable(String option) {
+        for(WebElement element:options){
+            if(element.getText().equals(option)){
+                return true;
+            }
+        }
+        return  false;
+
+    }
+    // public void messagedisplayed() {
+
+    //msgdisplay.isDisplayed();
+    //try {
+    // msgdisplay.isDisplayed();
+    //utils.waitToLoad();
+
+    //} catch (InterruptedException e) {
+    // e.printStackTrace();
+    //}
+}
 
 
 

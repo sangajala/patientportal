@@ -4,8 +4,11 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.testng.Assert;
 import pageObjects.medicalHistoryPage;
 import utils.Base;
+
+import java.util.List;
 
 public class medicalHistorySteps extends Base {
     @Given("^Patient launch the browser$")
@@ -58,9 +61,9 @@ public class medicalHistorySteps extends Base {
     // }
 
 
-     @When("^Patient click on Home link$")
+    @When("^Patient click on Home link$")
     public void patient_click_on_Home_link() throws Throwable {
-    medicalHistoryPage.Clickonhomelink();
+        medicalHistoryPage.Clickonhomelink();
 
     }
 
@@ -71,20 +74,18 @@ public class medicalHistorySteps extends Base {
 
     @When("^patient navigate to \"([^\"]*)\" menu$")
     public void patientNavigateToMenu(String menu) throws Throwable {
-        System.out.println(" Menu Item : "+menu);
+        System.out.println(" Menu Item : " + menu);
         navbarpage.gotoMenu(menu);
     }
 
     @And("^Patient should be able to view the documents related to his Medical History$")
-    public void patientShouldBeAbleToViewTheDocumentsRelatedToHisMedicalHistory()
-    {
+    public void patientShouldBeAbleToViewTheDocumentsRelatedToHisMedicalHistory() {
 
 
     }
 
     @And("^Patient clicks on Prescription \\(Acute\\)$")
-    public void patientClicksOnPrescriptionAcute()
-    {
+    public void patientClicksOnPrescriptionAcute() {
         medicalHistoryPage.ClickonPrescription();
     }
 
@@ -94,15 +95,34 @@ public class medicalHistorySteps extends Base {
     }
 
     @When("^Patient clicks on first Prescription on the list$")
-    public void patientClicksOnFirstPrescriptionOnTheList()
-    {
+    public void patientClicksOnFirstPrescriptionOnTheList() {
         medicalHistoryPage.clickonprescription1();
     }
 
     @Then("^Patient can view the Prescription  details$")
-    public void patientCanViewThePrescriptionDetails()
-    {
+    public void patientCanViewThePrescriptionDetails() {
         medicalHistoryPage.viewprescriptiondetails();
     }
-}
 
+    @Given("^patient with all full medical history logs into the portal$")
+    public void patientWithAllFullMedicalHistoryLogsIntoThePortal() {
+        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"),prop.getProperty("full_medical_history_password"));
+    }
+
+    @Then("^the medical history page should have below options$")
+    public void theMedicalHistoryPageShouldHaveBelowOptions(List<String> dataTable) throws InterruptedException {
+
+        utils.waitToLoad();
+        boolean flag = false;
+        for(String option:dataTable){
+            if(medicalHistoryPage.isOptionAvailable(option)){
+                flag= true;
+            }
+
+        }
+        Assert.assertTrue(flag);
+
+    }
+
+
+}
