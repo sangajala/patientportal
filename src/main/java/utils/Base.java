@@ -34,6 +34,9 @@ import pageObjects.*;
  */
 public class Base {
 
+	public static final String USERNAME="roopa34";
+	public static final String AUTOMATE_KEY="DwSmUzndiirmqdy9bhVf";
+
 	public utilities utils = new utilities();
 	
 	//class reference
@@ -85,8 +88,16 @@ public  WebDriver initializeDriver() throws IOException{
    		 
    	
    		String browserName = prop.getProperty("browser");
+
+   		 if(browserName.equals("browserfactory")){
+			 DesiredCapabilities caps = new DesiredCapabilities();
+			 caps.setCapability("os_version", "11");
+			 caps.setCapability("device", "iPhone 8 Plus");
+			 caps.setCapability("real_mobile", "true");
+			 caps.setCapability("browserstack.local", "false");
+		 }
    		
-		if(browserName.equals("chrome")){
+		else if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			options.addArguments("disable-infobars");

@@ -90,8 +90,8 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
     Then Patient clicks on Existing Appointments
-    Then the count of existing appointments should increase
-    Then Patient clicks on Online Portal
+   Then the count of existing appointments should increase
+   Then Patient clicks on Online Portal
     Then the count of upcoming appointments should increase
 
     Examples:
