@@ -5,6 +5,7 @@ package utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +18,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,9 +36,10 @@ import pageObjects.*;
  */
 public class Base {
 
-	public static final String USERNAME="roopa34";
-	public static final String AUTOMATE_KEY="DwSmUzndiirmqdy9bhVf";
-
+	private static final int MAX_TIMEOUT = 60;
+	public static final String USERNAME = "salesuser1";
+	public static final String AUTOMATE_KEY = "GWXF5zYmqxr1FJtu7XyA";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	public utilities utils = new utilities();
 	
 	//class reference
@@ -90,14 +93,25 @@ public  WebDriver initializeDriver() throws IOException{
    		String browserName = prop.getProperty("browser");
 
    		 if(browserName.equals("browserfactory")){
+//			 DesiredCapabilities caps = new DesiredCapabilities();
+//			 caps.setCapability("os", "Windows");
+//			 caps.setCapability("os_version", "10");
+//			 caps.setCapability("browser", "IE");
+//			 caps.setCapability("browser_version", "11.0");
+//			 caps.setCapability("browserstack.local", "false");
+//			 caps.setCapability("browserstack.selenium_version", "3.5.2");
+
 			 DesiredCapabilities caps = new DesiredCapabilities();
-			 caps.setCapability("os_version", "11");
-			 caps.setCapability("device", "iPhone 8 Plus");
-			 caps.setCapability("real_mobile", "true");
+			 caps.setCapability("os", "Windows");
+			 caps.setCapability("os_version", "10");
+			 caps.setCapability("browser", "Edge");
+			 caps.setCapability("browser_version", "81.0");
+			 caps.setCapability("resolution", "1280x1024");
 			 caps.setCapability("browserstack.local", "false");
+			 caps.setCapability("browserstack.selenium_version", "3.5.2");
+			 driver = new RemoteWebDriver(new URL(URL),caps);
 		 }
-   		
-		else if(browserName.equals("chrome")){
+   		 else  if(browserName.equals("chrome")){
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			options.addArguments("disable-infobars");
@@ -133,6 +147,7 @@ public  WebDriver initializeDriver() throws IOException{
     		homepage = PageFactory.initElements(driver, homePage.class);
     		navbarpage = PageFactory.initElements(driver, navbarPage.class);
     		faqpage = PageFactory.initElements(driver, faqpage.class);
+    		medicalHistoryPage = PageFactory.initElements(driver, medicalHistoryPage.class);
     		bookappointment = PageFactory.initElements(driver, bookAppointment.class); //added this line
 			return driver;
     		}

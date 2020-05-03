@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import utils.Base;
 
 import java.io.IOException;
+import java.util.List;
 
 public class medicalHistoryPage extends Base {
     public @FindBy(xpath = "//a[contains(text(),'Home')]")
@@ -19,6 +20,9 @@ public class medicalHistoryPage extends Base {
     WebElement prescriptionlist2;
     public @FindBy(xpath = "//span[@class='ng-binding']")
     WebElement prescriptiondetails;
+
+    public @FindBy(xpath = "//span[@ng-bind-html='medicalHistoryItem.Label']")
+    List<WebElement> options;
 
     public medicalHistoryPage() throws IOException {
         super();
@@ -63,7 +67,33 @@ public class medicalHistoryPage extends Base {
        e.printStackTrace();
    }
    }
-   // public void messagedisplayed() {
+
+    public boolean isOptionAvailable(String option) {
+        for(WebElement element:options){
+            if(element.getText().equals(option)){
+                return true;
+            }
+        }
+        return  false;
+
+    }
+
+    public void gotoSection(String section) throws Exception {
+        utils.clickOnText(driver,section);
+    }
+
+    public boolean checkRecordExist(String title) throws Exception {
+        return utils.checkSectionWithTextExists(driver,title);
+    }
+
+
+
+    public boolean checkLinkExist(String link) throws Exception {
+            return utils.checkLinkWithTextExists(driver,link);
+    }
+
+
+    // public void messagedisplayed() {
 
         //msgdisplay.isDisplayed();
         //try {

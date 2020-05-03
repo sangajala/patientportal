@@ -67,7 +67,7 @@ public class bookAppointment extends Base {
     // WebElement for Cancel Appointment on cancel info page
     private @FindBy(xpath = "//button[contains(text(),'Cancel appointment')]")
     WebElement cancelApptmtBtn2;
-
+    //Webelement for cancel appointment confirmation message
     private @FindBy(xpath = "//div[@ng-show='cancelConfirm']")
     WebElement cancelConfirmMsg;
 
@@ -185,7 +185,7 @@ public class bookAppointment extends Base {
         } catch (Exception e) {
             Assert.fail("WebElement not displayed");
         }
-
+        //utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-scope']"));
         Assert.assertTrue(utils.checkMessageIsDisplayed(driver, arg0));
     }
 
@@ -214,12 +214,13 @@ public class bookAppointment extends Base {
         }
         WebElement element = driver.findElement(By.xpath("//li[contains(text(), '" + clinician + "')]"));
         System.out.println("in choose prefereed clinician " + element);
+        // element.click();
         utils.clickOnWebElement(driver, element);
 
     }
 
     public void choosePreferredSiteAs(String site) {
-
+        //not selecting by site as there is only one site (work location)
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -250,11 +251,25 @@ public class bookAppointment extends Base {
         }
         confirmTimeNDateBtn.click();
 
+        //JavascriptExecutor executor = (JavascriptExecutor)driver;
+        //executor.executeScript("arguments[0].click();", confirmTimeNDateBtn);
 
     }
 
 
-
+         /*   if(payerType.isDisplayed()){
+                payerType.click();
+            }
+            else {
+                throw new Exception("Menu link not present "+menu);
+            }
+        }
+        catch (NoSuchFrameException e){
+            Assert.fail("Menu link not present "+menu);
+        }
+        catch (java.lang.Exception e){
+            Assert.fail("Menu link not present "+menu);
+        }*/
 
 }
 
