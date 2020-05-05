@@ -24,11 +24,10 @@ public class AfterActionsHook {
 		
 		WebDriver driver = Base.getDriver();
 		
-		if(scenario.isFailed()){
-//			 byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			//	scenario.embed(screenshotBytes, "image/png");
-				
-			}
+		//if(scenario.isFailed()){
+			 byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				scenario.embed(screenshotBytes, "image/png");
+			//}
 			if (driver != null){
 				driver.quit();
 			} 
