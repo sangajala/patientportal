@@ -3,6 +3,11 @@
   <groupId>bdd</groupId>
   <artifactId>patient.portal.regression</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+	</properties>
   
   <dependencies>
 
@@ -191,6 +196,7 @@
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 
 					</suiteXmlFiles>
+
 				</configuration>
 
 

@@ -52,7 +52,7 @@ public class loginPage extends Base {
 	
 	
 	public void NavigateToUrl() throws IOException {
-		//initializeDriver();
+		initializeDriver();
 		driver.navigate().to(prop.getProperty("url"));
 		
 	}
