@@ -60,7 +60,7 @@ public class BrowserFactory {
                 caps.setCapability("browser_version", "81.0");
                 caps.setCapability("os", "OS X");
                 caps.setCapability("os_version", "Catalina");
-                caps.setCapability("resolution", "1024x768");
+                caps.setCapability("resolution", "1920x1080");
                 caps.setCapability("name", "Bstack-[Java] Sample Test");
 
 
