@@ -29,7 +29,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/appointmentNotification.feature"},
+		features = {"src/test/java/features/membership.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
 		//tags = {"@details"},

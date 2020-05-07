@@ -1,5 +1,5 @@
-Feature:Verifying notifications generated under notifications icon and in home page notification panel
-  when booking and cancelling appointments and when receiving message from admin portal.
+Feature:Verifying notifications are generated when booking and cancelling appointments and verifying
+  incoming messages under notifications icon
 
 
 
@@ -7,7 +7,7 @@ Feature:Verifying notifications generated under notifications icon and in home p
   when he/she book new appointment
 
     Given Patient was on homepage
-    And gets the count of notifications in home page notification panel
+    And gets the number on notification icon
     And gets the count of notifications by accessing notification icon
     When Patient clicks on Online Portal
     And Patient clicks on Book Appointment
@@ -21,7 +21,7 @@ Feature:Verifying notifications generated under notifications icon and in home p
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
     When Patient clicks on Online Portal
-    Then Patient should view appointment notification and invoice for newly booked appointment in homepage notifications panel
+    Then the number on notification icon should be increased by refreshing the page
     When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
     Then Patient should view appointment notification and invoice for newly booked appointment in notifications
     Examples:
@@ -30,8 +30,8 @@ Feature:Verifying notifications generated under notifications icon and in home p
 
   Scenario:Patient can not view appointment notification and invoice of existing appointment in notifications
   when he/she cancel that appointment
-    When Patient was on homepage
-    And gets the count of notifications in home page notification panel
+    Given Patient was on homepage
+    And gets the number on notification icon
     And gets the count of notifications by accessing notification icon
     When Patient clicks on Online Portal
     When Patient clicks on Existing Appointments
@@ -44,6 +44,11 @@ Feature:Verifying notifications generated under notifications icon and in home p
     When Patient clicks on Cancel Appointment button on Cancel Info page
     Then Appointment successfully cancelled message "successfully cancelled"should be displayed
     When Patient clicks on Online Portal
-    Then Patient should not view appointment notification and invoice for cancelled appointment in homepage
+    Then the number on notification icon should be decreased by refreshing the page
     When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
     Then Patient should not view appointment notification and invoice for cancelled appointment in all notifications
+
+    Scenario: Patient can view incoming message in notifications
+      Given Patient was on homepage
+      When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
+      Then Patient should be able to view incoming message notification

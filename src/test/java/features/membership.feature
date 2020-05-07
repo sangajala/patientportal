@@ -27,11 +27,11 @@ Feature:Verify Patient can enroll for  monthly membership while Registration
       | Postcode            | <Postcode>            |
       | Mobile Phone Number (required) | <Mobile Phone Number> |
     And click on Next button
-    Then should  be able to see the "<Error Message>"
+    Then User should be in Confirm details page
 
     Examples:
-      | Test cases          | Password       | First Name | Last Name | Day | Month | Year |          Email address         | Postcode | Mobile Phone Number |Error Message|
-      | Verify invite code  |Bananaapps123$  |    sree    | lella     |  20 |   Aug | 1985 | lellasreelakshmiabc@gmail.com  |SL3 8DD |                    |Online Portal page is opened|
+      | Test cases          | Password       | First Name | Last Name | Day | Month | Year |          Email address         | Postcode | Mobile Phone Number |
+      | Verify invite code  |Bananaapps123$  |    sree    | lella     |  20 |   Aug | 1985 | lellasreelakshmi123@gmail.com |SL3 8DD |     07543571654        |
 
 
 @details

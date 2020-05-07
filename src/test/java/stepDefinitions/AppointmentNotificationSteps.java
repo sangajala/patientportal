@@ -12,7 +12,7 @@ import utils.Base;
 import java.util.ArrayList;
 import java.util.List;
 
-public class appointmentNotificationSteps extends Base {
+public class AppointmentNotificationSteps extends Base {
 
 
 
@@ -30,22 +30,23 @@ public class appointmentNotificationSteps extends Base {
         {
             System.out.println(data);
         }
-
     }
 
     @When("^Patient clicks on \"([^\"]*)\" notification in notification panel$")
     public void patient_clicks_on_notification_in_notification_panel(String arg1) throws Throwable {
-        homepage.reload();
-       homepage.clickOnfirstNotification();
+        homepage.toReloadPage();
+        homepage.clickOnfirstNotification();
     }
 
-    @Then("^Patient should be able to view the recently booked appointment$")
-    public void patient_should_be_able_to_view_the_recently_booked_appointment() throws Throwable {
 
-        for (String data : appntDetails) {
-         Assert.assertTrue(existingappointments.isAppointmentDataPresent(data));
+    @Then("^Patient should be able to view the recently booked appointment in the home page$")
+    public void patientShouldBeAbleToViewTheRecentlyBookedAppointmentInTheHomePage() throws Exception {
+
+       for (String data : appntDetails) {
+            Assert.assertTrue(existingappointments.isAppointmentDataPresent(data));
 
         }
+
     }
 }
 

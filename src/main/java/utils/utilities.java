@@ -20,6 +20,10 @@ import org.testng.Assert;
 
 import com.relevantcodes.extentreports.LogStatus;
 
+
+
+import static utils.Base.getDriver;
+
 /**
  * @author Niharika
  *
@@ -164,6 +168,7 @@ public class utilities {
 
 	}
 	public boolean checkSectionWithTextExists(WebDriver driver,String text) throws Exception {
+
 		return getElementFromText(driver,text).isDisplayed();
 	}
 
@@ -294,4 +299,34 @@ public class utilities {
 
 		}
 	}
+	public void reload(WebDriver driver) {
+		// remember reference to current html root element
+		final WebElement htmlRoot = getDriver().findElement(By.tagName("html"));
+
+		// the refresh seems to sometimes be asynchronous, so this sometimes just kicks off the refresh,
+		// but doesn't actually wait for the fresh to finish
+		getDriver().navigate().refresh();
+
+		// verify page started reloading by checking that the html root is not present anymore
+		final long startTime = System.currentTimeMillis();
+		final long maxLoadTime = TimeUnit.SECONDS.toMillis(20);
+		boolean startedReloading = false;
+		do {
+			try {
+				startedReloading = !htmlRoot.isDisplayed();
+			} catch (Exception e) {
+				startedReloading = true;
+			}
+		} while (!startedReloading && (System.currentTimeMillis() - startTime < maxLoadTime));
+
+		if (!startedReloading) {
+			throw new IllegalStateException("Page did not start reloading in " + maxLoadTime + "ms");
+		}
+
+		// verify page finished reloading
+		//verify();
+	}
+
+
+
 }

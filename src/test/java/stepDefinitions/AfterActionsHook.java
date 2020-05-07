@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import utils.Base;
+import utils.BrowserFactory;
 
 /**
  * @author Niharika
@@ -24,14 +26,15 @@ public class AfterActionsHook {
 		
 		WebDriver driver = Base.getDriver();
 		
-		/*if(scenario.isFailed()){
+		if(scenario.isFailed()){
 			 byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshotBytes, "image/png");
 				
 			}
 			if (driver != null){
 				driver.quit();
-			} */
+
+			}
 		
 		Base.tearDown();
 		

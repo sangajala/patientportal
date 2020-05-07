@@ -20,7 +20,7 @@ Feature:  View Appointment Notification in MedDbase Patient portal
      And Patient clicks on "1" notification in notification panel
      Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed."
      When Patient clicks on "1" available existing Appointment details
-     Then Patient should be able to view the recently booked appointment
+     Then Patient should be able to view the recently booked appointment in the home page
 
     Examples:
      | Payer type | Appointment type |

@@ -28,6 +28,7 @@ public class loginPage extends Base {
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
 utilities util=new utilities();
+	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']") WebElement confirm;
 	
 	public loginPage() throws IOException {
 		super();
@@ -125,15 +126,10 @@ utilities util=new utilities();
 		passWord.sendKeys(prop.getProperty("password"));
 		utils.clickOnWebElement(driver,signIn);
 	}
-	/*
-	
-	public void LoginToApp(String username,String password){
-		enterUsername(username);
-		enterPassword(password);
-		ClickOnSignin();
-		
-	} */
-	
+	public boolean confirmButton(){
+		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
+		return confirm.isDisplayed();
+	}
 	
 	
 	

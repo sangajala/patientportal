@@ -15,7 +15,7 @@ import java.util.Map;
 
 import static utils.Base.loginpage;
 
-public class membershipSteps extends Base {
+public class MembershipSteps extends Base {
 
 
     @Given("^Patient was on login page$")
@@ -91,9 +91,9 @@ public class membershipSteps extends Base {
 
     }
 
-    @Then("^patient should be able to register successfully$")
-    public void i_should_be_able_to_register_successfully() throws Throwable {
-
+    @Then("^User should be in Confirm details page$")
+    public void userShouldBeInConfirmDetailsPage() {
+        Assert.assertTrue(loginpage.confirmButton());
     }
 
 

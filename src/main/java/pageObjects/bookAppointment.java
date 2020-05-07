@@ -200,6 +200,7 @@ public class bookAppointment extends Base {
     }
 
     public void clickOnSpecificAvailableAppointment(int pos) {
+        searchResultsList = getsearchResults();
         utils.clickOnWebElement(driver, searchResultsList.get(pos - 1));
 
     }

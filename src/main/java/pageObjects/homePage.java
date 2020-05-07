@@ -14,7 +14,7 @@ import org.openqa.selenium.support.How;
 import org.testng.Assert;
 import utils.Base;
 
-import static com.sun.javaws.JnlpxArgs.verify;
+
 
 
 public class homePage extends Base {
@@ -42,12 +42,13 @@ public class homePage extends Base {
 	private @FindBy(xpath="//div[@class='panel-body']/ul/li") List<WebElement> notificationList;
 
 
-
+	private @FindBy(css ="span.badge.badge-danger.up.ng-binding") WebElement NotificationIcon;
 
 
 	public void clickOnfirstNotification()
 	{
-		notificationList.get(1).click();
+		utils.clickOnWebElement( driver,notificationList.get(0));
+
 	}
 
 
@@ -62,6 +63,16 @@ public class homePage extends Base {
 	public void clickOnhomePageIcon()
 	{
 		utils.clickOnWebElement( driver,homePageIcon);
+	}
+
+	public int getNoOnNotificationIcon()
+	{
+		utils.waitForElementVisibility(driver,NotificationIcon);
+		String count=NotificationIcon.getText();
+		System.out.println("The no is   "+count);
+		int no;
+		no = Integer.parseInt(count);
+		return no;
 	}
 
 	public homePage() throws IOException {
@@ -138,36 +149,13 @@ public class homePage extends Base {
 	}
 
 
+public void toReloadPage()
+{
+	utils.reload(driver);
+}
 
 
 
-	public void reload() {
-		// remember reference to current html root element
-		final WebElement htmlRoot = getDriver().findElement(By.tagName("html"));
-
-		// the refresh seems to sometimes be asynchronous, so this sometimes just kicks off the refresh,
-		// but doesn't actually wait for the fresh to finish
-		getDriver().navigate().refresh();
-
-		// verify page started reloading by checking that the html root is not present anymore
-		final long startTime = System.currentTimeMillis();
-		final long maxLoadTime = TimeUnit.SECONDS.toMillis(20);
-		boolean startedReloading = false;
-		do {
-			try {
-				startedReloading = !htmlRoot.isDisplayed();
-			} catch (Exception e) {
-				startedReloading = true;
-			}
-		} while (!startedReloading && (System.currentTimeMillis() - startTime < maxLoadTime));
-
-		if (!startedReloading) {
-			throw new IllegalStateException("Page did not start reloading in " + maxLoadTime + "ms");
-		}
-
-		// verify page finished reloading
-		verify();
-	}
 
 
 }
