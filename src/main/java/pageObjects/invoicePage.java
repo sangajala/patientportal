@@ -53,14 +53,19 @@ public class invoicePage extends Base {
         try {
             Thread.sleep(3000);
         } catch (Exception e) {
-            Allinvoice.click();
             e.printStackTrace();
-
         }
+            Allinvoice.click();
+
     }
 
     public void patientclicksonfirstinvoice() {
         utils.waitForElementClickable(driver,firstinvoice);
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         firstinvoice.click();
     }
 
@@ -90,7 +95,6 @@ public class invoicePage extends Base {
    public void selectParticularInvoice(String inv) throws InterruptedException {
        utils.waitToLoad();
     WebElement invoice=driver.findElement(By.xpath("//li[contains(text(),'"+inv+"')]"));
-      //utils.waitToLoad();
     invoice.click();
    }
    public boolean invoiceDetails(String details){
@@ -98,15 +102,13 @@ public class invoicePage extends Base {
        System.out.println(InvoiceDetails.getText());
         return InvoiceDetails.getText().contains(details);
    }
-
+    public boolean itemDetails(String details){
+        utils.waitForElementPresence(driver,By.xpath("//div[@class='ng-binding ng-scope']"));
+        System.out.println(itemDetails.getText());
+        return itemDetails.getText().contains(details);
+    }
     public void patiendclickonunpaidinvoice(){
-        utils.waitForElementPresence(driver,By.xpath("//div[@class='page ng-scope']/div[4]/div/button[2]"));
-        System.out.println("before wait for element clickable" );
-        try {
-            Thread.sleep(3000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        utils.waitForElementClickable(driver,unpaidinvoice);
         unpaidinvoice.click();
     }
 

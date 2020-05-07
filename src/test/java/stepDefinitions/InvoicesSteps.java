@@ -117,4 +117,8 @@ invoicepage.patientclicksonfirstinvoice();
     }
 
 
+    @Then("^Patient should able to see \"([^\"]*)\"$")
+    public void patientShouldAbleToSee(String details) throws Throwable {
+        Assert.assertTrue(invoicepage.itemDetails(details));
+    }
 }

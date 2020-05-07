@@ -45,7 +45,7 @@ Feature:Patient Portal Invoices
         |  Invoice Details   |
         | 23/03/2020 - No: 872|
 
-
+@reg
   Scenario Outline: Patient is able to see Invoice when book an appointment
     Given Patient logged in
     When Patient clicks on Book Appointment
@@ -66,9 +66,9 @@ Feature:Patient Portal Invoices
     When Patient clicks on "Invoices" in menu
     And patient clicks on unpaid invoices
     And Patient select first UnPaid invoice that appears on the search result
-    Then Patient is able to see "<Appointment type>"
+    Then Patient should able to see "<Appointment type>"
 
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
-      | Patient    | Health Screen     | Any Clinician | Work location | Afternoon   | 05/05/2020 |
+      | Patient    | Health Screen     | Any Clinician | Work location | Afternoon   | 10/05/2020 |
      # | Insurer    | Consultation     | Kaaru kaaru    | Work Location | Afternoon | 03/01/2020 |

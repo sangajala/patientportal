@@ -38,29 +38,6 @@ public class medicalHistorySteps extends Base {
         navbarpage.VerifyBookAppointment();
 
     }
-    //   @When("^Patient clicks on Medical History from the left panel$")
-    //public void patient_clicks_on_Medical_History_from_the_left_panel() throws Throwable {
-//navbarpage.ClickMedicalHistory();
-    //}
-
-    @Then("^Patient  must be navigated to Medical History Page$")
-    //public void patient_must_be_navigated_to_Medical_History_Page() throws Throwable {
-    // utilities u = new utilities();
-    //u.waitForElementPresence(driver, By.xpath("//h1[contains(text(),'Medical History')]"));
-    //Assert.assertTrue(MedicalHistoryPage.checkMessageIsDisplayed("No results"));
-    //medicalHistoryPage.messagedisplayed();
-    //}
-
-
-    //@Then("^Patient should be able to view the documents related to his Medical History$")
-    //public void patient_should_be_able_to_view_the_documents_related_to_his_Medical_History() throws Throwable {
-    //utilities u = new utilities();
-
-    //// u.waitForElementPresence(driver, By.xpath("//h4[contains(text(),'No results')]"));
-    //Assert.assertTrue(MedicalHistoryPage.checkMessageIsDisplayed("No results"));
-    // }
-
-
     @When("^Patient click on Home link$")
     public void patient_click_on_Home_link() throws Throwable {
         medicalHistoryPage.Clickonhomelink();
@@ -106,23 +83,40 @@ public class medicalHistorySteps extends Base {
 
     @Given("^patient with all full medical history logs into the portal$")
     public void patientWithAllFullMedicalHistoryLogsIntoThePortal() {
-        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"),prop.getProperty("full_medical_history_password"));
+        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"), prop.getProperty("full_medical_history_password"));
     }
 
     @Then("^the medical history page should have below options$")
     public void theMedicalHistoryPageShouldHaveBelowOptions(List<String> dataTable) throws InterruptedException {
 
-        utils.waitToLoad();
+        // utils.waitToLoad();
         boolean flag = false;
-        for(String option:dataTable){
-            if(medicalHistoryPage.isOptionAvailable(option)){
-                flag= true;
-            }
-
+        for (String option : dataTable) {
+            Assert.assertTrue((medicalHistoryPage.isOptionAvailable(option)));
         }
-        Assert.assertTrue(flag);
 
     }
 
+
+    @Then("^he should see record with title \"([^\"]*)\"$")
+    public void heShouldSeeRecordWithTitle(String title) throws Throwable {
+        if(!title.equals(""))
+            Assert.assertTrue(medicalHistoryPage.checkRecordExist(title));
+
+    }
+
+    @When("^he navigate to \"([^\"]*)\"$")
+    public void heNavigateTo(String title) throws Throwable {
+        medicalHistoryPage.gotoSection(title);
+    }
+
+    @Then("^he should see record with detail \"([^\"]*)\"$")
+    public void heShouldSeeRecordWithDetail(String detail) throws Throwable {
+        if (detail.equalsIgnoreCase("download")) {
+            Assert.assertTrue(medicalHistoryPage.checkLinkExist(detail));
+        } else {
+            Assert.assertTrue(medicalHistoryPage.checkRecordExist(detail));
+        }
+    }
 
 }
