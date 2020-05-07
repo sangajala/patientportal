@@ -71,4 +71,3 @@ Feature:Patient Portal Invoices
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
       | Patient    | Health Screen     | Any Clinician | Work location | Afternoon   | 10/05/2020 |
-     # | Insurer    | Consultation     | Kaaru kaaru    | Work Location | Afternoon | 03/01/2020 |
