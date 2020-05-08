@@ -35,7 +35,7 @@ import utils.utilities;
         features = {"src/test/java/features/medicalHistory.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-        tags = {"@medicalhistory"},
+
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
         //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
