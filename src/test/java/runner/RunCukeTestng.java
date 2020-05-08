@@ -1,11 +1,12 @@
 /**
- * 
+ *
  */
 package runner;
 
 
-
 import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
 
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -19,41 +20,42 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
+import utils.BrowserFactory;
 //import cucumber.api.junit.Cucumber;
+import utils.utilities;
+
 
 /**
  * @author Niharika
  *
- * 
+ *
  */
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"src/test/java/features/medicalHistory.feature"},
-		glue = {"stepDefinitions"},
-		monochrome = true,
-		tags = {"@medicalhistory"},
-		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
-				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
+        features = {"src/test/java/features/medicalHistory.feature"},
+        glue = {"stepDefinitions"},
+        monochrome = true,
+        tags = {"@medicalhistory"},
+        plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
+        //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
-		)
-public class RunCukeTestng extends AbstractTestNGCucumberTests{
-	
+)
+public class RunCukeTestng extends AbstractTestNGCucumberTests {
 
-	@BeforeClass
+    static Properties prop;
+
+
+    @BeforeClass
     public static void setup() {
-	  ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+        utilities.loadReport();
+        prop = utilities.loadProperties();
+        BrowserFactory.getDriver();
+    }
 
-        // Loads the extent config xml to customize on the report.
-        ExtentCucumberFormatter.loadConfig(new File("src/main/java/extent-config.xml"));
+    @AfterClass
+    public static void afterClass(){
+        BrowserFactory.close();
+    }
 
-        // User can add the system information as follows
-        ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
-        ExtentCucumberFormatter.addSystemInfo("Browser version", "v47.0.1");
-        ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.1");
-
-    	    }
-	
-	
-	
 
 }

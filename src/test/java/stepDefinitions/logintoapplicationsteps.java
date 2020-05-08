@@ -3,15 +3,15 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utils.Base;
+import utils.basePage;
 
-public class logintoapplicationsteps extends Base{
+public class logintoapplicationsteps extends baseStepDefs {
 	
 	
 	
 	@Given("^user navigates to meddbase login page$")
 	public void user_navigates_to_meddbase_login_page() throws Throwable {
-		initializeDriver();
+
 		loginpage.NavigateToUrl();
 	    
 	}

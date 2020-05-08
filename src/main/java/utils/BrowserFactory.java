@@ -127,4 +127,9 @@ public class BrowserFactory {
 
         return driver;
     }
+
+    public static void close() {
+        driver.quit();
+        driver = null;
+    }
 }

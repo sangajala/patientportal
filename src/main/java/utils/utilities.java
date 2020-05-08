@@ -3,11 +3,15 @@
  */
 package utils;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import com.cucumber.listener.ExtentCucumberFormatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +37,7 @@ public class utilities {
     public void waitForElementPresence(WebDriver driver, By element) {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         try {
-          //  wait.until(ExpectedConditions.presenceOfElementLocated(element));
+            //  wait.until(ExpectedConditions.presenceOfElementLocated(element));
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -46,7 +50,7 @@ public class utilities {
     public void waitForElementVisibility(WebDriver driver, WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         try {
-          //  wait.until(ExpectedConditions.visibilityOf(element));
+            //  wait.until(ExpectedConditions.visibilityOf(element));
 
         } catch (Exception e) {
 
@@ -60,7 +64,7 @@ public class utilities {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         try {
 
-         //   wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            //   wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -74,7 +78,7 @@ public class utilities {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         try {
 
-          //  wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+            //  wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -88,7 +92,7 @@ public class utilities {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         try {
 
-           // wait.until(ExpectedConditions.elementToBeClickable(element));
+            // wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -116,7 +120,7 @@ public class utilities {
         try {
             //  wait.until(ExpectedConditions.textToBePresentInElement(element, text));
 
-         //   wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
+            //   wait.until(ExpectedConditions.textToBePresentInElementValue(element, text));
 
 
         } catch (Exception e) {
@@ -147,7 +151,6 @@ public class utilities {
 
 
     //checkbox
-
     public boolean isChecboxSelected(WebElement element) {
         try {
             Assert.assertTrue(element.isSelected());
@@ -199,7 +202,7 @@ public class utilities {
     //wait
     public void waitToLoad() throws InterruptedException {
 
-            Thread.sleep(5000);
+        Thread.sleep(5000);
 
     }
 
@@ -246,46 +249,68 @@ public class utilities {
         }
     }
 
-    public void clickOnText(WebDriver driver,String text) throws Exception {
-        getElementFromText(driver,text).click();
+    public void clickOnText(WebDriver driver, String text) throws Exception {
+        getElementFromText(driver, text).click();
     }
 
-    public WebElement getElementFromText(WebDriver driver,String text) throws Exception {
-        return getElement(driver,By.xpath("//span[contains(text(),'"+text+"')]"));
+    public WebElement getElementFromText(WebDriver driver, String text) throws Exception {
+        return getElement(driver, By.xpath("//span[contains(text(),'" + text + "')]"));
     }
 
 
-    public WebElement getElement(WebDriver driver,By by) throws Exception {
+    public WebElement getElement(WebDriver driver, By by) throws Exception {
         List<WebElement> elements = driver.findElements(by);
-        if(elements.size()==0){
+        if (elements.size() == 0) {
             throw new Exception("Given element not present");
-        }
-        else {
+        } else {
             return elements.get(0);
         }
 
     }
 
-    public List<WebElement> getElements(WebDriver driver,By by) throws Exception {
+    public List<WebElement> getElements(WebDriver driver, By by) throws Exception {
         List<WebElement> elements = driver.findElements(by);
-        if(elements.size()==0){
+        if (elements.size() == 0) {
             throw new Exception("Given element not present");
-        }
-        else {
+        } else {
             return elements;
         }
 
     }
 
-    public boolean checkSectionWithTextExists(WebDriver driver,String text) throws Exception {
-        return getElementFromText(driver,text).isDisplayed();
+    public boolean checkSectionWithTextExists(WebDriver driver, String text) throws Exception {
+        return getElementFromText(driver, text).isDisplayed();
     }
 
     public boolean checkLinkWithTextExists(WebDriver driver, String linkText) throws Exception {
-        return getElementFromLinkText(driver,linkText).isDisplayed();
+        return getElementFromLinkText(driver, linkText).isDisplayed();
     }
 
     private WebElement getElementFromLinkText(WebDriver driver, String linkText) throws Exception {
-        return getElement(driver,By.linkText(linkText));
+        return getElement(driver, By.linkText(linkText));
+    }
+
+    public static void loadReport() {
+        ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+
+        // Loads the extent config xml to customize on the report.
+        ExtentCucumberFormatter.loadConfig(new File("src/main/java/extent-config.xml"));
+
+        // User can add the system information as follows
+        ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
+        ExtentCucumberFormatter.addSystemInfo("Browser version", "v47.0.1");
+        ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.1");
+    }
+
+    public static Properties loadProperties() {
+        Properties prop = new Properties();
+        try {
+            FileInputStream fs = new FileInputStream("./src/main/java/config/data.properties");  // comment this line if u r using windows pc
+            prop.load(fs);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return prop;
     }
 }

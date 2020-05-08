@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 import utils.utilities;
 
 
-public class loginPage extends Base {
+public class loginPage extends basePage {
 	
 	//public @FindBy(xpath = "//input[@name='first_name']") WebElement textfield_FirstName;
 	public @FindBy(id = "inputEmail")  WebElement userName;
@@ -28,7 +28,7 @@ public class loginPage extends Base {
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
 
 	
-	public loginPage() throws IOException {
+	public loginPage() {
 		super();
 	}
 
@@ -52,9 +52,7 @@ public class loginPage extends Base {
 	
 	
 	public void NavigateToUrl() throws IOException {
-		initializeDriver();
 		driver.navigate().to(prop.getProperty("url"));
-		
 	}
 	
 	

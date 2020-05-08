@@ -2,12 +2,12 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
 import java.io.IOException;
 import java.util.List;
 
-public class medicalHistoryPage extends Base {
+public class medicalHistoryPage extends basePage {
     public @FindBy(xpath = "//a[contains(text(),'Home')]")
     WebElement homelink;
     //public @FindBy(xpath = " //div[@class='alert alert-info alert-icon ng-scope']")
@@ -24,7 +24,7 @@ public class medicalHistoryPage extends Base {
     public @FindBy(xpath = "//span[@ng-bind-html='medicalHistoryItem.Label']")
     List<WebElement> options;
 
-    public medicalHistoryPage() throws IOException {
+    public medicalHistoryPage()  {
         super();
     }
 
