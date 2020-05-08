@@ -37,8 +37,10 @@ import pageObjects.*;
 public class Base {
 
 	private static final int MAX_TIMEOUT = 60;
-	public static final String USERNAME = "salesuser1";
-	public static final String AUTOMATE_KEY = "GWXF5zYmqxr1FJtu7XyA";
+//	public static final String USERNAME = "salesuser1";
+	public static final String USERNAME = "roopa34";
+//	public static final String AUTOMATE_KEY = "GWXF5zYmqxr1FJtu7XyA";
+	public static final String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
 	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	public utilities utils = new utilities();
 	
@@ -115,20 +117,20 @@ public  WebDriver initializeDriver() throws IOException{
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-notifications");
 			options.addArguments("disable-infobars");
-			
+
 			// uncomment below line in windows pc
 //			System.setProperty("webdriver.chrome.driver",".\\drivers\\chromedriver.exe");
 			WebDriverManager.chromedriver().setup();
 		 driver = new ChromeDriver(options);
 
-		 
+
 		}
 		else if(browserName.equals("firefox")){
 			// uncomment below line in windows pc
 			//System.setProperty("webdriver.gecko.driver", ".\\drivers\\geckodriver.exe");
-			
+
 			driver=new FirefoxDriver();
-			
+
 		}
 		else if(browserName.equals("IE")){
 			// uncomment below line in windows pc
@@ -136,10 +138,10 @@ public  WebDriver initializeDriver() throws IOException{
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			caps.setCapability("ignoreZoomSetting", true);
 			driver = new InternetExplorerDriver();
-			
+
 		}
     		driver.manage().window().maximize();
-    		
+
     		waitDriver = new WebDriverWait(driver,TIMEOUT);
     		driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
     		driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);

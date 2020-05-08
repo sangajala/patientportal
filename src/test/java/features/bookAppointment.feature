@@ -23,9 +23,9 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Examples:
       | Payer type | Appointment type |
       | Patient    | Consultation     |
-      | Insurer    | Consultation     |
-      | Employer   | Consultation     |
-      | Patient    | Health Screen    |
+#      | Insurer    | Consultation     |
+#      | Employer   | Consultation     |
+#      | Patient    | Health Screen    |
 
 
   @BookByAppointmentFilters
