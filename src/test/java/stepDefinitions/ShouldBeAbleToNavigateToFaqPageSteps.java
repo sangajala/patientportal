@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.WebElement;
-import utils.Base;
+
 
 import java.io.IOException;
 
@@ -13,11 +13,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ShouldBeAbleToNavigateToFaqPageSteps extends Base {
+public class ShouldBeAbleToNavigateToFaqPageSteps extends baseStepDefs {
 
     @Given("^As end user i am the Patient booking website$")
     public void as_end_user_i_am_the_Patient_booking_website() throws IOException {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
     }
 

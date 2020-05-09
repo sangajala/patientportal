@@ -2,16 +2,16 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
 import java.io.IOException;
 
-public class membershipsPage extends Base {
+public class membershipsPage extends basePage {
 
     private @FindBy(xpath = "//div[@class='panel panel-bordered ng-scope']//div[@class='panel-body']")
     WebElement details;
 
-    public membershipsPage() throws IOException {
+    public membershipsPage()  {
         super();
 
     }

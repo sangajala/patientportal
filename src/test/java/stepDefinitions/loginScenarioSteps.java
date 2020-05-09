@@ -1,9 +1,9 @@
 package stepDefinitions;
 
 import cucumber.api.java.en.When;
-import utils.Base;
 
-public class loginScenarioSteps extends Base{
+
+public class loginScenarioSteps extends baseStepDefs{
 	
 	
 

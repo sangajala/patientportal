@@ -5,14 +5,14 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import utils.Base;
 
-public class bookAppointmentSteps extends Base {
+
+public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
     @Given("^Patient navigates to Meddbase Patient Portal Login Page$")
     public void patient_navigates_to_Meddbase_Patient_Portal_Login_Page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        initializeDriver();
+
         loginpage.NavigateToUrl();
 
     }

@@ -5,15 +5,16 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import utils.basePage;
 import pageObjects.medicalHistoryPage;
-import utils.Base;
+
 
 import java.util.List;
 
-public class medicalHistorySteps extends Base {
+public class medicalHistorySteps extends baseStepDefs {
     @Given("^Patient launch the browser$")
     public void patient_launch_the_browser() throws Throwable {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
     }
 

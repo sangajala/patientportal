@@ -4,11 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import utils.Base;
+
+import utils.basePage;
 
 import java.io.IOException;
 
-public class invoicePage extends Base {
+public class invoicePage extends basePage {
 
     public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[1]")
     WebElement Allinvoice;
@@ -42,7 +43,7 @@ public class invoicePage extends Base {
 
 
 
-    public invoicePage() throws IOException {
+    public invoicePage()  {
 
         super();
     }
@@ -71,6 +72,7 @@ public class invoicePage extends Base {
 
     public void emailbutton() {
         utils.waitForElementPresence(driver, By.xpath( "//button[contains(@class,'btn btn-primary ng-scope')][2]"));
+        utils.waitForElementClickable(driver,emailbtn);
         emailbtn.click();
 
     }

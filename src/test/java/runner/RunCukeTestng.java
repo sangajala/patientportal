@@ -6,6 +6,7 @@ package runner;
 
 
 import java.io.File;
+import java.util.Properties;
 
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -19,6 +20,8 @@ import com.cucumber.listener.ExtentCucumberFormatter;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
+import utils.BrowserFactory;
+import utils.utilities;
 //import cucumber.api.junit.Cucumber;
 
 /**
@@ -31,28 +34,27 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/test/java/features/invoice.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		//tags = {"@reg"},
+		tags = {"@first"},
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
 		)
-public class RunCukeTestng extends AbstractTestNGCucumberTests{
+public class RunCukeTestng extends AbstractTestNGCucumberTests {
+
+	static Properties prop;
+
 
 	@BeforeClass
-    public static void setup() {
-	  ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+	public static void setup() {
+		utilities.loadReport();
+		prop = utilities.loadProperties();
+		BrowserFactory.getDriver();
+	}
 
-        // Loads the extent config xml to customize on the report.
-        ExtentCucumberFormatter.loadConfig(new File("src/main/java/extent-config.xml"));
+	@AfterClass
+	public static void afterClass(){
+		BrowserFactory.close();
+	}
 
-        // User can add the system information as follows
-        ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
-        ExtentCucumberFormatter.addSystemInfo("Browser version", "v47.0.1");
-        ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.1");
-
-    	    }
-	
-	
-	
 
 }

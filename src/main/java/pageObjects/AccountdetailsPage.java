@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import utils.Base;
+
+import utils.basePage;
 
 import java.io.IOException;
 import java.util.List;
 
-public class accountdetailsPage extends Base {
+public class AccountdetailsPage extends basePage {
 
 
     public @FindBy(xpath = "//span[contains(@class,'avatar-online')]")
@@ -50,7 +51,7 @@ public class accountdetailsPage extends Base {
 
 
 
-    public accountdetailsPage() throws IOException {
+    public AccountdetailsPage()  {
         super();
     }
 

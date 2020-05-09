@@ -5,11 +5,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import utils.Base;
+
 
 import java.io.IOException;
 
-public class MyAccount  extends Base {
+public class MyAccount  extends baseStepDefs {
   //  @Given("^Patient launch the browser$")
   //  public void patient_launch_the_browser() throws Throwable {
     //    initializeDriver();
@@ -130,7 +130,7 @@ public class MyAccount  extends Base {
 
     @When("^patient logged in back$")
     public void patientLoggedInBack() throws IOException {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
         loginpage.loginToMeddBase();
 

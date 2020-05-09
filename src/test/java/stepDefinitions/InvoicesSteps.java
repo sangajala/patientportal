@@ -11,14 +11,12 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.invoicePage;
 import pageObjects.navbarPage;
-
-import utils.Base;
 import utils.utilities;
 
 import java.util.List;
 import java.util.Map;
 
-public class InvoicesSteps extends Base {
+public class InvoicesSteps extends baseStepDefs {
 
 
 
@@ -83,7 +81,7 @@ invoicepage.patientclicksonfirstinvoice();
     @Given("^Patient logged in$")
     public void patientLoggedIn() throws Exception
     {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
         loginpage.loginToMeddBase();
     }
