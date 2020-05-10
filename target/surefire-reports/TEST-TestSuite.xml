@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSuite" time="52.919" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="JOB_NAME" value="Manen_project"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="NUMBER_OF_PROCESSORS" value="8"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="JENKINS_HOME" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="HUDSON_SERVER_COOKIE" value="e5887106a16341c4"/>
+    <property name="POM_ARTIFACTID" value="patient.portal.regression"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_251\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_251\jre\classes"/>
+    <property name="EXECUTOR_NUMBER" value="0"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="POM_DISPLAYNAME" value="patient.portal.regression"/>
+    <property name="NODE_LABELS" value="master"/>
+    <property name="TEMP" value="C:\Windows\TEMP"/>
+    <property name="java.runtime.version" value="1.8.0_251-b08"/>
+    <property name="WINSW_SERVICE_ID" value="Jenkins"/>
+    <property name="user.name" value="DESKTOP-1EBNG06$"/>
+    <property name="BROWSER" value="FIREFOX"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="CommonProgramW6432" value="C:\Program Files\Common Files"/>
+    <property name="ProgramFiles" value="C:\Program Files (x86)"/>
+    <property name="user.language" value="en"/>
+    <property name="JOB_BASE_NAME" value="Manen_project"/>
+    <property name="RUN_CHANGES_DISPLAY_URL" value="http://localhost:9090/job/Manen_project/9/display/redirect?page=changes"/>
+    <property name="BUILD_DISPLAY_NAME" value="#9"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_251\jre\bin"/>
+    <property name="LOCALAPPDATA" value="C:\Windows\system32\config\systemprofile\AppData\Local"/>
+    <property name="java.version" value="1.8.0_251"/>
+    <property name="PROCESSOR_LEVEL" value="6"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="USERNAME" value="DESKTOP-1EBNG06$"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="NODE_NAME" value="master"/>
+    <property name="PROCESSOR_ARCHITEW6432" value="AMD64"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\endorsed"/>
+    <property name="BUILD_ID" value="9"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.6.3\conf"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="user.country" value="US"/>
+    <property name="ALLUSERSPROFILE" value="C:\ProgramData"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_251\jre"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="os.version" value="10.0"/>
+    <property name="RUN_DISPLAY_URL" value="http://localhost:9090/job/Manen_project/9/display/redirect"/>
+    <property name="POM_VERSION" value="0.0.1-SNAPSHOT"/>
+    <property name="TMP" value="C:\Windows\TEMP"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="25.251-b08"/>
+    <property name="user.variant" value=""/>
+    <property name="JOB_DISPLAY_URL" value="http://localhost:9090/job/Manen_project/display/redirect"/>
+    <property name="HOST" value="BROWSERSTACK"/>
+    <property name="CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_251"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="CommonProgramFiles" value="C:\Program Files (x86)\Common Files"/>
+    <property name="ComSpec" value="C:\Windows\system32\cmd.exe"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="POM_PACKAGING" value="jar"/>
+    <property name="SERVICE_ID" value="Jenkins"/>
+    <property name="COMPUTERNAME" value="DESKTOP-1EBNG06"/>
+    <property name="user.script" value=""/>
+    <property name="POM_GROUPID" value="bdd"/>
+    <property name="user.home" value="C:\Windows\system32\config\systemprofile"/>
+    <property name="PUBLIC" value="C:\Users\Public"/>
+    <property name="BUILD_TAG" value="jenkins-Manen_project-9"/>
+    <property name="JENKINS_SERVER_COOKIE" value="e5887106a16341c4"/>
+    <property name="HUDSON_URL" value="http://localhost:9090/"/>
+    <property name="ProgramData" value="C:\ProgramData"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="USERPROFILE" value="C:\Windows\system32\config\systemprofile"/>
+    <property name="CLASSPATH" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_251\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\apache-maven-3.6.3/bin;C:\Program Files\Java\jdk1.8.0_251/bin;C:\Program Files\Java\jdk1.8.0_251/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.6.3\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;."/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="APPDATA" value="C:\Windows\system32\config\systemprofile\AppData\Roaming"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.6.3"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-agent-1.13.jar;C:\Program Files\apache-maven-3.6.3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\apache-maven-3.6.3/conf/logging"/>
+    <property name="sun.java.command" value="jenkins.maven3.agent.Maven35Main C:\Program Files\apache-maven-3.6.3 C:\Program Files (x86)\Jenkins\war\WEB-INF\lib\remoting-4.2.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar 57664"/>
+    <property name="Path" value="C:\Program Files\Java\jdk1.8.0_251/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.6.3\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PROCESSOR_ARCHITECTURE" value="x86"/>
+    <property name="PATH+JDK" value="C:\Program Files\Java\jdk1.8.0_251/bin"/>
+    <property name="PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 126 Stepping 5, GenuineIntel"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="M2_HOME" value="C:\Program Files\apache-maven-3.6.3"/>
+    <property name="java.io.tmpdir" value="C:\Windows\TEMP\"/>
+    <property name="OS" value="Windows_NT"/>
+    <property name="HUDSON_HOME" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="PATH+MAVEN" value="C:\Program Files\apache-maven-3.6.3/bin"/>
+    <property name="ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+    <property name="BUILD_URL" value="http://localhost:9090/job/Manen_project/9/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="SystemRoot" value="C:\Windows"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_251\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="C:\Users\lella\IdeaProjects\patientportal"/>
+    <property name="JOB_URL" value="http://localhost:9090/job/Manen_project/"/>
+    <property name="USERDOMAIN" value="WORKGROUP"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="MAVEN_HOME" value="C:\Program Files\apache-maven-3.6.3"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="BUILD_NUMBER" value="9"/>
+    <property name="BASE" value="C:\Program Files (x86)\Jenkins"/>
+    <property name="JENKINS_URL" value="http://localhost:9090/"/>
+    <property name="PROCESSOR_REVISION" value="7e05"/>
+    <property name="ProgramW6432" value="C:\Program Files"/>
+    <property name="windir" value="C:\Windows"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="SystemDrive" value="C:"/>
+    <property name="maven3.interceptor" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven35-interceptor-1.13.jar"/>
+    <property name="WORKSPACE_TMP" value="C:\Program Files (x86)\Jenkins\workspace\Manen_project@tmp"/>
+    <property name="WORKSPACE" value="C:\Program Files (x86)\Jenkins\workspace\Manen_project"/>
+    <property name="maven3.interceptor.common" value="C:\Program Files (x86)\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.13.jar"/>
+    <property name="WINSW_EXECUTABLE" value="C:\Program Files (x86)\Jenkins\jenkins.exe"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules"/>
+    <property name="DriverData" value="C:\Windows\System32\Drivers\DriverData"/>
+  </properties>
+  <testcase name="feature" classname="runner.RunCukeTestng" time="52.919">
+    <failure message="org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;DESKTOP-1EBNG06&apos;, ip: &apos;192.168.0.72&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;&#10;Driver info: driver.version: RemoteWebDriver" type="cucumber.runtime.CucumberException">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+	at pageObjects.loginPage.NavigateToUrl(loginPage.java:58)
+	at stepDefinitions.NotificationsSteps.patient_was_on_homepage(NotificationsSteps.java:22)
+	at ✽.Given Patient was on homepage(src/test/java/features/notifications.feature:33)
+</failure>
+    <system-out><![CDATA[Feature: Verifying notifications are generated when booking and cancelling appointments and verifying
+  incoming messages under notifications icon
+
+  Scenario Outline: Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel                                                  # src/test/java/features/notifications.feature:6
+    when he/she book new appointment
+
+    Given Patient was on homepage
+    And gets the number on notification icon
+    And gets the count of notifications by accessing notification icon
+    When Patient clicks on Online Portal
+    And Patient clicks on Book Appointment
+    And chooses Payer Type as "<Payer type>"
+    And Appointment Type as "<Appointment type>"
+    Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
+    When Patient clicks on Search button
+    Then Appointment search Results should be displayed
+    When Patient clicks on "1" available appointment details
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
+    When Patient clicks on Book Appointment button on Details Page
+    Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
+    When Patient clicks on Online Portal
+    Then the number on notification icon should be increased by refreshing the page
+    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
+    Then Patient should view appointment notification and invoice for newly booked appointment in notifications
+
+    Examples: 
+HOSTBROWSERSTACK
+BRFIREFOX
+utils : utils.utilities@a50ae65
+The no is   21
+No of notifications are : 21
+in navigateappPlease use the filters if you wish to refine your search
+Size of List : 10
+in navigateappThe patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours.
+in navigateappwas successfully completed
+The no is   22
+Before booking 21
+No of notifications are : 22
+After booking 22
+
+  Scenario Outline: Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel                                                  # src/test/java/features/notifications.feature:29
+    when he/she book new appointment
+
+    Given Patient was on homepage                                                                                                                                                      # NotificationsSteps.patient_was_on_homepage()
+    And gets the number on notification icon                                                                                                                                           # NotificationsSteps.getsTheNumberOnNotificationIcon()
+    And gets the count of notifications by accessing notification icon                                                                                                                 # NotificationsSteps.gets_the_count_of_notifications_by_accessing_notification_icon()
+    When Patient clicks on Online Portal                                                                                                                                               # bookAppointmentSteps.patientClicksOnOnlinePortal()
+    And Patient clicks on Book Appointment                                                                                                                                             # bookAppointmentSteps.patient_clicks_on_Book_Appointment()
+    And chooses Payer Type as "Patient"                                                                                                                                                # bookAppointmentSteps.choosesPayerTypeAs(String)
+    And Appointment Type as "Consultation"                                                                                                                                             # bookAppointmentSteps.appointmentTypeAs(String)
+    Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"                                          # bookAppointmentSteps.patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String)
+    When Patient clicks on Search button                                                                                                                                               # bookAppointmentSteps.patientClicksOnSearchButton()
+    Then Appointment search Results should be displayed                                                                                                                                # bookAppointmentSteps.appointmentSearchResultsShouldBeDisplayed()
+    When Patient clicks on "1" available appointment details                                                                                                                           # bookAppointmentSteps.patientClicksOnAvailableAppointmentDetails(String)
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page # bookAppointmentSteps.patientSeesAMessageOnAppointmentDetailsPage(String)
+    When Patient clicks on Book Appointment button on Details Page                                                                                                                     # bookAppointmentSteps.patientClicksOnBookAppointmentButtonOnDetailsPage()
+    Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed                                                                            # bookAppointmentSteps.appointmentBookingCompleteConfirmationMessageShouldBeDisplayed(String)
+    When Patient clicks on Online Portal                                                                                                                                               # bookAppointmentSteps.patientClicksOnOnlinePortal()
+    Then the number on notification icon should be increased by refreshing the page                                                                                                    # NotificationsSteps.theNumberOnNotificationIconShouldBeIncreasedByRefreshingThePage()
+    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu                                                                                         # NotificationsSteps.patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu()
+    Then Patient should view appointment notification and invoice for newly booked appointment in notifications                                                                        # NotificationsSteps.patient_should_view_appointment_notification_and_invoice_for_newly_booked_appointment_in_notifications()
+Failure in after hook:AfterActionsHook.tearDown(Scenario)
+Message: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at stepDefinitions.AfterActionsHook.tearDown(AfterActionsHook.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+      org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+      Driver info: driver.version: RemoteWebDriver
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+      	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+      	at stepDefinitions.AfterActionsHook.tearDown(AfterActionsHook.java:30)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+      	at org.testng.TestRunner.run(TestRunner.java:632)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+      	at org.testng.TestNG.run(TestNG.java:1064)
+      	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+      	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+      	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+
+  Scenario: Patient can not view appointment notification and invoice of existing appointment in notifications                                                                                                                                                             # src/test/java/features/notifications.feature:31
+    when he/she cancel that appointment
+
+    Given Patient was on homepage                                                                                                                                                                                                                                          # NotificationsSteps.patient_was_on_homepage()
+      org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+      Driver info: driver.version: RemoteWebDriver
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+      	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+      	at pageObjects.loginPage.NavigateToUrl(loginPage.java:58)
+      	at stepDefinitions.NotificationsSteps.patient_was_on_homepage(NotificationsSteps.java:22)
+      	at ?.Given Patient was on homepage(src/test/java/features/notifications.feature:33)
+
+    And gets the number on notification icon                                                                                                                                                                                                                               # NotificationsSteps.getsTheNumberOnNotificationIcon()
+    And gets the count of notifications by accessing notification icon                                                                                                                                                                                                     # NotificationsSteps.gets_the_count_of_notifications_by_accessing_notification_icon()
+    When Patient clicks on Online Portal                                                                                                                                                                                                                                   # bookAppointmentSteps.patientClicksOnOnlinePortal()
+    When Patient clicks on Existing Appointments                                                                                                                                                                                                                           # bookAppointmentSteps.patientClicksOnExistingAppointments()
+    Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed." # bookAppointmentSteps.patientShouldBeAbleToViewRecentlyBookedAppointmentsWithAMessage(String)
+    And gets the count of existing appointments                                                                                                                                                                                                                            # bookAppointmentSteps.getsTheCountOfExistingAppointments()
+    When Patient clicks on "1" available existing Appointment details                                                                                                                                                                                                      # bookAppointmentSteps.patientClicksOnAvailableExistingAppointmentDetails(String)
+    Then Cancel Appointment button should be visible                                                                                                                                                                                                                       # bookAppointmentSteps.cancelAppointmentButtonShouldBeVisible()
+    When Patient clicks Cancel Appointment button                                                                                                                                                                                                                          # bookAppointmentSteps.patientClicksCancelAppointmentButton()
+    Then Cancel Info Page with a message "Cancellation fee" should be displayed                                                                                                                                                                                            # bookAppointmentSteps.cancelInfoPageWithAMessageShouldBeDisplayed(String)
+    When Patient clicks on Cancel Appointment button on Cancel Info page                                                                                                                                                                                                   # bookAppointmentSteps.patientClicksOnCancelAppointmentButtonOnCancelInfoPage()
+    Then Appointment successfully cancelled message "successfully cancelled"should be displayed                                                                                                                                                                            # bookAppointmentSteps.appointmentSuccessfullyCancelledMessageShouldBeDisplayed(String)
+    When Patient clicks on Online Portal                                                                                                                                                                                                                                   # bookAppointmentSteps.patientClicksOnOnlinePortal()
+    Then the number on notification icon should be decreased by refreshing the page                                                                                                                                                                                        # NotificationsSteps.theNumberOnNotificationIconShouldBeDecreasedByRefreshingThePage()
+    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu                                                                                                                                                                             # NotificationsSteps.patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu()
+    Then Patient should not view appointment notification and invoice for cancelled appointment in all notifications                                                                                                                                                       # NotificationsSteps.patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInAllNotifications()
+Failure in after hook:AfterActionsHook.tearDown(Scenario)
+Message: org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at stepDefinitions.AfterActionsHook.tearDown(AfterActionsHook.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+      org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+      Driver info: driver.version: RemoteWebDriver
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+      	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+      	at stepDefinitions.AfterActionsHook.tearDown(AfterActionsHook.java:30)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:40)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+      	at cucumber.runtime.Utils.invoke(Utils.java:34)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
+      	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
+      	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+      	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+      	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+      	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+      	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+      	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+      	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+      	at org.testng.TestRunner.run(TestRunner.java:632)
+      	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+      	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+      	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+      	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+      	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+      	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+      	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+      	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+      	at org.testng.TestNG.run(TestNG.java:1064)
+      	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+      	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+      	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+
+
+  Scenario: Patient can view incoming message in notifications                                 # src/test/java/features/notifications.feature:51
+    Given Patient was on homepage                                                              # NotificationsSteps.patient_was_on_homepage()
+      org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+      Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+      System info: host: 'DESKTOP-1EBNG06', ip: '192.168.0.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_251'
+      Driver info: driver.version: RemoteWebDriver
+      	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+      	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+      	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+      	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
+      	at pageObjects.loginPage.NavigateToUrl(loginPage.java:58)
+      	at stepDefinitions.NotificationsSteps.patient_was_on_homepage(NotificationsSteps.java:22)
+      	at ?.Given Patient was on homepage(src/test/java/features/notifications.feature:52)
+
+    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu # NotificationsSteps.patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu()
+    Then Patient should be able to view incoming message notification                          # NotificationsSteps.patientShouldBeAbleToViewIncomingMessageNotification()
+]]></system-out>
+    <system-err><![CDATA[May 08, 2020 2:48:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>

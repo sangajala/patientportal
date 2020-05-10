@@ -1,0 +1,15 @@
+runner\RunCukeTestng.class
+stepDefinitions\RegloginMeddbaseSteps.class
+stepDefinitions\logintoapplicationsteps.class
+stepDefinitions\MyAccount.class
+stepDefinitions\BeforeActionsHook.class
+stepDefinitions\MembershipSteps.class
+stepDefinitions\NotificationsSteps.class
+stepDefinitions\loginScenarioSteps.class
+stepDefinitions\InvoicesSteps.class
+stepDefinitions\loginMeddBaseSteps.class
+stepDefinitions\AppointmentNotificationSteps.class
+stepDefinitions\ShouldBeAbleToNavigateToFaqPageSteps.class
+stepDefinitions\bookAppointmentSteps.class
+stepDefinitions\medicalHistorySteps.class
+stepDefinitions\AfterActionsHook.class

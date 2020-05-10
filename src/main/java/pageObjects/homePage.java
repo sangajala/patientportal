@@ -39,15 +39,27 @@ public class homePage extends Base {
 	private @FindBy(css ="i.icon.wb-bell") WebElement notificationIcon;
 	private @FindBy(linkText ="All notifications") WebElement AllNotificationLink;
 	private @FindBy(css ="span.icon.fa.fa-home") WebElement homePageIcon;
-	private @FindBy(xpath="//div[@class='panel-body']/ul/li") List<WebElement> notificationList;
+	private @FindBy(xpath="//div[@class='panel-body']/ul/li") List<WebElement> notificationListInHomePage;
+	private @FindBy(xpath="//div[@class=’scrollable-content’]/a[1]/div/div[2]/h6") WebElement firstNotificationLinkTitle;
 
 
 	private @FindBy(css ="span.badge.badge-danger.up.ng-binding") WebElement NotificationIcon;
 
 
+
+	public boolean isAppntnotificationDisplayed(String appmnt,String appmntType)
+	{
+		WebElement text=driver.findElement(By.xpath("//a[1]/div/div[2]/div[contains(text(),\"Appointment '"+appmntType+"' is due soon\")]"));
+		utils.waitForElementVisibility(driver,text);
+		if(text.isDisplayed()) {
+			return true;
+		}
+		return false;
+	}
+
 	public void clickOnfirstNotification()
 	{
-		utils.clickOnWebElement( driver,notificationList.get(0));
+		utils.clickOnWebElement( driver,notificationListInHomePage.get(0));
 
 	}
 

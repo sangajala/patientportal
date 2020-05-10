@@ -1,10 +1,8 @@
-Feature:Verifying notifications are generated when booking and cancelling appointments and verifying
-  incoming messages under notifications icon
+Feature:Verifying notifications generated when booking and cancelling appointments and verifying
+  incoming messages under notifications icon and in notifications page
 
-
-
-  Scenario Outline:Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel
-  when he/she book new appointment
+  Scenario Outline:Patient can view appointment notification and invoice in notifications under notification icon and  in notifications page
+  when he/she book earliest appointment
 
     Given Patient was on homepage
     And gets the number on notification icon
@@ -18,17 +16,21 @@ Feature:Verifying notifications are generated when booking and cancelling appoin
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
     Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
+    And get appointment type from details
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
     When Patient clicks on Online Portal
     Then the number on notification icon should be increased by refreshing the page
-    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
-    Then Patient should view appointment notification and invoice for newly booked appointment in notifications
+    When Patient clicks on Notifications icon
+    Then He should view booked "appointment" notification in notifications
+    When He clicks on All Notifications link in dropdown menu
+    Then He should view appointment notification and invoice for newly booked appointment in notification page
     Examples:
       | Payer type | Appointment type |
       | Patient    | Consultation |
 
-  Scenario:Patient can not view appointment notification and invoice of existing appointment in notifications
+
+  Scenario:Patient can not view appointment notification and invoice of existing appointment in notifications page
   when he/she cancel that appointment
     Given Patient was on homepage
     And gets the number on notification icon
@@ -45,10 +47,12 @@ Feature:Verifying notifications are generated when booking and cancelling appoin
     Then Appointment successfully cancelled message "successfully cancelled"should be displayed
     When Patient clicks on Online Portal
     Then the number on notification icon should be decreased by refreshing the page
-    When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
-    Then Patient should not view appointment notification and invoice for cancelled appointment in all notifications
+    When Patient clicks on Notifications icon
+    And He clicks on All Notifications link in dropdown menu
+    Then He should not view appointment notification and invoice for cancelled appointment in notification page
 
-    Scenario: Patient can view incoming message in notifications
-      Given Patient was on homepage
-      When Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu
-      Then Patient should be able to view incoming message notification
+  Scenario: Patient can view incoming message in notification page
+    Given Patient was on homepage
+    When Patient clicks on Notifications icon
+    And He clicks on All Notifications link in dropdown menu
+    Then Patient should be able to view incoming message notification

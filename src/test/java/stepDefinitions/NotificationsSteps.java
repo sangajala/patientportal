@@ -15,6 +15,7 @@ public class NotificationsSteps extends Base {
     int notifCountBefore=0;
     int notifCountAfter=0;
     int noOnIconAfter=0;
+    String appmntType;
 
     @Given("^Patient was on homepage$")
     public void patient_was_on_homepage() throws Throwable {
@@ -45,24 +46,19 @@ public class NotificationsSteps extends Base {
         Assert.assertTrue(noOnIconBefore<noOnIconAfter);
 
     }
-
-
-    @When("^Patient clicks on Notifications icon and clicks on All Notifications in dropdown menu$")
-    public void patient_clicks_on_Notifications_icon_and_clicks_on_All_Notifications_in_dropdown_menu() throws Throwable {
-        homepage.clickOnNotificationIcon();
+    @When("^He clicks on All Notifications link in dropdown menu$")
+    public void heClicksOnAllNotificationslinkInDropdownMenu() throws InterruptedException {
         homepage.clickOnAllNotificationLink();
-
     }
-
-    @Then("^Patient should view appointment notification and invoice for newly booked appointment in notifications$")
-    public void patient_should_view_appointment_notification_and_invoice_for_newly_booked_appointment_in_notifications() throws Throwable {
-
+    @Then("^He should view appointment notification and invoice for newly booked appointment in notification page$")
+    public void heShouldViewAppointmentNotificationAndInvoiceForNewlyBookedAppointmentInNotificationPage() {
         System.out.println("Before booking " + notifCountBefore);
         //notifCountBefore = notifCountBefore + 2;
         notifCountAfter = allnotificationspage.getCountOfNotifiactions();
         Assert.assertTrue(notifCountBefore<notifCountAfter);
         System.out.println("After booking " + notifCountAfter);
     }
+
 
     @Then("^the number on notification icon should be decreased by refreshing the page$")
     public void theNumberOnNotificationIconShouldBeDecreasedByRefreshingThePage() {
@@ -71,9 +67,8 @@ public class NotificationsSteps extends Base {
         Assert.assertTrue(noOnIconBefore > noOnIconAfter);
     }
 
-    @Then("^Patient should not view appointment notification and invoice for cancelled appointment in all notifications$")
-    public void patientShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInAllNotifications() {
-
+    @Then("^He should not view appointment notification and invoice for cancelled appointment in notification page$")
+    public void heShouldNotViewAppointmentNotificationAndInvoiceForCancelledAppointmentInNotificationPage() {
 
         System.out.println("Before cancelling " + notifCountBefore);
         //notifCountBefore= notifCountBefore - 2;
@@ -82,8 +77,25 @@ public class NotificationsSteps extends Base {
         System.out.println("After cancelling " + notifCountAfter);
     }
 
+
     @Then("^Patient should be able to view incoming message notification$")
     public void patientShouldBeAbleToViewIncomingMessageNotification() {
         Assert.assertTrue(allnotificationspage.isMessageDisplayed());
     }
+
+    @And("^get appointment type from details$")
+    public void getAppointmentTypeFromDetails() {
+        appmntType= appointmentdetails.getAppointType();
+    }
+
+    @When("^Patient clicks on Notifications icon$")
+    public void patientClicksOnNotificationsIcon() {
+        homepage.clickOnNotificationIcon();
+    }
+
+    @Then("^He should view booked \"([^\"]*)\" notification in notifications$")
+    public void heShouldViewBookedNotificationInNotifications(String appmnt) throws Throwable {
+        Assert.assertTrue(homepage.isAppntnotificationDisplayed(appmnt,appmntType));
+    }
+
 }
