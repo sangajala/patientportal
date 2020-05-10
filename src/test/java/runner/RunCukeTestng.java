@@ -31,7 +31,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = {"src/test/java/features/bookAppointment.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		tags = {"@cancelAppointment"},
+		tags = {"@smoke"},
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
