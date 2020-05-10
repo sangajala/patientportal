@@ -6,9 +6,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import utils.Base;
 
-public class bookAppointmentSteps extends Base {
+
+
+public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
     @Given("^Patient navigates to Meddbase Patient Portal Login Page$")
     public void patient_navigates_to_Meddbase_Patient_Portal_Login_Page() throws Throwable {
@@ -36,7 +37,7 @@ public class bookAppointmentSteps extends Base {
     @Then("^Patient should be navigated to Meddbase Patient Portal Homepage$")
     public void patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-
+       // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
         Assert.assertTrue(loginpage.isUserLoggedIn(),"Patient not logged in succesfully");
 
     }
@@ -44,9 +45,8 @@ public class bookAppointmentSteps extends Base {
     @When("^Patient clicks on Book Appointment$")
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-
+       // navbarpage.gotoMenu("Book Appointment");
         utils.clickOnWebElement(driver,navbarpage.getBookappointment());
-
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
@@ -88,7 +88,7 @@ public class bookAppointmentSteps extends Base {
         int pos=Integer.parseInt(arg0);
         bookappointment.clickOnSpecificAvailableAppointment(pos);
 
-
+        //throw new PendingException();
     }
 
      @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
@@ -98,7 +98,10 @@ public class bookAppointmentSteps extends Base {
 
     }
 
-
+   /* @When("^Patient clicks on Book Appointment button$")
+    public void patientClicksOnBookAppointmentButton() {
+        utils.clickOnWebElement(driver,bookappointment.getBookAppointmentBtn());
+    }*/
 
 
     @Then("^Appointment Booking Complete confirmation message \"([^\"]*)\" should be displayed$")
@@ -196,7 +199,10 @@ public class bookAppointmentSteps extends Base {
      bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
     }
 
-
+   /* @When("^Patient clicks on Book Appointment on Details Page$")
+    public void patientClicksOnBookAppointmentOnDetailsPage() {
+        utils.clickOnWebElement(driver,bookappointment.getBookAppointmentBtn());
+    }*/
 
     @When("^Patient clicks on Book Appointment button on Details Page$")
     public void patientClicksOnBookAppointmentButtonOnDetailsPage() {

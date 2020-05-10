@@ -2,13 +2,13 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class faqpage  extends Base {
+public class faqpage  extends basePage {
      @FindBy(css = "div[class='page-header'] h1")
      private WebElement pageTitle;
 
@@ -17,7 +17,7 @@ public class faqpage  extends Base {
 
 
 
-    public faqpage() throws IOException {
+    public faqpage() {
         super();
 
     }

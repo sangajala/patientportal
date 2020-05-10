@@ -48,7 +48,7 @@ public class bookAppointment extends Base {
     WebElement preferredTimeDate;
     private @FindBy(xpath = "//button[contains(text(),'Select site')]")
     WebElement selectSiteBtn;
-    private @FindBy(xpath = "//input[@name='date']")
+    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
     WebElement selectedDate;
     private @FindBy(xpath = "//button[contains(text(),'Confirm Time & Date')]")
     WebElement confirmTimeNDateBtn;
