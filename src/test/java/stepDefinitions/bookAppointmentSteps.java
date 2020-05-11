@@ -14,7 +14,7 @@ public class bookAppointmentSteps extends baseStepDefs {
     @Given("^Patient navigates to Meddbase Patient Portal Login Page$")
     public void patient_navigates_to_Meddbase_Patient_Portal_Login_Page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        initializeDriver();
+        //initializeDriver();
         loginpage.NavigateToUrl();
 
     }

@@ -15,8 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class BrowserFactory {
 
     private static final int MAX_TIMEOUT = 60;
-    public static String USERNAME = "deepthikaligi1";
-    public static String AUTOMATE_KEY = "XjAEsGPh6QzDEg9fBsxf";
+    public static String USERNAME = "roopa34";
+    public static String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 

@@ -23,8 +23,8 @@ import pageObjects.*;
 public abstract class basePage {
 
     private static final int MAX_TIMEOUT = 60;
-    public static final String USERNAME = "salesuser1";
-    public static final String AUTOMATE_KEY = "GWXF5zYmqxr1FJtu7XyA";
+    public static final String USERNAME = "roopa34";
+    public static final String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
     public utilities utils = new utilities();
 
