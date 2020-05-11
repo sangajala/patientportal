@@ -28,7 +28,7 @@ import utils.utilities;
 
 @CucumberOptions(
 
-        features = {"src/test/java/features/membership.feature"},
+        features = {"src/test/java/features/appointmentNotification.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
 

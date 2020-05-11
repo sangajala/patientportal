@@ -60,6 +60,14 @@ public class homePage extends basePage {
         }
         return false;
     }
+    public boolean isAppntnotificationDisplayedinHomepage(String appmntType) {
+        WebElement text = driver.findElement(By.xpath("//li[1]/div/div[2]/span[contains(text(),\"Appointment '" + appmntType + "' is due soon\")]"));
+        utils.waitForElementVisibility(driver, text);
+        if (text.isDisplayed()) {
+            return true;
+        }
+        return false;
+    }
 
     public void clickOnfirstNotification() {
         utils.clickOnWebElement(driver, notificationListInHomePage.get(0));

@@ -1,9 +1,9 @@
-Feature:  View Appointment Notification in MedDbase Patient portal
+Feature:  verifying appointment notification in home page notifications
 
 
 
    @first
-    Scenario Outline:Patient can view the recently booked appointment in the homepage
+    Scenario Outline:Patient can view the earliest booked appointment in the homepage notifications as the first notification in the list
      Given Patient was on homepage
      When Patient clicks on Book Appointment
      And  chooses Payer Type as "<Payer type>"
@@ -13,14 +13,11 @@ Feature:  View Appointment Notification in MedDbase Patient portal
      Then Appointment search Results should be displayed
      When Patient clicks on "1" available appointment details
      Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
-     And get appointment details
+    And get appointment type from details page
      When Patient clicks on Book Appointment button on Details Page
      Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
      When Patient clicks on Online Portal
-     And Patient clicks on "1" notification in notification panel
-     Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed."
-     When Patient clicks on "1" available existing Appointment details
-     Then Patient should be able to view the recently booked appointment in the home page
+    Then He should view booked appointment notification in homePage notifications
 
     Examples:
      | Payer type | Appointment type |
