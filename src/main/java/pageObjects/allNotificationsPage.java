@@ -1,15 +1,13 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
 import java.util.List;
 
 
-public class allNotificationsPage extends Base {
+public class allNotificationsPage extends basePage {
 
     private @FindBy(xpath = "//h1[contains(text(),'Notifications')]")
     WebElement notificationTitle;

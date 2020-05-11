@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:maven" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0df3649-c29b-4ec2-9e4c-085ee110d8a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/newutilis/WireMock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/basePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/medicalHistory.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/baseStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/OR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/OR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/data.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/data.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/newutilis/Waitfor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/newutilis/Waitfor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AppointmentDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AppointmentDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ExistingAppointments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ExistingAppointments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/accountdetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AccountdetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/allNotificationsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/allNotificationsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/bookAppointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/bookAppointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/faqpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/faqpage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/homePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/homePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/invoicePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/invoicePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/loginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/medicalHistoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/medicalHistoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/membershipEnrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/membershipEnrollment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/membershipsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/membershipsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/navbarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/navbarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BrowserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/bookAppointment.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/bookAppointment.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/invoice.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/invoice.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/loginMeddBase.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/loginMeddBase.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/logintoapplication.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/logintoapplication.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/membership.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/membership.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/RunCukeTestng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/RunCukeTestng.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/AfterActionsHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/AfterActionsHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/AppointmentNotificationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/AppointmentNotificationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BeforeActionsHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BeforeActionsHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/InvoicesSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/InvoicesSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/MembershipSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/MembershipSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/MyAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/MyAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/NotificationsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/NotificationsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/RegloginMeddbaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/RegloginMeddbaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/ShouldBeAbleToNavigateToFaqPageSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/ShouldBeAbleToNavigateToFaqPageSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/bookAppointmentSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/bookAppointmentSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/loginMeddBaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/loginMeddBaseSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/loginScenarioSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/loginScenarioSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/logintoapplicationsteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/logintoapplicationsteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/medicalHistorySteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/MedicalHistorySteps.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1azRKZcbSpkDUnN3dS1xikXgf0e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="TestNG.RunCukeTestng (1)">
+    <configuration name="Scenario: Patient can not view appointment notification and invoice of existing appointment in notifications" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/notifications.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumberBasics" />
+      <option name="NAME_FILTER" value="^Patient can not view appointment notification and invoice of existing appointment in notifications$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Patient can not view appointment notification and invoice of existing appointment in notifications$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Patient can not view appointment notification and invoice of existing appointment in notifications" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/notifications.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumberBasics" />
+      <option name="NAME_FILTER" value="^Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Patient can view the recently booked appointment in the homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/appointmentNotification.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="cucumberBasics" />
+      <option name="NAME_FILTER" value="^Patient can view the recently booked appointment in the homepage$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^Patient can view the recently booked appointment in the homepage$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Patient can view the recently booked appointment in the homepage" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukeTestng (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="patientportal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.RunCukeTestng" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukeTestng" type="TestNG" nameIsGenerated="true">
+      <module name="patientportal" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.RunCukeTestng" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -DBROWSER=FIREFOX -DHOST=BROWSERSTACK" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <envs>
+        <env name="HOST" value="BROWSERSTACK" />
+        <env name="BROWSER" value="FIREFOX" />
+      </envs>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukeTestng" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="cucumberBasics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.RunCukeTestng" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukeTestng" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="patientportal" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.RunCukeTestng" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -DBROWSER=FIREFOX -DHOST=BROWSERSTACK" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunCukeTestng" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="patientportal" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.RunCukeTestng" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -DHOST=BROWSERSTACK -DBROWSER=FIREFOX" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Cucumber Java.Scenario: Patient can not view appointment notification and invoice of existing appointment in notifications" />
+      <item itemvalue="Cucumber Java.Scenario: Patient can view appointment notification and invoice in notifications icon and  in home page notifications panel" />
+      <item itemvalue="Cucumber Java.Scenario: Patient can view the recently booked appointment in the homepage" />
+      <item itemvalue="TestNG.RunCukeTestng" />
+      <item itemvalue="TestNG.RunCukeTestng (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.RunCukeTestng (1)" />
+        <item itemvalue="TestNG.RunCukeTestng" />
+        <item itemvalue="TestNG.RunCukeTestng" />
+        <item itemvalue="TestNG.RunCukeTestng" />
+        <item itemvalue="Cucumber Java.Scenario: Patient can view the recently booked appointment in the homepage" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0df3649-c29b-4ec2-9e4c-085ee110d8a3" name="Default Changelist" comment="" />
+      <created>1587736372243</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587736372243</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="359" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589144440090">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="359" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1589144440090" />
+    <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1588866462069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="117" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824@0.0.1536.824" timestamp="1588866462069" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1588373792317">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1588373792317" />
+    <state x="534" y="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587739427528">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="534" y="256" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1587739427528" />
+    <state x="551" y="281" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588110093385">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="551" y="281" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1588110093385" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589126979358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589126979358" />
+    <state x="637" y="162" width="426" height="499" key="EnvironmentVariablesDialog" timestamp="1588866852357">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="637" y="162" width="426" height="499" key="EnvironmentVariablesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588866852357" />
+    <state x="521" y="138" key="FileChooserDialogImpl" timestamp="1589113353518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587747051887" />
+    <state x="521" y="138" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589113353518" />
+    <state x="632" y="310" key="Github.ShareDialog" timestamp="1587761783302">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="632" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1587761783302" />
+    <state width="1493" height="221" key="GridCell.Tab.0.bottom" timestamp="1589188788227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587750370510" />
+    <state width="1493" height="221" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589188788227" />
+    <state width="1493" height="221" key="GridCell.Tab.0.center" timestamp="1589188788227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587750370510" />
+    <state width="1493" height="221" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589188788227" />
+    <state width="1493" height="221" key="GridCell.Tab.0.left" timestamp="1589188788227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587750370510" />
+    <state width="1493" height="221" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589188788227" />
+    <state width="1493" height="221" key="GridCell.Tab.0.right" timestamp="1589188788227">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587750370510" />
+    <state width="1493" height="221" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589188788227" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589145284548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589145284548" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1589145284548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589145284548" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1589145284548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589145284548" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1589145284548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589145284548" />
+    <state x="209" y="10" key="SettingsEditor" timestamp="1588840426978">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587741730106" />
+    <state x="209" y="10" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588840426978" />
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog" timestamp="1587746407911">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="191" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1587746407911" />
+    <state x="30" y="194" key="git4idea.merge.GitPullDialog" timestamp="1589125793536">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="30" y="194" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1589125793536" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1588787696643">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1588787696643" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/InvoicesSteps.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/bookAppointmentSteps.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/NotificationsSteps.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/MembershipSteps.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

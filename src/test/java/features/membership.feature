@@ -1,9 +1,10 @@
+
 Feature:Verify Patient can enroll for  monthly membership while Registration
 
   Patient will enroll for monthly membership while Registration
   then Patient should be able to see monthly LGP membership scheme in membership page
 
-  Scenario Outline:
+  Scenario Outline: Patient can enroll for monthly membership while registration
     Given Patient was on login page
     When Patient click on signup button
     Then Patient should be navigated to invite code page and able to see "see our memberships scheme" option
@@ -44,3 +45,4 @@ Scenario:verify Patient can view membership details
     |Net Price: 50 £|
     |  VAT: 0 £     |
     |Gross Price: 50 £|
+

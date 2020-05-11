@@ -2,9 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
-public class membershipEnrollment extends Base {
+public class membershipEnrollment extends basePage {
 
     private @FindBy(xpath = "//button[contains(text(),'See our membership schemes')]")
     WebElement seeOurMembershipSchemeButton;

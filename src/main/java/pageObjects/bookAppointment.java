@@ -1,3 +1,4 @@
+
 package pageObjects;
 
 import org.openqa.selenium.By;
@@ -5,11 +6,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 
 import java.util.List;
 
-public class bookAppointment extends Base {
+public class bookAppointment extends basePage {
     //Page Objects
     private WebElement payerType;
     private WebElement appointmentType;

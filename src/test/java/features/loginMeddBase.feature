@@ -7,8 +7,10 @@ Feature: Login to MeddBase
  Scenario: Login To MeddBAse With Valid Credentials
  
  Given I navigate to meddbase login page 
+
  When I enter valid username "yashwantrsunkara@gmail.com"
  And I enter valid password "Aanya@2016"
+
  And I click on sign in button
  Then I should be able to login successfully    
 

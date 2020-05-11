@@ -7,7 +7,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Then Patient should be navigated to Meddbase Patient Portal Homepage
 
 
-  @defaultsearch
+  @defaultsearch@smoke
   Scenario Outline: Booking an appointment by default search
 
   When Patient clicks on Book Appointment

@@ -1,15 +1,12 @@
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import utils.Base;
 
-public class NotificationsSteps extends Base {
+public class NotificationsSteps extends baseStepDefs {
 
     int noOnIconBefore=0;
     int notifCountBefore=0;
@@ -19,7 +16,7 @@ public class NotificationsSteps extends Base {
 
     @Given("^Patient was on homepage$")
     public void patient_was_on_homepage() throws Throwable {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
         loginpage.loginToMeddBase();
         Assert.assertTrue(loginpage.isUserLoggedIn());

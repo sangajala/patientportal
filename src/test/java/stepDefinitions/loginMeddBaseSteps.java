@@ -1,29 +1,17 @@
 package stepDefinitions;
 
-import java.io.IOException;
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
-import cucumber.api.Scenario;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pageObjects.loginPage;
-import utils.Base;
+import utils.basePage;
 
-public class loginMeddBaseSteps extends Base{
+public class loginMeddBaseSteps extends baseStepDefs {
 	
 
 	
 	@Given("^I navigate to meddbase login page$")
 	public void i_navigate_to_meddbase_login_page() throws Throwable {
-		initializeDriver();
+
 	   loginpage.NavigateToUrl();
 	}
 

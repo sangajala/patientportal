@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 
 import java.io.IOException;
 
-public class invoicePage extends Base {
+public class invoicePage extends basePage {
 
     public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[1]")
     WebElement Allinvoice;
@@ -30,8 +30,7 @@ public class invoicePage extends Base {
 
 
 
-    public invoicePage() throws IOException {
-
+    public invoicePage() {
         super();
     }
 

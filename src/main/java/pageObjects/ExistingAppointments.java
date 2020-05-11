@@ -1,16 +1,11 @@
 package pageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import utils.Base;
-
-import java.util.List;
+import utils.basePage;
 
 import static org.openqa.selenium.By.xpath;
 
-public class ExistingAppointments extends Base {
+public class ExistingAppointments extends basePage {
 
 
 //*[@id="ng-app"]/body/div/div[2]/div[4]/ul/li[1]/text()

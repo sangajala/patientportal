@@ -1,6 +1,5 @@
-/**
- * 
- */
+
+
 package stepDefinitions;
 
 import org.openqa.selenium.OutputType;
@@ -9,35 +8,27 @@ import org.openqa.selenium.WebDriver;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import utils.Base;
 import utils.BrowserFactory;
+import utils.basePage;
 
 /**
  * @author Niharika
  *
- * 
+ *
  */
 public class AfterActionsHook {
-	
-	
-	@After
-	public static void tearDown(Scenario scenario){
-		
-		WebDriver driver = Base.getDriver();
-		
-		if(scenario.isFailed()){
-			 byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-				scenario.embed(screenshotBytes, "image/png");
-				
-			}
-			if (driver != null){
-				driver.quit();
 
-			}
-		
-		Base.tearDown();
-		
-	}
+
+    @After
+    public static void tearDown(Scenario scenario) {
+
+        WebDriver driver = BrowserFactory.getDriver();
+
+        byte[] screenshotBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        scenario.embed(screenshotBytes, "image/png");
+
+
+    }
 
 }
+

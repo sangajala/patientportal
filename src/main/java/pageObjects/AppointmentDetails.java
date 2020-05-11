@@ -2,9 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Base;
+import utils.basePage;
 
-public class AppointmentDetails extends Base {
+public class AppointmentDetails extends basePage {
 
     private @FindBy(xpath = "//h4[@class='ng-binding']")
     WebElement appointmentType;

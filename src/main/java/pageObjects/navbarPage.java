@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 import utils.utilities;
 
-public class navbarPage extends Base {
+public class navbarPage extends basePage {
 
 
     public @FindBy(xpath = "//span[contains(text(),'Book Appointment')]")
@@ -41,8 +41,8 @@ public class navbarPage extends Base {
 
 
 
+    public navbarPage()  {
 
-    public navbarPage() throws IOException {
         super();
     }
 
@@ -71,8 +71,9 @@ public class navbarPage extends Base {
     }
 
 
-    public void gotoMenu(String menu) {
+    public void gotoMenu(String menu) throws InterruptedException {
 
+        utils.waitToLoad();
         try {
             WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
             if (menuLink.isDisplayed()) {

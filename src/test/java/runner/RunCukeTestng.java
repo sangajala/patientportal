@@ -1,60 +1,60 @@
 /**
- * 
+ *
  */
 package runner;
 
 
-
 import java.io.File;
+import java.io.FileInputStream;
+import java.util.Properties;
 
 
-import org.testng.Reporter;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-
-import com.cucumber.listener.ExtentCucumberFormatter;
 
 
-//import org.junit.runner.RunWith;
+
+
+
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-//import cucumber.api.junit.Cucumber;
+import utils.BrowserFactory;
 
-/**
- * @author Niharika
- *
- * 
- */
-//@RunWith(Cucumber.class)
+import utils.utilities;
+
+
+
 @CucumberOptions(
-		features = {"src/test/java/features/notifications.feature"},
-		glue = {"stepDefinitions"},
-		monochrome = true,
-		//tags = {"@details"},
-		//loginMeddBase-Done,Faqpage-it is going to faqs sometimes and it is not counting no,logintoapplication-Done,
-		//loginScenario-Done,invoices-
-		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
-				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 
-		)
-public class RunCukeTestng extends AbstractTestNGCucumberTests{
-	
+        features = {"src/test/java/features/membership.feature"},
+        glue = {"stepDefinitions"},
+        monochrome = true,
 
-	@BeforeClass
+
+        plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
+        //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
+
+)
+public class RunCukeTestng extends AbstractTestNGCucumberTests {
+
+    static Properties prop;
+
+
+    @BeforeClass
     public static void setup() {
-	  ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+        utilities.loadReport();
+        prop = utilities.loadProperties();
+        BrowserFactory.getDriver();
+    }
 
-        // Loads the extent config xml to customize on the report.
-        ExtentCucumberFormatter.loadConfig(new File("src/main/java/extent-config.xml"));
+    @AfterClass
+    public static void afterClass(){
+        BrowserFactory.close();
+    }
 
-        // User can add the system information as follows
-        ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
-        ExtentCucumberFormatter.addSystemInfo("Browser version", "v47.0.1");
-        ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.1");
 
-    	    }
 
 
 }

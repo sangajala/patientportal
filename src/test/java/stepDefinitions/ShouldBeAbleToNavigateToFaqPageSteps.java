@@ -1,11 +1,10 @@
+
 package stepDefinitions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.hamcrest.MatcherAssert;
-import org.openqa.selenium.WebElement;
-import utils.Base;
+import utils.basePage;
 
 import java.io.IOException;
 
@@ -13,11 +12,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.endsWith;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ShouldBeAbleToNavigateToFaqPageSteps extends Base {
+public class ShouldBeAbleToNavigateToFaqPageSteps extends baseStepDefs {
 
     @Given("^As end user i am the Patient booking website$")
     public void as_end_user_i_am_the_Patient_booking_website() throws IOException {
-        initializeDriver();
+
         loginpage.NavigateToUrl();
     }
 
@@ -39,26 +38,20 @@ public class ShouldBeAbleToNavigateToFaqPageSteps extends Base {
         assertThat("Navigated to wrong page , please invesigate",
                 homepage.getTheCurrent(), endsWith("faq"));
     }
+
     @Then("^I Should view page title as \"([^\"]*)\"$")
     public void i_Should_view_page_title_as(String title) throws Throwable {
         assertThat("wrong title as been displayed pls investigate",
-                faqpage.getTitle(),equalTo(title));
+                faqpage.getTitle(), equalTo(title));
     }
 
     @Then("^I Should view all FAQS$")
     public void i_Should_view_all_FAQS() throws Throwable {
-        System.out.println("no og urls");
-        System.out.println(faqpage.getAllFAQSList().size());
-       // assertThat("All Faqs not displayed pls be investigate",
-               // faqpage.getAllFAQSList().size() == 7);
-
-       // for (String faq : faqpage.getAllFAQSList()) {
-
-          //  System.out.println(faq+"\n");
-       // }
-
+        assertThat("All Faqs not displayed pls be investigate",
+                faqpage.getAllFAQSList().size() == 7);
 
     }
 
 
 }
+
