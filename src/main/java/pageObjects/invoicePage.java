@@ -111,11 +111,21 @@ public class invoicePage extends basePage {
         return itemDetails.getText().contains(details);
     }
     public void patiendclickonunpaidinvoice(){
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         utils.waitForElementClickable(driver,unpaidinvoice);
         unpaidinvoice.click();
     }
 
     public void patiendclickonpaidinvoice(){
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         utils.waitForElementPresence(driver,By.xpath("//div[@class='page ng-scope']/div[4]/div/button[3]"));
         System.out.println("before wait for element clickable" );
         paidInvoice.click();
