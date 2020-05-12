@@ -28,11 +28,11 @@ Feature:Patient Portal Invoices
      Given Patient logged in
      When  Patient clicks on "Invoices" in menu
      When patient clicks on unpaid invoices
-     When Then Patient is navigated to Invoice Details page with number "1186"
+     When Then Patient is navigated to Invoice Details page with number "1451"
      Then Patient is able to see "<Invoice Details>"
      Examples:
     |  Invoice Details   |
-    |25/04/2020 - No: 1186|
+    |12/05/2020 - No: 1451|
 
   @paidInvoice
     Scenario Outline: Patient is able to see Invoice Details for Paid invoice
@@ -70,4 +70,4 @@ Feature:Patient Portal Invoices
 
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
-      | Patient    | Health Screen     | Any Clinician | Work location | Afternoon   | 10/05/2020 |
+      | Patient    | Health Screen     | Any Clinician | Work location | Afternoon   | 20/05/2020 |

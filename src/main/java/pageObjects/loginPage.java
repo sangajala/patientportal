@@ -59,11 +59,6 @@ public class loginPage extends basePage {
 		
 	}
 	
-	
-	
-	
-	
-	
 
 	public WebElement enterUserName(){
 		return userName;

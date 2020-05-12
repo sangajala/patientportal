@@ -91,6 +91,7 @@ public class invoicePage extends basePage {
     }
     public void patientnavigatesbacktohomepage()
     {
+        utils.waitForElementPresence(driver, By.xpath( "//li[contains(@class,'list-group-item ng-binding ng-scope')][1]"));
         firstinvoice.isDisplayed();
         Assert.assertTrue(firstinvoice.isDisplayed(),"msgnotdisplayed");
     }
