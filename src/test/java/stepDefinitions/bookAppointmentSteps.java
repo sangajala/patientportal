@@ -235,8 +235,8 @@ public class bookAppointmentSteps extends baseStepDefs {
         homepage.chkAppointmentNotifications();
     }
 
-    
-  
+
+
   @Then("^gets the count of upcoming Appointment notifications$")
     public void getsTheCountOfUpcomingAppointmentNotifications() {
         countOfUpcomingApptmt=homepage.getNoOfRowsInTable(driver);
@@ -283,6 +283,7 @@ public class bookAppointmentSteps extends baseStepDefs {
 
 
 
-    
+
+
 }
 
