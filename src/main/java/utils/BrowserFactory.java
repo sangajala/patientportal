@@ -15,8 +15,10 @@ import java.util.concurrent.TimeUnit;
 public class BrowserFactory {
 
     private static final int MAX_TIMEOUT = 60;
-    public static String USERNAME = "roopa34";
-    public static String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
+
+    public static String USERNAME = "sreelakshmi16";
+    public static String AUTOMATE_KEY = "VSC8Z8jsEug8LEzPgHA1";
+ 
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
 
@@ -34,8 +36,10 @@ public class BrowserFactory {
     }
 
     private static WebDriver createDriverInstance() {
+
          String BROWSER = System.getProperty("BROWSER");
          String HOST = System.getProperty("HOST");
+
 
         USERNAME = System.getProperty("USERNAME");
         AUTOMATE_KEY = System.getProperty("AUTOMATE_KEY");
@@ -53,6 +57,7 @@ public class BrowserFactory {
 
         if (HOST.equalsIgnoreCase("browserstack")) {
             try {
+
             DesiredCapabilities caps = new DesiredCapabilities();
             if (BROWSER.equalsIgnoreCase("CHROME")) {
 
@@ -99,6 +104,7 @@ public class BrowserFactory {
 
             }
 
+
                 driver = new RemoteWebDriver(new URL(URL), caps);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -128,8 +134,10 @@ public class BrowserFactory {
         return driver;
     }
 
+
     public static void close() {
         driver.quit();
         driver = null;
     }
 }
+

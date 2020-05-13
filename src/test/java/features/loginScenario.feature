@@ -14,5 +14,5 @@ And I click on log out button
 Examples: 
 
 |Username|Password|
-|teena@bananaapps.co.uk|Bananaapps123|
-|test123@test.com|invalid|
+|lellasreelakshmiabc@gmail.com|Aanya@2016|
+|yashwantrsunkara@gmail.com|Aanya@2016|

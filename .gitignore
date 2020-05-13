@@ -1,5 +1,6 @@
+.gitignore
+.idea
 output
 target
-.idea
 patient.portal.regression.iml
-.gitignore
+

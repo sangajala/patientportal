@@ -16,6 +16,7 @@ Feature: Login to medd base with valid credentials
 
     Examples:
 
-      | LoginUsername          | Password    |
-      | teena@bananaapps.co.uk | London12    |
-      | test@test123.com       | testing1234 |
+
+|LoginUsername|Password|
+|lellasreelakshmiabc@gmail.com|Aanya@2016|
+|yashwantrsunkara@gmail.com|Aanya@2016|

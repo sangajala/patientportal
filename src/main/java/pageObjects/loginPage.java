@@ -3,6 +3,7 @@ package pageObjects;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,7 +27,8 @@ public class loginPage extends basePage {
 	private WebElement signupButton;
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
-
+utilities util=new utilities();
+	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']") WebElement confirm;
 	
 	public loginPage() {
 		super();
@@ -54,12 +56,6 @@ public class loginPage extends basePage {
 	public void NavigateToUrl() throws IOException {
 		driver.navigate().to(prop.getProperty("url"));
 	}
-	
-	
-	
-	
-	
-	
 
 	public WebElement enterUserName(){
 		return userName;
@@ -84,7 +80,9 @@ public class loginPage extends basePage {
 
 		if (!value.trim().equals("")) {
 			if(key.equals("Month")){
+
 				utilities utilities = new utilities();
+				utilities.waitForlocatorVisibility(driver,By.xpath("//select[@ng-model='dob.month']"));
 				utilities.SelectUsingVisibleText(driver.findElement(By.xpath("//select[@ng-model='dob.month']")),value);
 			}else {
 
@@ -103,6 +101,7 @@ public class loginPage extends basePage {
 	}
 
 	public String getErrorMessage() {
+		util.waitForElementVisibility(driver,errorMessage);
 		return errorMessage.getText();
 	}
 
@@ -129,15 +128,10 @@ public class loginPage extends basePage {
 		passWord.sendKeys(password);
 		utils.clickOnWebElement(driver,signIn);
 	}
-	/*
-	
-	public void LoginToApp(String username,String password){
-		enterUsername(username);
-		enterPassword(password);
-		ClickOnSignin();
-		
-	} */
-	
+	public boolean confirmButton(){
+		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
+		return confirm.isDisplayed();
+	}
 	
 	
 	

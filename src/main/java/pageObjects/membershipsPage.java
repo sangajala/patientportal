@@ -5,30 +5,32 @@ import org.openqa.selenium.support.FindBy;
 import utils.basePage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class membershipsPage extends basePage {
 
     private @FindBy(xpath = "//div[@class='panel panel-bordered ng-scope']//div[@class='panel-body']")
     WebElement details;
 
-    public membershipsPage()  {
-        super();
+    private @FindBy(xpath = "//h2[contains(text(),'Current Membership')]")
+    WebElement currentMembershipTitle;
+    private @FindBy(xpath = "//div[@class='panel-body']/span")
+    List<WebElement> membershipDetails;
 
+    public boolean areMembershipDetailsDisplayed(String text) {
+
+        for (WebElement element : membershipDetails) {
+            if (element.getText().equals(text)) {
+                return true;
+            }
+        }
+
+        return false;
     }
-    public void NavigateToUrl() throws IOException {
-        //initializeDriver();
-        driver.navigate().to(prop.getProperty("url"));
-
-    }
-
-    public void membershipsPagedetails() throws InterruptedException {
-        //details.isDisplayed();
-
-            details.isDisplayed();
-            utils.waitToLoad();
 
 
-
+    public boolean isCurrentMembershipDisplayed(String text) {
+        utils.waitForElementVisibility(driver,currentMembershipTitle);
+        return currentMembershipTitle.isDisplayed();
     }
 }
-

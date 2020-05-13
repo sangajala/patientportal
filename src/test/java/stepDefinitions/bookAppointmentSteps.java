@@ -1,20 +1,18 @@
+
+
 package stepDefinitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
-
-
 public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
     @Given("^Patient navigates to Meddbase Patient Portal Login Page$")
     public void patient_navigates_to_Meddbase_Patient_Portal_Login_Page() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        //initializeDriver();
+
         loginpage.NavigateToUrl();
 
     }
@@ -37,7 +35,7 @@ public class bookAppointmentSteps extends baseStepDefs {
     @Then("^Patient should be navigated to Meddbase Patient Portal Homepage$")
     public void patient_should_be_navigated_to_Meddbase_Patient_Portal_Homepage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
+        // Assert.assertTrue(navbarpage.VerifyBookAppointment(),"Not logged in successfully");
         Assert.assertTrue(loginpage.isUserLoggedIn(),"Patient not logged in succesfully");
 
     }
@@ -45,21 +43,23 @@ public class bookAppointmentSteps extends baseStepDefs {
     @When("^Patient clicks on Book Appointment$")
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-       // navbarpage.gotoMenu("Book Appointment");
+        // navbarpage.gotoMenu("Book Appointment");
         utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        //System.out.println("**** clicking on book appointment link");
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
+        // System.out.println("hello I am about to select payer type ----->: "+pType);
+        // Write code here that turns the phrase above into concrete actions
+        //  bookappointment.choosePayerType(pType);
         utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
-
     }
 
     @And("^Appointment Type as \"([^\"]*)\"$")
     public void appointmentTypeAs(String AType) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.chooseAppointmentType(AType);
-
     }
 
 
@@ -67,8 +67,6 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patientShouldBeNavigatedToAppointmentFiltersPageAndSeeAMessage(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.navigateApp(arg0,bookappointment.getApptmtFiltersMsg())  ;
-
-
     }
 
     @When("^Patient clicks on Search button$")
@@ -91,10 +89,10 @@ public class bookAppointmentSteps extends baseStepDefs {
         //throw new PendingException();
     }
 
-     @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
+    @Then("^Patient sees a message \"([^\"]*)\" on Appointment Details page$")
     public void patientSeesAMessageOnAppointmentDetailsPage(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-         bookappointment.navigateApp(arg0,bookappointment.getApptmtDetMsg());
+        bookappointment.navigateApp(arg0,bookappointment.getApptmtDetMsg());
 
     }
 
@@ -196,7 +194,7 @@ public class bookAppointmentSteps extends baseStepDefs {
     @And("^chooses Preferred Time and Date as \"([^\"]*)\"  \"([^\"]*)\"$")
     public void choosesPreferredTimeAndDateAs(String arg0, String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-     bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
+        bookappointment.choosesPreferredTimeAndDateAs(arg0,arg1);
     }
 
    /* @When("^Patient clicks on Book Appointment on Details Page$")
@@ -211,14 +209,14 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @And("^gets the count of existing appointments$")
     public void getsTheCountOfExistingAppointments() {
-    countOfExistingAppointments=bookappointment.getsearchResults().size();
-    System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
+        countOfExistingAppointments=bookappointment.getsearchResults().size();
+        System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
 
     @Then("^the count of existing appointments should increase$")
     public void theCountOfExistingAppointmentsShouldIncrease() {
-     int incrementedCount=bookappointment.getsearchResults().size();
-     System.out.println("incremented Count :"+incrementedCount);
-     Assert.assertTrue(incrementedCount>countOfExistingAppointments);
+        int incrementedCount=bookappointment.getsearchResults().size();
+        System.out.println("incremented Count :"+incrementedCount);
+        Assert.assertTrue(incrementedCount>countOfExistingAppointments);
     }
 
     @Then("^the count of existing appointments should decrease$")
@@ -235,7 +233,9 @@ public class bookAppointmentSteps extends baseStepDefs {
         homepage.chkAppointmentNotifications();
     }
 
-    @Then("^gets the count of upcoming Appointment notifications$")
+    
+  
+  @Then("^gets the count of upcoming Appointment notifications$")
     public void getsTheCountOfUpcomingAppointmentNotifications() {
         countOfUpcomingApptmt=homepage.getNoOfRowsInTable(driver);
     }
@@ -277,4 +277,10 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patientEntersAccountCredentialsWhoHasAllTheAccountsSetup() {
         loginpage.loginToMeddBase();
     }
+
+
+
+
+    
 }
+

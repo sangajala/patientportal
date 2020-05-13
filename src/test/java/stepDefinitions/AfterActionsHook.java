@@ -1,6 +1,5 @@
-/**
- *
- */
+
+
 package stepDefinitions;
 
 import org.openqa.selenium.OutputType;
@@ -32,3 +31,4 @@ public class AfterActionsHook {
     }
 
 }
+

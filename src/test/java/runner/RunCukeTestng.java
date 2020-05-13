@@ -8,34 +8,31 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import org.testng.Reporter;
+
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-
-import com.cucumber.listener.ExtentCucumberFormatter;
 
 
-//import org.junit.runner.RunWith;
+
+
+
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import utils.BrowserFactory;
-//import cucumber.api.junit.Cucumber;
+
 import utils.utilities;
 
 
-/**
- * @author Niharika
- *
- *
- */
-//@RunWith(Cucumber.class)
+
 @CucumberOptions(
+
         features = {"src/test/java/features/bookAppointment.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
         tags = {"@smoke"},
+
 
 
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
@@ -58,6 +55,8 @@ public class RunCukeTestng extends AbstractTestNGCucumberTests {
     public static void afterClass(){
         BrowserFactory.close();
     }
+
+
 
 
 }

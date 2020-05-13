@@ -147,27 +147,10 @@ public class MedicalHistorySteps extends baseStepDefs {
         navbarpage.VerifyBookAppointment();
 
     }
-    //   @When("^Patient clicks on Medical History from the left panel$")
-    //public void patient_clicks_on_Medical_History_from_the_left_panel() throws Throwable {
-//navbarpage.ClickMedicalHistory();
-    //}
+
 
     @Then("^Patient  must be navigated to Medical History Page$")
-    //public void patient_must_be_navigated_to_Medical_History_Page() throws Throwable {
-    // utilities u = new utilities();
-    //u.waitForElementPresence(driver, By.xpath("//h1[contains(text(),'Medical History')]"));
-    //Assert.assertTrue(MedicalHistoryPage.checkMessageIsDisplayed("No results"));
-    //medicalHistoryPage.messagedisplayed();
-    //}
 
-
-    //@Then("^Patient should be able to view the documents related to his Medical History$")
-    //public void patient_should_be_able_to_view_the_documents_related_to_his_Medical_History() throws Throwable {
-    //utilities u = new utilities();
-
-    //// u.waitForElementPresence(driver, By.xpath("//h4[contains(text(),'No results')]"));
-    //Assert.assertTrue(MedicalHistoryPage.checkMessageIsDisplayed("No results"));
-    // }
 
 
     @When("^Patient click on Home link$")

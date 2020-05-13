@@ -93,16 +93,7 @@ public class medicalHistoryPage extends basePage {
     }
 
 
-    // public void messagedisplayed() {
 
-        //msgdisplay.isDisplayed();
-        //try {
-           // msgdisplay.isDisplayed();
-            //utils.waitToLoad();
-
-        //} catch (InterruptedException e) {
-           // e.printStackTrace();
-        //}
     }
 
 
