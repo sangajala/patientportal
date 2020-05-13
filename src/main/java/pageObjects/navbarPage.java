@@ -14,7 +14,10 @@ import utils.utilities;
 public class navbarPage extends basePage {
 
 
-    public @FindBy(xpath = "//span[contains(text(),'Book Appointment')]")
+//    public @FindBy(xpath = "//span[contains(text(),'Book Appointment')]")
+//    WebElement bookappointment;
+
+    public @FindBy(xpath = "//span[text()='Book Appointment']")
     WebElement bookappointment;
 
 

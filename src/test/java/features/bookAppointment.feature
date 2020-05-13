@@ -1,16 +1,15 @@
 Feature: End to end functions of booking and viewing Appointments in patient portal
+
   Background:
     Given Patient navigates to Meddbase Patient Portal Login Page
-   # When patient enters username as "lakshmi@bananaapps.co.uk" Password as "Bananaapps2"
-    When patient enters username as "mail4vijaya@gmail.com" Password as "Meddbase1234"
-    And clicks on Signin
+    When Patient enters account credentials who has all the accounts setup
     Then Patient should be navigated to Meddbase Patient Portal Homepage
 
 
-  @defaultsearch@smoke
+  @defaultsearch @smoke
   Scenario Outline: Booking an appointment by default search
 
-  When Patient clicks on Book Appointment
+    When Patient clicks on Book Appointment
     And  chooses Payer Type as "<Payer type>"
     And  Appointment Type as "<Appointment type>"
     Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
@@ -24,6 +23,9 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Examples:
       | Payer type | Appointment type |
       | Patient    | Consultation     |
+#      | Insurer    | Consultation     |
+#      | Employer   | Consultation     |
+#      | Patient    | Health Screen    |
 
 
   @BookByAppointmentFilters
@@ -42,17 +44,15 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     When Patient clicks on Search button
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
-    Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
-      #When Patient clicks on appointment details
-   # Then Appointment Details page should be opened
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
-    #Then Appointment Booking Complete confirmation message should be displayed
 
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
-      | Patient    | Consultation     | Any Clinician | Work location | Afternoon   | 10/01/2020 |
-     # | Insurer    | Consultation     | Kaaru kaaru    | Work Location | Afternoon | 03/01/2020 |
+      | Patient    | Consultation     | Any Clinician | Work location | Afternoon | 3/05/2020 |
+      | Insurer    | Consultation     | Kaaru kaaru   | Work Location | Morning   | 07/05/2020 |
+      | Insurer    | Consultation     | Kaaru kaaru   | Home          | Morning   | 02/05/2020 |
 
 
   @viewExistingAppointments
@@ -86,23 +86,21 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     When Patient clicks on Search button
     Then Appointment search Results should be displayed
     When Patient clicks on "1" available appointment details
-   # Then Patient sees a message "The patient will be charged £35.00 if you cancel the appointment within 1 hours." on Appointment Details page
-    Then Patient sees a message "The patient will be charged at 10% of the full price plus £35.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
-   #Then Appointment Details page should be opened
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
     When Patient clicks on Book Appointment button on Details Page
     Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
     Then Patient clicks on Existing Appointments
-    Then the count of existing appointments should increase
-    Then Patient clicks on Online Portal
+   Then the count of existing appointments should increase
+   Then Patient clicks on Online Portal
     Then the count of upcoming appointments should increase
 
     Examples:
       | Payer type | Appointment type |
-     | Patient    | Consultation     |
-     # | Patient    | Phone Consultation |
-      #| Patient    | Video Conference   |
-     # | Insurer    | Consultation     |
-     # | Insurer | Phone Consultation |
+      | Patient    | Consultation     |
+      | Patient    | Health Screen    |
+      | Employer   | Health Screen    |
+      | Insurer    | Consultation     |
+      | Employer   | Consultation     |
 
   @chkForDecreaseinCountOfExistingApptmntAndCountOfUpcomingAppointmentsAfterCancelApptmt
   Scenario: To check the existing appointments count decreases once a booked appointment is cancelled
@@ -123,4 +121,33 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Then the count of upcoming appointments should decrease
 
 
+  @service
+  Scenario Outline: Booking an appointment by using selecting services
 
+    When Patient clicks on Book Appointment
+    And  chooses Payer Type as "<Payer type>"
+    And  Appointment Type as "<Appointment type>"
+    Then Patient should be navigated to Service filters and see a message "Please select your required services"
+    Then Patient selects "<Services>" and "<Selectserviceof>" and click on next button
+    Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
+    When Patient clicks on Search button
+    Then Appointment search Results should be displayed
+    When Patient clicks on "1" available appointment details
+    Then Patient sees a message "The patient will be charged at 10% of the full price plus £50.00 fixed fee if you cancel the appointment within 1 hours." on Appointment Details page
+    When Patient clicks on Book Appointment button on Details Page
+    Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
+
+    Examples:
+      | Payer type | Appointment type   | Services     | Selectserviceof             |
+      | Patient    | Phone Consultation | Location     | Ilford Work Location        |
+      | Patient    | Phone Consultation | PACS         | PACS Module  [2]            |
+      | Employer   | Phone Consultation | Procedure    | Procedure 1  [3]            |
+      | Patient    | Phone Consultation | Product      | Blood Test                  |
+      | Patient    | Phone Consultation | Test         | Eye Test                    |
+      | Patient    | Phone Consultation | Vaccinations | Nasal Spray Flu Vaccination |
+      | Employer   | Video Conference   | Location     | Hounslow Home Location      |
+      | Employer   | Video Conference   | PACS         | PACS Module  [2]            |
+      | Patient    | Video Conference   | Procedure    | Procedure 1  [3]            |
+      | Patient    | Video Conference   | Product      | Gloves                      |
+      | Patient    | Video Conference   | Test         | Eye Test                    |
+      | Patient    | Video Conference   | Vaccinations | Flu Vaccination  [2]        |

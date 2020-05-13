@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import utils.basePage;
+//import utils.Base;
+
 
 import java.util.List;
 
@@ -48,7 +50,7 @@ public class bookAppointment extends basePage {
     WebElement preferredTimeDate;
     private @FindBy(xpath = "//button[contains(text(),'Select site')]")
     WebElement selectSiteBtn;
-    private @FindBy(xpath = "//input[@name='date']")
+    private @FindBy(xpath = "//input[@placeholder='dd/mm/yyyy']")
     WebElement selectedDate;
     private @FindBy(xpath = "//button[contains(text(),'Confirm Time & Date')]")
     WebElement confirmTimeNDateBtn;
@@ -220,7 +222,6 @@ public class bookAppointment extends basePage {
     }
 
     public void choosePreferredSiteAs(String site) {
-
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -257,4 +258,23 @@ public class bookAppointment extends basePage {
 
 
 
+
 }
+
+         /*   if(payerType.isDisplayed()){
+                payerType.click();
+            }
+            else {
+                throw new Exception("Menu link not present "+menu);
+            }
+        }
+        catch (NoSuchFrameException e){
+            Assert.fail("Menu link not present "+menu);
+        }
+        catch (java.lang.Exception e){
+            Assert.fail("Menu link not present "+menu);
+        }*/
+
+}
+
+

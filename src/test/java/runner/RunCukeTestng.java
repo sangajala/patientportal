@@ -28,9 +28,11 @@ import utils.utilities;
 
 @CucumberOptions(
 
-        features = {"src/test/java/features/appointmentNotification.feature"},
+        features = {"src/test/java/features/bookAppointment.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
+        tags = {"@smoke"},
+
 
 
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
