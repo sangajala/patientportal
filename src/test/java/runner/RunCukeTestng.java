@@ -28,7 +28,7 @@ import utils.utilities;
 
 @CucumberOptions(
 
-        features = {"src/test/java/features/bookAppointment.feature"},
+       // features = {"src/test/java/features/bookAppointment.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
         tags = {"@smoke"},
