@@ -8,13 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 import utils.utilities;
 
-public class navbarPage extends Base {
+public class navbarPage extends basePage {
 
 
-    public @FindBy(xpath = "//span[contains(text(),'Book Appointment')]")
+//    public @FindBy(xpath = "//span[contains(text(),'Book Appointment')]")
+//    WebElement bookappointment;
+
+    public @FindBy(xpath = "//span[text()='Book Appointment']")
     WebElement bookappointment;
 
 
@@ -40,11 +43,7 @@ public class navbarPage extends Base {
 
 
 
-
-
-
-
-    public navbarPage() throws IOException {
+    public navbarPage()  {
         super();
     }
 

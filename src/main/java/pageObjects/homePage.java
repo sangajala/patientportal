@@ -11,10 +11,10 @@ import org.openqa.selenium.support.FindBy;
 
 
 import org.testng.Assert;
-import utils.Base;
+import utils.basePage;
 
 
-public class homePage extends Base {
+public class homePage extends basePage {
 	
 	
 	
@@ -31,7 +31,7 @@ public class homePage extends Base {
 	private @FindBy(xpath="//div[@class='panel-body']/table") WebElement homePageApptmtNotificationDet;
 	public @FindBy(xpath = "" + "//a[contains(text(),'My account')]")  WebElement myAccounticon;
 
-	public homePage() throws IOException {
+	public homePage()  {
 		super();
 	}
 	

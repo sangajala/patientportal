@@ -1,18 +1,20 @@
 package stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import utils.Base;
 
-public class bookAppointmentSteps extends Base {
+
+
+public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
     @Given("^Patient navigates to Meddbase Patient Portal Login Page$")
     public void patient_navigates_to_Meddbase_Patient_Portal_Login_Page() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        initializeDriver();
+        //initializeDriver();
         loginpage.NavigateToUrl();
 
     }
@@ -49,8 +51,7 @@ public class bookAppointmentSteps extends Base {
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        bookappointment.choosePayerType(pType);
+        utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
 
     }
 
@@ -253,5 +254,27 @@ public class bookAppointmentSteps extends Base {
         System.out.println("decremented CountApp :"+decrementedCountApp);
         Assert.assertTrue(decrementedCountApp<countOfUpcomingApptmt);
 
+    }
+
+    @Then("^Patient should be navigated to Service filters and see a message \"([^\"]*)\"$")
+    public void patientShouldBeNavigatedToServiceFiltersAndSeeAMessage(String arg0)  {
+        // Write code here that turns the phrase above into concrete actions
+        bookappointment.navigateApp(arg0,bookappointment.getServiceMessage());
+
+    }
+
+
+    @Then("^Patient selects \"([^\"]*)\" and \"([^\"]*)\" and click on next button$")
+    public void patientSelectsAndAndClickOnNextButton(String sType, String selcetserType) {
+        bookappointment.chooseServiceType(sType);
+        bookappointment.selectsrcivecfronServicetype(selcetserType);
+        // Write code here that turns the phrase above into concrete actions
+
+    }
+
+
+    @When("^Patient enters account credentials who has all the accounts setup$")
+    public void patientEntersAccountCredentialsWhoHasAllTheAccountsSetup() {
+        loginpage.loginToMeddBase();
     }
 }
