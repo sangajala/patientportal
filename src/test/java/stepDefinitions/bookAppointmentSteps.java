@@ -46,7 +46,8 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
        // navbarpage.gotoMenu("Book Appointment");
-        utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        navbarpage.clickonBookappointment();
+        //utils.clickOnWebElement(driver,navbarpage.getBookappointment());
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
@@ -277,4 +278,10 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patientEntersAccountCredentialsWhoHasAllTheAccountsSetup() {
         loginpage.loginToMeddBase();
     }
+
+
+
+
+
+
 }

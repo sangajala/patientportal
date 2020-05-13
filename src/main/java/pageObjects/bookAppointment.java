@@ -272,5 +272,16 @@ public class bookAppointment extends basePage {
             Assert.fail("Menu link not present "+menu);
         }*/
 
+
+         /////
+         public void choosePreferredClinicianType(String ClinicianType) {
+             System.out.println(ClinicianType);
+             WebElement element = driver.findElement(By.xpath("//button[contains(text(), '" + ClinicianType + "')]"));
+             System.out.println("in choose prefereed clinician " + element);
+             // element.click();
+             utils.clickOnWebElement(driver, element);
+
+         }
+
 }
 

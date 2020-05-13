@@ -36,9 +36,13 @@ public class loginPage extends basePage {
 		return userName;
 	}
 
+
+
 	public WebElement getPassWord(){
 		return passWord;
 	}
+
+
 
 	public WebElement getSignIn() {
 		return signIn;

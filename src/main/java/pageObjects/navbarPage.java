@@ -55,7 +55,11 @@ public class navbarPage extends basePage {
     public WebElement getBookappointment() {
         return bookappointment;
     }
-
+///////////////
+    public void clickonBookappointment(){
+        utils.clickOnWebElement(driver, getBookappointment());
+    }
+    ////////////////
     public WebElement getExistingappointments() {
         return existingappointments;
     }
