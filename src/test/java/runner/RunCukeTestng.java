@@ -31,7 +31,7 @@ import utils.utilities;
        features = {"src/test/java/features/bookAppointment.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-        tags = {"@smoke"},
+        tags = {"@cancelAppointment"},
 
 
 
