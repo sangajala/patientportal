@@ -34,7 +34,7 @@ import utils.utilities;
 		features = {"src/test/java/features/invoice.feature"},
 		glue = {"stepDefinitions"},
 		monochrome = true,
-		//tags = {"@first"},
+		//tags = {"@invoice"},
 		plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter","json:target/cucumber.json"}
 				//plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 

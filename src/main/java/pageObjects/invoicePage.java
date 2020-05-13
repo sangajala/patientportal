@@ -102,9 +102,19 @@ public class invoicePage extends basePage {
    }
    public boolean invoiceDetails(String details){
        utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-binding']"));
-       System.out.println(InvoiceDetails.getText());
+
         return InvoiceDetails.getText().contains(details);
    }
+   public boolean details(String text1,String text2){
+       utils.waitForElementPresence(driver,By.xpath("//p[@class='ng-binding']"));
+       utils.waitForElementPresence(driver,By.xpath("//div[@class='ng-binding ng-scope']"));
+       if(InvoiceDetails.getText().contains(text1)){
+           if(itemDetails.getText().contains(text2)){
+
+               return true;
+       }
+   }return false;
+    }
     public boolean itemDetails(String details){
         utils.waitForElementPresence(driver,By.xpath("//div[@class='ng-binding ng-scope']"));
         System.out.println(itemDetails.getText());

@@ -28,11 +28,11 @@ Feature:Patient Portal Invoices
      Given Patient logged in
      When  Patient clicks on "Invoices" in menu
      When patient clicks on unpaid invoices
-     When Then Patient is navigated to Invoice Details page with number "1451"
-     Then Patient is able to see "<Invoice Details>"
+     When Then Patient is navigated to Invoice Details page with number "1456"
+     Then Patient is able to see "<Invoice Details>""<Item details>"
      Examples:
-    |  Invoice Details   |
-    |12/05/2020 - No: 1451|
+    |  Invoice Details   | Item details    |
+    |12/05/2020 - No: 1456 | Net Price: £500|
 
   @paidInvoice
     Scenario Outline: Patient is able to see Invoice Details for Paid invoice
@@ -40,10 +40,10 @@ Feature:Patient Portal Invoices
       When  Patient clicks on "Invoices" in menu
       When patient clicks on paid invoices
       When Then Patient is navigated to Invoice Details page with number "872"
-      Then Patient is able to see "<Invoice Details>"
+      Then Patient is able to see "<Invoice Details>""<Item details>"
       Examples:
-        |  Invoice Details   |
-        | 23/03/2020 - No: 872|
+        |  Invoice Details   |Item details    |
+        | 23/03/2020 - No: 872|Net Price: £250|
 
 @reg
   Scenario Outline: Patient is able to see Invoice when book an appointment

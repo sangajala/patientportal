@@ -119,4 +119,10 @@ invoicepage.patientclicksonfirstinvoice();
     public void patientShouldAbleToSee(String details) throws Throwable {
         Assert.assertTrue(invoicepage.itemDetails(details));
     }
+
+
+    @Then("^Patient is able to see \"([^\"]*)\"\"([^\"]*)\"$")
+    public void patientIsAbleToSee(String text1, String text2) throws Throwable {
+       Assert.assertTrue(invoicepage.details(text1,text2));
+    }
 }
