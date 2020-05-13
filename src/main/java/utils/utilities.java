@@ -14,10 +14,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import com.cucumber.listener.ExtentCucumberFormatter;
-import org.openqa.selenium.By;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -309,5 +306,29 @@ public class utilities {
 
         return prop;
     }
+
+    ////
+    public void gotoMenu(WebDriver driver, String menu) throws InterruptedException, Exception {
+
+        waitToLoad();
+        try {
+            WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
+            if (menuLink.isDisplayed()) {
+                menuLink.click();
+            } else {
+                throw new Exception("Menu link not present " + menu);
+            }
+        } catch (NoSuchFrameException e) {
+            Assert.fail("Menu link not present " + menu);
+        }
+
+
+    }
+
+
+
+
+
+
 }
 

@@ -44,7 +44,9 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         // navbarpage.gotoMenu("Book Appointment");
-        utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        //utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        utils.clickOnWebElement(driver,bookappointment.getBookappointment());
+
         //System.out.println("**** clicking on book appointment link");
     }
 
@@ -111,7 +113,7 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @When("^Patient clicks on Existing Appointments$")
     public void patientClicksOnExistingAppointments() {
-        utils.clickOnWebElement(driver,navbarpage.getExistingappointments());
+        utils.clickOnWebElement(driver,bookappointment.getExistingappointments());
         bookappointment.searchResultsDisplayed();
     }
 

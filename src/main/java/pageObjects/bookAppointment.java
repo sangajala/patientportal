@@ -3,10 +3,12 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import utils.basePage;
+import utils.utilities;
 //import utils.Base;
 
 
@@ -77,7 +79,6 @@ public class bookAppointment extends basePage {
     WebElement nextBtn;
 
 
-
     //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
         return bookingCompleteMsg;
@@ -90,8 +91,12 @@ public class bookAppointment extends basePage {
     public WebElement getApptmtDetMsg() {
         return apptmtDetMsg;
     }
+
     /////
-    public WebElement getServiceMessage(){ return serviceMessage; }
+    public WebElement getServiceMessage() {
+        return serviceMessage;
+    }
+
     //
     public WebElement getApptmtFiltersMsg() {
         return apptmtFiltersMsg;
@@ -135,27 +140,27 @@ public class bookAppointment extends basePage {
     }
 
     public void choosePayerType(String pType) {
-        String toPass = "//li[contains(text(),'"+pType+"')]";
+        String toPass = "//li[contains(text(),'" + pType + "')]";
         payerType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, payerType);
     }
 
     public WebElement choosePayerType2(String pType) {
 
-        String toPass = "//li[contains(text(),'"+pType+"')]";
+        String toPass = "//li[contains(text(),'" + pType + "')]";
         return driver.findElement(By.xpath(toPass));
 
     }
 
-    public  void chooseServiceType(String sType)  {
-        String toPass = "//li[contains(text(),'"+sType+"')]";
-        serviceType= driver.findElement(By.xpath(toPass));
+    public void chooseServiceType(String sType) {
+        String toPass = "//li[contains(text(),'" + sType + "')]";
+        serviceType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, serviceType);
 
     }
 
-    public void selectsrcivecfronServicetype(String selcetserType){
-        selectservicesType= driver.findElement(By.xpath("//li[contains(text(),'"+selcetserType+"')]"));
+    public void selectsrcivecfronServicetype(String selcetserType) {
+        selectservicesType = driver.findElement(By.xpath("//li[contains(text(),'" + selcetserType + "')]"));
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -255,7 +260,46 @@ public class bookAppointment extends basePage {
 
     }
 
+    //////
+    public @FindBy(xpath = "//span[text()='Book Appointment']")
+    WebElement bookappointment;
 
+
+    public @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
+    WebElement existingappointments;
+
+
+    public void ClickBookAppointment() {
+
+        bookappointment.click();
+
+    }
+
+
+    public void ClickExistingAppointments() {
+
+        existingappointments.click();
+
+    }
+
+
+    public WebElement getBookappointment() {
+        return bookappointment;
+    }
+
+    public WebElement getExistingappointments() {
+        return existingappointments;
+    }
+
+
+    public boolean VerifyBookAppointment() {
+        System.out.println("in verify bookappointment");
+        utilities u1 = new utilities();
+        u1.waitForElementPresence(driver, By.xpath("//span[contains(text(),'Book Appointment')]"));
+        return bookappointment.isDisplayed();
+
+
+    }
 
 
 
@@ -275,6 +319,6 @@ public class bookAppointment extends basePage {
             Assert.fail("Menu link not present "+menu);
         }*/
 
-}
+
 
 

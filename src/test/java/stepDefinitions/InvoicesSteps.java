@@ -25,7 +25,8 @@ public class InvoicesSteps extends baseStepDefs {
 
     @When("^Patient clicks on \"([^\"]*)\" in menu$")
     public void patientClicksOnInMenu(String menu) throws Throwable {
-        navbarpage.gotoMenu(menu);
+        //navbarpage.gotoMenu(menu);
+        utils.gotoMenu(driver, menu);
 
     }
 
