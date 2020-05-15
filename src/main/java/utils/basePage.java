@@ -29,10 +29,10 @@ public abstract class basePage {
     public utilities utils = new utilities();
 
 
-    //initialize webdriver
+
     public static WebDriver driver;
 
-    //webdriver wait
+
     private static WebDriverWait waitDriver;
 
     public static Properties prop;
