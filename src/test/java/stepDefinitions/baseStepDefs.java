@@ -13,7 +13,7 @@ public class baseStepDefs {
 
     public loginPage loginpage;
     public homePage homepage;
-    public navbarPage navbarpage;
+    //public navbarPage navbarpage;
     public pageObjects.faqpage faqpage;
     public bookAppointment bookappointment;
     public medicalHistoryPage medicalHistoryPage;
@@ -32,7 +32,7 @@ public class baseStepDefs {
     public baseStepDefs() {
         loginpage = new loginPage();
         homepage = new homePage();
-        navbarpage = new navbarPage();
+       // navbarpage = new navbarPage();
         faqpage = new faqpage();
         bookappointment = new bookAppointment();
         medicalHistoryPage = new medicalHistoryPage();

@@ -16,8 +16,8 @@ public class BrowserFactory {
 
     private static final int MAX_TIMEOUT = 60;
 
-    public static String USERNAME = "sreelakshmi16";
-    public static String AUTOMATE_KEY = "VSC8Z8jsEug8LEzPgHA1";
+    public static String USERNAME = "roopa34";
+    public static String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
  
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 
@@ -82,7 +82,7 @@ public class BrowserFactory {
                 caps.setCapability("browser_version", "11.0");
                 caps.setCapability("os", "Windows");
                 caps.setCapability("os_version", "10");
-                caps.setCapability("resolution", "1024x768");
+                caps.setCapability("resolution", "1280x1024");
                 caps.setCapability("name", "Bstack-[Java] Sample Test");
 
             } else if (BROWSER.equalsIgnoreCase("SAFARI")) {

@@ -42,9 +42,9 @@ Feature: Medical history
     Examples:
       | Section              | Item Title                            | Field Title               | Field Details                                                            |
       | Prescription (Acute) | Prescription for Lord Nazim, Muhammad | Drug to prescribe (Acute) | Alvita absorbent cotton BP 1988 (Alliance Healthcare (Distribution) Ltd) |
-      | Prescription (Acute) | Prescription for Lord Nazim, Muhammad | Quantity                  | 1                                                                        |
-      | Vaccination          | Vaccination for Lord Nazim, Muhammad  | Vaccination               | Flu Vaccination                                                          |
-      | Document             | Test Document.docx                    |                           | Download                                                                 |
+#      | Prescription (Acute) | Prescription for Lord Nazim, Muhammad | Quantity                  | 1                                                                        |
+#      | Vaccination          | Vaccination for Lord Nazim, Muhammad  | Vaccination               | Flu Vaccination                                                          |
+#      | Document             | Test Document.docx                    |                           | Download                                                                 |
 
 
 

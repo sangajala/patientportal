@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import utils.basePage;
 
 public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
@@ -44,15 +45,13 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         // navbarpage.gotoMenu("Book Appointment");
-        utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        utils.clickOnWebElement(driver,bookappointment.getBookappointment());
         //System.out.println("**** clicking on book appointment link");
     }
 
     @And("^chooses Payer Type as \"([^\"]*)\"$")
     public void choosesPayerTypeAs(String pType) throws Throwable {
-        // System.out.println("hello I am about to select payer type ----->: "+pType);
-        // Write code here that turns the phrase above into concrete actions
-        //  bookappointment.choosePayerType(pType);
+
         utils.clickOnWebElement(driver,bookappointment.choosePayerType2(pType));
     }
 
@@ -111,7 +110,8 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @When("^Patient clicks on Existing Appointments$")
     public void patientClicksOnExistingAppointments() {
-        utils.clickOnWebElement(driver,navbarpage.getExistingappointments());
+        //utils.clickOnWebElement(driver,navbarpage.getExistingappointments());
+        utils.clickOnWebElement(driver,bookappointment.getExistingappointments());
         bookappointment.searchResultsDisplayed();
     }
 
