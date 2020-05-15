@@ -82,7 +82,7 @@ public class BrowserFactory {
                 caps.setCapability("browser_version", "11.0");
                 caps.setCapability("os", "Windows");
                 caps.setCapability("os_version", "10");
-                caps.setCapability("resolution", "1024x768");
+                caps.setCapability("resolution", "1280x1024");
                 caps.setCapability("name", "Bstack-[Java] Sample Test");
 
             } else if (BROWSER.equalsIgnoreCase("SAFARI")) {
