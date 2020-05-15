@@ -307,23 +307,7 @@ public class utilities {
         return prop;
     }
 
-    ////
-    public void gotoMenu(WebDriver driver, String menu) throws InterruptedException, Exception {
 
-        waitToLoad();
-        try {
-            WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
-            if (menuLink.isDisplayed()) {
-                menuLink.click();
-            } else {
-                throw new Exception("Menu link not present " + menu);
-            }
-        } catch (NoSuchFrameException e) {
-            Assert.fail("Menu link not present " + menu);
-        }
-
-
-    }
 
 
 
