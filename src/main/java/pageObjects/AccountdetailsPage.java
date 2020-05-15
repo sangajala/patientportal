@@ -103,12 +103,6 @@ public class AccountdetailsPage extends basePage {
              formData.get(i).clear();
 
 
-            //for(WebElement w:formData){
-            // w.getText
-             //System.out.println(w.getText());
-               // System.out.println(w);
-            //formData.clear();
-
 
         }
 

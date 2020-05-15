@@ -14,7 +14,7 @@ import utils.utilities;
 
 public class loginPage extends basePage {
 	
-	//public @FindBy(xpath = "//input[@name='first_name']") WebElement textfield_FirstName;
+
 	public @FindBy(id = "inputEmail")  WebElement userName;
 	
 	public @FindBy(id = "inputPassword")  WebElement passWord;
@@ -45,12 +45,7 @@ utilities util=new utilities();
 	public WebElement getSignIn() {
 		return signIn;
 	}
-	
-	/*
-	public loginPage(){
-		  PageFactory.initElements(driver, loginPage.class);
-		}*/
-	
+
 	
 	
 	public void NavigateToUrl() throws IOException {
@@ -132,13 +127,6 @@ utilities util=new utilities();
 		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
 		return confirm.isDisplayed();
 	}
-	
-	
-	
-	
 
-	
-	
-	
 
 }

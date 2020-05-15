@@ -27,7 +27,7 @@ public class membershipEnrollment extends basePage {
     WebElement checkbox2;
     private @FindBy(xpath = "//button[contains(text(),'Apply for Membership')]")
     WebElement ApplyForMembershipButton2;
-    //'marketing' and @class='ng-pristine ng-valid ng-empty ng-touched']")
+
     private @FindBy(xpath = "//h3[contains(text(),'Register')]")
     WebElement RegisterTitle;
 
@@ -49,26 +49,22 @@ public class membershipEnrollment extends basePage {
 
     }
 
-    public boolean isDisclaimerPageDisplayed(String text1,String text2) {
+    public boolean isDisclaimerPageDisplayed(String text1, String text2) {
 
-       if(disclaimer.getText().equals(text1)) {
-           if (fees.getText().equals(text2)) {
-               return true;
-           }
+        if (disclaimer.getText().equals(text1)) {
+            if (fees.getText().equals(text2)) {
+                return true;
+            }
 
-       }
-               return false;
+        }
+        return false;
 
-       }
-
-
-
+    }
 
 
     public boolean isRegisterPageDisplayed(String text) {
 
-        if(RegisterTitle.getText().equals(text))
-        {
+        if (RegisterTitle.getText().equals(text)) {
             return true;
         }
         return false;

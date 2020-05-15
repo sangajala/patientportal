@@ -18,19 +18,23 @@ public class AppointmentDetails extends basePage {
     private @FindBy(xpath = "//span[@ng-show='appointmentData.Invoice.TotalGross']")
     WebElement appointmentPrice;
 
-public String getAppointType(){
-    return appointmentType.getText();
-}
-    public String getAppointSchedule(){
+    public String getAppointType() {
+        return appointmentType.getText();
+    }
+
+    public String getAppointSchedule() {
         return appointmentSchedule.getText();
     }
-    public String getAppointmentSite(){
+
+    public String getAppointmentSite() {
         return appointmentSite.getText();
     }
-    public String getAppointmentClinician(){
+
+    public String getAppointmentClinician() {
         return appointmentClinician.getText();
     }
-    public String getAppointmentPrice(){
+
+    public String getAppointmentPrice() {
         return appointmentPrice.getText();
     }
 

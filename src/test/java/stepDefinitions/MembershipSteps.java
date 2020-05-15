@@ -35,7 +35,7 @@ public class MembershipSteps extends baseStepDefs {
     @When("^Patient click on see our membership scheme button$")
     public void patientClickOnSeeOurMembershipSchemeButton() {
         membershipenrollment.clickonSeeOurMembershipSchemeButton();
-//utils.click(driver,membershipenrollment.seeOurMembershipSchemeButton);
+
     }
 
     @Then("^Patient should be navigated to membership page with \"([^\"]*)\" title$")

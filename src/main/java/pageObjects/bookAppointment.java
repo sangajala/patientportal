@@ -13,16 +13,13 @@ import utils.basePage;
 import java.util.List;
 
 public class bookAppointment extends basePage {
-    //Page Objects
+
     private WebElement payerType;
     private WebElement appointmentType;
     private WebElement serviceType;
     private WebElement selectservicesType;
 
     private List<WebElement> searchResultsList;
-
-
-    // private @FindBy(xpath="//button[contains(text(),'Book Appointment')]") WebElement bookApptmtBtn;
 
     private @FindBy(xpath = "//div[@class='ng-scope']/div")
     WebElement apptmtDetMsg;
@@ -66,7 +63,7 @@ public class bookAppointment extends basePage {
     private @FindBy(xpath = "//strong[contains(text(),'Cancellation fee:')]")
     WebElement cancelFeeMsg;
 
-    // WebElement for Cancel Appointment on cancel info page
+   
     private @FindBy(xpath = "//button[contains(text(),'Cancel appointment')]")
     WebElement cancelApptmtBtn2;
 
@@ -78,7 +75,6 @@ public class bookAppointment extends basePage {
 
 
 
-    //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
         return bookingCompleteMsg;
     }
@@ -90,16 +86,16 @@ public class bookAppointment extends basePage {
     public WebElement getApptmtDetMsg() {
         return apptmtDetMsg;
     }
-    /////
-    public WebElement getServiceMessage(){ return serviceMessage; }
-    //
+
+
+    public WebElement getServiceMessage() {
+        return serviceMessage;
+    }
+
     public WebElement getApptmtFiltersMsg() {
         return apptmtFiltersMsg;
     }
 
-  /*  public WebElement getBookApptmtBtn() {
-        return bookApptmtBtn;
-    }*/
 
     public WebElement getExistingApptmtMsg() {
         return existingApptmtMsg;
@@ -134,28 +130,22 @@ public class bookAppointment extends basePage {
         return preferredTimeDate;
     }
 
-    public void choosePayerType(String pType) {
-        String toPass = "//li[contains(text(),'"+pType+"')]";
-        payerType = driver.findElement(By.xpath(toPass));
-        utils.clickOnWebElement(driver, payerType);
-    }
-
     public WebElement choosePayerType2(String pType) {
 
-        String toPass = "//li[contains(text(),'"+pType+"')]";
+        String toPass = "//li[contains(text(),'" + pType + "')]";
         return driver.findElement(By.xpath(toPass));
 
     }
 
-    public  void chooseServiceType(String sType)  {
-        String toPass = "//li[contains(text(),'"+sType+"')]";
-        serviceType= driver.findElement(By.xpath(toPass));
+    public void chooseServiceType(String sType) {
+        String toPass = "//li[contains(text(),'" + sType + "')]";
+        serviceType = driver.findElement(By.xpath(toPass));
         utils.clickOnWebElement(driver, serviceType);
 
     }
 
-    public void selectsrcivecfronServicetype(String selcetserType){
-        selectservicesType= driver.findElement(By.xpath("//li[contains(text(),'"+selcetserType+"')]"));
+    public void selectsrcivecfronServicetype(String selcetserType) {
+        selectservicesType = driver.findElement(By.xpath("//li[contains(text(),'" + selcetserType + "')]"));
         try {
             utils.waitToLoad();
         } catch (InterruptedException e) {
@@ -167,8 +157,6 @@ public class bookAppointment extends basePage {
 
     }
 
-
-//--------------------//
 
     public void chooseAppointmentType(String aType) {
         try {
@@ -256,25 +244,7 @@ public class bookAppointment extends basePage {
     }
 
 
-
-
-
 }
 
-         /*   if(payerType.isDisplayed()){
-                payerType.click();
-            }
-            else {
-                throw new Exception("Menu link not present "+menu);
-            }
-        }
-        catch (NoSuchFrameException e){
-            Assert.fail("Menu link not present "+menu);
-        }
-        catch (java.lang.Exception e){
-            Assert.fail("Menu link not present "+menu);
-        }*/
-
-}
 
 

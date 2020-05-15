@@ -19,7 +19,7 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @When("^patient enters username as \"([^\"]*)\" Password as \"([^\"]*)\"$")
     public void patient_enters_username_as_Password_as(String arg1, String arg2) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+
         utils.writeToWebElement(loginpage.getUserName(),arg1);
         utils.writeToWebElement(loginpage.getPassWord(),arg2);
 

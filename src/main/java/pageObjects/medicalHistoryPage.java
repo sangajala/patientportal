@@ -10,8 +10,7 @@ import java.util.List;
 public class medicalHistoryPage extends basePage {
     public @FindBy(xpath = "//a[contains(text(),'Home')]")
     WebElement homelink;
-    //public @FindBy(xpath = " //div[@class='alert alert-info alert-icon ng-scope']")
-   // WebElement msgdisplay;
+
     public @FindBy(xpath = "//span[contains(text(),'Prescription (Acute)')]")
     WebElement Prescriptionacute;
     public @FindBy(xpath = "//*[@id=\"ng-app\"]/body/div/div[2]/div[4]/ul/li[1]/h5/span")

@@ -12,11 +12,10 @@ public class allNotificationsPage extends basePage {
     private @FindBy(xpath = "//h1[contains(text(),'Notifications')]")
     WebElement notificationTitle;
 
-    private @FindBy(xpath="//div[@class='page-content container-fluid ng-scope']/ul/li")
+    private @FindBy(xpath = "//div[@class='page-content container-fluid ng-scope']/ul/li")
     List<WebElement> countOfNotifications;
     private @FindBy(xpath = "//h4[contains(text(),'Message')]")
     WebElement message;
-
 
 
     public int getCountOfNotifiactions() {
@@ -24,9 +23,9 @@ public class allNotificationsPage extends basePage {
         System.out.println("No of notifications are : " + countOfNotifications.size());
         return countOfNotifications.size();
     }
-    public boolean isMessageDisplayed()
-    {
-       return message.isDisplayed();
+
+    public boolean isMessageDisplayed() {
+        return message.isDisplayed();
     }
 
 

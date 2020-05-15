@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import newutilis.Waitfor;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -113,7 +112,7 @@ public class homePage extends basePage {
 
 
     public void clickFaqLink() throws InterruptedException {
-        Waitfor.waitForElementClick(faqLink);
+        //Waitfor.waitForElementClick(faqLink);
         //faqLink.click();
         new Actions(driver).moveToElement(faqLink).click().build().perform();
 
