@@ -51,8 +51,8 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Examples:
       | Payer type | Appointment type | Clinician     | Site          | Time      | Date       |
       | Patient    | Consultation     | Any Clinician | Work location | Afternoon | 3/05/2020 |
-      | Insurer    | Consultation     | Kaaru kaaru   | Work Location | Morning   | 07/05/2020 |
-      | Insurer    | Consultation     | Kaaru kaaru   | Home          | Morning   | 02/05/2020 |
+#      | Insurer    | Consultation     | Kaaru kaaru   | Work Location | Morning   | 07/05/2020 |
+#      | Insurer    | Consultation     | Kaaru kaaru   | Home          | Morning   | 02/05/2020 |
 
 
   @viewExistingAppointments

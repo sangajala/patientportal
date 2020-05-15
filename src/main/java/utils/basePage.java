@@ -8,11 +8,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchSessionException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.testng.Assert;
 import pageObjects.*;
 
 /**
@@ -26,7 +27,7 @@ public abstract class basePage {
     public static final String USERNAME = "roopa34";
     public static final String AUTOMATE_KEY = "DwSmUzndiirmqdy9bhVf";
     public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-    public utilities utils = new utilities();
+    public static utilities utils = new utilities();
 
 
     //initialize webdriver
@@ -58,5 +59,86 @@ public abstract class basePage {
 
         }
     }
+
+    //<<<<<<FromNavbar>>>>>>>>>///
+    public static @FindBy(xpath = "//span[text()='Book Appointment']")
+    WebElement bookappointment;
+
+
+    public static @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
+    WebElement existingappointments;
+
+
+
+
+
+    public static void ClickBookAppointment() {
+
+        bookappointment.click();
+
+    }
+
+
+    public static void ClickExistingAppointments() {
+
+        existingappointments.click();
+
+    }
+
+
+
+
+
+
+    public static void clickOnWebElement(WebElement element) {
+        utils.waitForElementClickable(driver, element);
+        element.click();
+    }
+
+    public static WebElement getBookappointment() {
+        return bookappointment;
+    }
+
+    public static WebElement getExistingappointments() {
+        return existingappointments;
+    }
+
+
+
+    public static boolean VerifyBookAppointment() {
+        System.out.println("in verify bookappointment");
+        utilities u1 = new utilities();
+        u1.waitForElementPresence(driver, By.xpath("//span[contains(text(),'Book Appointment')]"));
+        return bookappointment.isDisplayed();
+
+
+    }
+
+
+    public static void gotoMenu(String menu) throws InterruptedException {
+
+        utils.waitToLoad();
+        try {
+            WebElement menuLink = driver.findElement(By.xpath("//span[contains(text(),'" + menu + "')]"));
+            if (menuLink.isDisplayed()) {
+                menuLink.click();
+            } else {
+                throw new Exception("Menu link not present " + menu);
+            }
+        } catch (NoSuchFrameException e) {
+            Assert.fail("Menu link not present " + menu);
+        } catch (java.lang.Exception e) {
+            Assert.fail("Menu link not present " + menu);
+        }
+
+
+    }
+
+
+
+
+
+
+
 
 }

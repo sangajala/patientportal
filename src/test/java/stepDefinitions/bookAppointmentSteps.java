@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import utils.basePage;
 
 public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
@@ -44,7 +45,8 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void patient_clicks_on_Book_Appointment() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         // navbarpage.gotoMenu("Book Appointment");
-        utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        //utils.clickOnWebElement(driver,navbarpage.getBookappointment());
+        utils.clickOnWebElement(driver,basePage.getBookappointment());
         //System.out.println("**** clicking on book appointment link");
     }
 
@@ -111,7 +113,8 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @When("^Patient clicks on Existing Appointments$")
     public void patientClicksOnExistingAppointments() {
-        utils.clickOnWebElement(driver,navbarpage.getExistingappointments());
+        //utils.clickOnWebElement(driver,navbarpage.getExistingappointments());
+        utils.clickOnWebElement(driver,basePage.getExistingappointments());
         bookappointment.searchResultsDisplayed();
     }
 
