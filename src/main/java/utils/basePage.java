@@ -8,8 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchSessionException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -60,59 +59,6 @@ public abstract class basePage {
         }
     }
 
-    //<<<<<<FromNavbar>>>>>>>>>///
-    public static @FindBy(xpath = "//span[text()='Book Appointment']")
-    WebElement bookappointment;
-
-
-    public static @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
-    WebElement existingappointments;
-
-
-
-
-
-    public static void ClickBookAppointment() {
-
-        bookappointment.click();
-
-    }
-
-
-    public static void ClickExistingAppointments() {
-
-        existingappointments.click();
-
-    }
-
-
-
-
-
-
-    public static void clickOnWebElement(WebElement element) {
-        utils.waitForElementClickable(driver, element);
-        element.click();
-    }
-
-    public static WebElement getBookappointment() {
-        return bookappointment;
-    }
-
-    public static WebElement getExistingappointments() {
-        return existingappointments;
-    }
-
-
-
-    public static boolean VerifyBookAppointment() {
-        System.out.println("in verify bookappointment");
-        utilities u1 = new utilities();
-        u1.waitForElementPresence(driver, By.xpath("//span[contains(text(),'Book Appointment')]"));
-        return bookappointment.isDisplayed();
-
-
-    }
 
 
     public static void gotoMenu(String menu) throws InterruptedException {

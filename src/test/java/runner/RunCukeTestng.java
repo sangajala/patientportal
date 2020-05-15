@@ -28,10 +28,10 @@ import utils.utilities;
 
 @CucumberOptions(
 
-       features = {"src/test/java/features/bookAppointment.feature"},
+       features = {"src/test/java/features/medicalHistory.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-        tags = {"@cancelAppointment"},
+        //tags = {"@cancelAppointment"},
         //tags = {"@smoke"},
 
 

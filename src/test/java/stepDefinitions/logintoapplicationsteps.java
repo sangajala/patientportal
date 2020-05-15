@@ -35,7 +35,7 @@ public class logintoapplicationsteps extends baseStepDefs {
 	@Then("^I should be directed to home page$")
 	public void i_should_be_directed_to_home_page() throws Throwable {
 	    //navbarpage.VerifyBookAppointment();
-	    basePage.VerifyBookAppointment();
+	    bookappointment.VerifyBookAppointment();
 	}
 
 

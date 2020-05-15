@@ -78,6 +78,13 @@ public class bookAppointment extends basePage {
     private @FindBy(xpath = "//button[contains(text(), 'Next')]")
     WebElement nextBtn;
 
+    public @FindBy(xpath = "//span[text()='Book Appointment']")
+    WebElement bookappointment;
+
+
+    public @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
+    WebElement existingappointments;
+
 
     //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
@@ -261,12 +268,7 @@ public class bookAppointment extends basePage {
     }
 
     //////
-    public @FindBy(xpath = "//span[text()='Book Appointment']")
-    WebElement bookappointment;
 
-
-    public @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
-    WebElement existingappointments;
 
 
     public void ClickBookAppointment() {
@@ -303,21 +305,14 @@ public class bookAppointment extends basePage {
 
 
 
+
+
+
+
+
+
 }
 
-         /*   if(payerType.isDisplayed()){
-                payerType.click();
-            }
-            else {
-                throw new Exception("Menu link not present "+menu);
-            }
-        }
-        catch (NoSuchFrameException e){
-            Assert.fail("Menu link not present "+menu);
-        }
-        catch (java.lang.Exception e){
-            Assert.fail("Menu link not present "+menu);
-        }*/
 
 
 

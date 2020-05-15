@@ -145,7 +145,7 @@ public class MedicalHistorySteps extends baseStepDefs {
     @Then("^Patient is navigated to patient portal home page$")
     public void patient_is_navigated_to_patient_portal_home_page() throws Throwable {
         //navbarpage.VerifyBookAppointment();
-        basePage.VerifyBookAppointment();
+        bookappointment.VerifyBookAppointment();
 
     }
 
@@ -163,7 +163,7 @@ public class MedicalHistorySteps extends baseStepDefs {
     @And("^Patient should be navigated to Patient Portal Homepage$")
     public void patient_should_be_navigated_to_Patient_Portal_Homepage() throws Throwable {
         //navbarpage.VerifyBookAppointment();
-        basePage.VerifyBookAppointment();
+        bookappointment.VerifyBookAppointment();
     }
 
     @When("^patient navigate to \"([^\"]*)\" menu$")
