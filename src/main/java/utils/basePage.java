@@ -8,18 +8,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchSessionException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pageObjects.*;
 
-/**
- * @author Niharika
- *
- *
- */
 public abstract class basePage {
 
     private static final int MAX_TIMEOUT = 60;
