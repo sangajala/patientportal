@@ -54,8 +54,9 @@ public class AccountdetailsPage extends basePage {
         super();
     }
 
-    public void ClickMyAccountImage() {
+    public void gotoMyAccount() {
         MyAccountImage.click();
+        MyAccountButton.click();
     }
 
     public void ClickMyAccount() {

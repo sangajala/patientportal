@@ -1,3 +1,4 @@
+@invoice
 Feature:Patient Portal Invoices
 
 @first

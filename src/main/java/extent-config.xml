@@ -2,8 +2,8 @@
 <extentreports>
     <configuration>
         <encoding>UTF-8</encoding>
-        <documentTitle>Cucumber Extent Reports - v1.1.0</documentTitle>
-        <reportName>Cucumber-Report</reportName>
-        <reportHeadline> - v1.1.0</reportHeadline>
+        <documentTitle>Patient Portal reports</documentTitle>
+        <reportName>Regression Test- Report</reportName>
+        <reportHeadline> - v1.1.2</reportHeadline>
     </configuration>
 </extentreports>

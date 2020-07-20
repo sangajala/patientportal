@@ -68,18 +68,12 @@ public class InvoicesSteps extends baseStepDefs {
         invoicepage.patientclicksonfirstinvoice();
     }
 
-    @Given("^Patient logged in$")
-    public void patientLoggedIn() throws Exception {
-        loginpage.NavigateToUrl();
-        loginpage.loginToMeddBase();
-    }
 
     @When("^patient clicks on unpaid invoices$")
     public void patientClicksOnUnpaidInvoices() {
         invoicepage.patiendclickonunpaidinvoice();
 
     }
-
 
 
 }

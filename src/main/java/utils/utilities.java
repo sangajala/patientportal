@@ -39,85 +39,85 @@ public class utilities {
     /********************Explicit Wait/Expected Conditions*******************************/
 
     public void waitForElementPresence(WebDriver driver, By element) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-              wait.until(ExpectedConditions.presenceOfElementLocated(element));
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//              wait.until(ExpectedConditions.presenceOfElementLocated(element));
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
 
     public void waitForElementVisibility(WebDriver driver, WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-            wait.until(ExpectedConditions.visibilityOf(element));
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//            wait.until(ExpectedConditions.visibilityOf(element));
+//
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
     public void waitForlocatorVisibility(WebDriver driver, By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-
-            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//
+//            wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
 
     public void islocatorInvisible(WebDriver driver, By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
 
     public void waitForElementClickable(WebDriver driver, WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-
-            wait.until(ExpectedConditions.elementToBeClickable(element));
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
 
     public void waitForEnterText(WebDriver driver, WebElement element, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, 20);
-        try {
-            wait.until(ExpectedConditions.textToBePresentInElement(element, text));
-
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-
-            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
-        }
+//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//        try {
+//            wait.until(ExpectedConditions.textToBePresentInElement(element, text));
+//
+//
+//        } catch (Exception e) {
+//
+//            e.printStackTrace();
+//
+//            Assert.assertFalse(false, "Failed the test - " + e.getMessage());
+//        }
     }
 
 
@@ -300,8 +300,15 @@ public class utilities {
 
     public static Properties loadProperties() {
         Properties prop = new Properties();
+        FileInputStream fs;
+
         try {
-            FileInputStream fs = new FileInputStream("./src/main/java/config/data.properties");  // comment this line if u r using windows pc
+            if (System.getenv("ENV") != null && System.getenv("ENV").equals("test")) {
+                fs = new FileInputStream("./src/main/java/config/data-test.properties");
+            } else {
+                fs = new FileInputStream("./src/main/java/config/data.properties");
+            }
+            // comment this line if u r using windows pc
             prop.load(fs);
         } catch (Exception e) {
             e.printStackTrace();
