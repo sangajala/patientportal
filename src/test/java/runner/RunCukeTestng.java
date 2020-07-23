@@ -7,34 +7,20 @@ package runner;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
-
-
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-
-
-
-
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 import utils.BrowserFactory;
 
 import utils.utilities;
 
-
-
 @CucumberOptions(
 
-       // features = {"src/test/java/features/bookAppointment.feature"},
+        features = {"src/test/java/features/UserAccounts.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-      //  tags = {"@smoke"},
-
-
-
+        tags = {"@login"},
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
         //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
 

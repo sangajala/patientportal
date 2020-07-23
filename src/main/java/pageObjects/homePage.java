@@ -20,12 +20,18 @@ public class homePage extends basePage {
     public @FindBy(xpath = "//img[@src='assets/images/profile.jpg']")
     WebElement userIcon;
 
-    public @FindBy(xpath = "//a[contains(text(),' Logout')]")
+    public @FindBy(className = "img-circle")
+    WebElement logOut;
+
+    public @FindBy(linkText = "Log Out")
     WebElement logOutLink;
 
     @FindBy(css = "a[ui-sref='faq']")
     private WebElement faqLink;
 
+
+    @FindBy(className = "page-title")
+    private WebElement pageTitle;
 
     private @FindBy(xpath = "//span[contains(text(),'Online Portal')]")
     WebElement OnlinePortalLink;
@@ -170,4 +176,15 @@ public class homePage extends basePage {
     }
 
 
+    public boolean isUserCanSeeDashBoard() {
+        return pageTitle.getText().contains("Dashboard");
+    }
+
+    public String getTheTitleOfThePage() {
+        return driver.getTitle();
+    }
+
+    public void logout() {
+       driver.get(prop.getProperty("url")+"/logout");
+    }
 }

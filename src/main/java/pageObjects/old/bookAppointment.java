@@ -1,5 +1,5 @@
 
-package pageObjects;
+package pageObjects.old;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -275,6 +275,6 @@ public class bookAppointment extends basePage {
             Assert.fail("Menu link not present "+menu);
         }*/
 
-}
+//}
 
 

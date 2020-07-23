@@ -3,7 +3,6 @@ package stepDefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import utils.basePage;
 
 public class loginMeddBaseSteps extends baseStepDefs {
 	
@@ -44,7 +43,7 @@ public class loginMeddBaseSteps extends baseStepDefs {
 	@Given("^Patient logged in$")
 	public void patientLoggedIn() throws Exception {
 		loginpage.NavigateToUrl();
-		loginpage.loginToMeddBase();
+		loginpage.loginToDoctorPortal();
 	}
 
 

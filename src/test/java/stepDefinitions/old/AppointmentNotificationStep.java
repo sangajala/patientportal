@@ -1,4 +1,4 @@
-package stepDefinitions;
+package stepDefinitions.old;
 
 
 import cucumber.api.PendingException;
@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
+import stepDefinitions.baseStepDefs;
 import utils.basePage;
 
 import java.util.ArrayList;

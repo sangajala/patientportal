@@ -1,11 +1,11 @@
-package stepDefinitions;
+package stepDefinitions.old;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
-import utils.basePage;
+import stepDefinitions.baseStepDefs;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class MyAccount extends baseStepDefs {
 
     @Given("^patient with my account login to the portal$")
     public void patientWithAllFullMedicalHistoryLogsIntoThePortal() {
-        loginpage.loginToMeddBase(prop.getProperty("myaccount_medical_history_username"), prop.getProperty("myaccount_medical_history_password"));
+        loginpage.loginToDoctorPortal(prop.getProperty("myaccount_medical_history_username"), prop.getProperty("myaccount_medical_history_password"));
     }
 
 
@@ -105,7 +105,7 @@ public class MyAccount extends baseStepDefs {
     @When("^patient logged in back$")
     public void patientLoggedInBack() throws IOException {
         loginpage.NavigateToUrl();
-        loginpage.loginToMeddBase();
+        loginpage.loginToDoctorPortal();
     }
 
     @Then("^patient should see the account page being updated$")
@@ -130,6 +130,8 @@ public class MyAccount extends baseStepDefs {
     public void patientInMyAccountPageEntersPassword() {
         utils.Write(accountdetailspage.Password, prop.getProperty("myaccount_medical_history_password"));
     }
+
+
 }
 
 

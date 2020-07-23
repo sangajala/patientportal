@@ -3,7 +3,6 @@ package pageObjects;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -15,19 +14,22 @@ import utils.utilities;
 public class loginPage extends basePage {
 	
 	//public @FindBy(xpath = "//input[@name='first_name']") WebElement textfield_FirstName;
-	public @FindBy(id = "inputEmail")  WebElement userName;
+	public @FindBy(id = "EmailAddress")  WebElement userName;
 	
-	public @FindBy(id = "inputPassword")  WebElement passWord;
+	public @FindBy(id = "password")  WebElement passWord;
+
+
 	public @FindBy(tagName = "body")  WebElement errorMessage;
 
-	public @FindBy(xpath = "//div[contains(text(),'Sign in')]")  WebElement signIn;
+	public @FindBy(className = "login100-form-btn")  WebElement signIn;
+
 	public @FindBy(xpath = "//button[contains(text(),'Next')]")  WebElement next;
 
 	@FindBy(css="a[class='btn btn-primary btn-block ng-scope']")
 	private WebElement signupButton;
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
-utilities util=new utilities();
+
 	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']") WebElement confirm;
 	
 	public loginPage() {
@@ -45,6 +47,8 @@ utilities util=new utilities();
 	public WebElement getSignIn() {
 		return signIn;
 	}
+
+	utilities util=new utilities();
 	
 	/*
 	public loginPage(){
@@ -118,27 +122,23 @@ utilities util=new utilities();
 		}
 	}
 
-	public void loginToMeddBase() {
+	public void loginToDoctorPortal() {
 
-		loginToMeddBase(prop.getProperty("username"),prop.getProperty("password"));
+		loginToDoctorPortal(prop.getProperty("username"),prop.getProperty("password"));
+		System.out.println(prop.get("invoice"));
 	}
-	public void loginToMeddBase(String username,String password) {
-
+	public void loginToDoctorPortal(String username, String password) {
 		userName.sendKeys(username);
 		passWord.sendKeys(password);
-		utils.clickOnWebElement(driver,signIn);
+		signIn.click();
 	}
 	public boolean confirmButton(){
 		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
 		return confirm.isDisplayed();
 	}
-	
-	
-	
-	
 
-	
-	
-	
 
+	public boolean isUserInLoginPage() {
+		return signIn.isDisplayed();
+	}
 }

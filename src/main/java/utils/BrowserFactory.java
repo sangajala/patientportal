@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory {
 
-    private static final int MAX_TIMEOUT = 60;
+    private static final int MAX_TIMEOUT = 30;
 
     public static String USERNAME = "sreelakshmi16";
     public static String AUTOMATE_KEY = "VSC8Z8jsEug8LEzPgHA1";
