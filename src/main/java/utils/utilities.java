@@ -39,7 +39,7 @@ public class utilities {
     /********************Explicit Wait/Expected Conditions*******************************/
 
     public void waitForElementPresence(WebDriver driver, By element) {
-//        WebDriverWait wait = new WebDriverWait(driver, 20);
+//       WebDriverWait wait = new WebDriverWait(driver, 20);
 //        try {
 //              wait.until(ExpectedConditions.presenceOfElementLocated(element));
 //        } catch (Exception e) {

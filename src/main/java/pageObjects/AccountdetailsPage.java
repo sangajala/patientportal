@@ -1,10 +1,13 @@
 package pageObjects;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Element;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import utils.basePage;
+import weka.core.pmml.jaxbbindings.False;
 
 import java.io.IOException;
 import java.util.List;
@@ -40,7 +43,26 @@ public class AccountdetailsPage extends basePage {
     WebElement clickSavechangeButton;
     public @FindBy(xpath = "//div[contains(@class,'alert alert-info top-margin ng-scope')]")
     WebElement updatesSuccessfully;
-
+    public @FindBy(xpath = "//input[@placeholder='Day']")
+    WebElement dayTextBox;
+    public @FindBy(xpath = "//input[@placeholder='Year']")
+    WebElement yearTextBox;
+    public @FindBy(xpath = "//select[@ng-model='dob.month']")
+    WebElement monthDropDown;
+    public @FindBy(xpath = "//input[@placeholder='Email Address']")
+    WebElement email;
+    public @FindBy(xpath = "//input[@placeholder='Mobile Phone Number']")
+    WebElement mobileNumberTextBox;
+    public  @FindBy(xpath = "(//input[@placeholder='Telephone Number'])[2]")
+    WebElement PatientTelephoneNoTextBox;
+    public @FindBy(xpath = "//input[@ng-model='account.NextOfKin.Name']")
+    WebElement nextToKinNameTextBox;
+    public @FindBy(xpath ="//input[@ng-model='account.NextOfKin.Surname']")
+    WebElement nextToKinSurnameTextBox;
+    public @FindBy(xpath = "//input[@placeholder='Email Address']")
+    WebElement emailTextBox;
+    public @FindBy(xpath = "//div[@ng-show='receivedError']")
+    WebElement errorMessage;
     public @FindBy(xpath = "(//input[@type='checkbox'])[7]")
     WebElement emailcheckbox;
     public @FindBy(xpath = "(//input[@type='checkbox'])[8]")
@@ -56,7 +78,7 @@ public class AccountdetailsPage extends basePage {
 
     public void gotoMyAccount() {
         MyAccountImage.click();
-        MyAccountButton.click();
+      //  MyAccountButton.click();
     }
 
     public void ClickMyAccount() {
@@ -80,9 +102,11 @@ public class AccountdetailsPage extends basePage {
         }
     }
 
-    public void displayupdatesuccessfully() {
+    public void displayupdatesuccessfully() throws InterruptedException {
+
         updatesSuccessfully.isDisplayed();
-        Assert.assertTrue(updatesSuccessfully.isDisplayed(), "msgnotdisplayed");
+       // Assert.assertTrue(updatesSuccessfully.isDisplayed(), "msgnotdisplayed");
+        Assert.assertTrue(updatesSuccessfully.isDisplayed(),"Account updated successfully");
     }
 
     public void Clickonemailcheckboxtobookappointment() {
@@ -114,6 +138,36 @@ public class AccountdetailsPage extends basePage {
         }
 
     }
+
+    public void clearBirthTextBox()
+    {
+        dayTextBox.clear();
+        yearTextBox.clear();
+
+    }
+    public String getErrorMessage() {
+
+        return errorMessage.getText();
+    }
+
+    public boolean getFirstName(String fName) throws InterruptedException {
+        //utils.waitToLoad();
+        //return FirstName.getText();
+        boolean isFirstNameDisplayed= false;
+       System.out.println("getText()");
+       // System.out.println(FirstName.getText());
+        System.out.println(FirstName.getAttribute("value"));
+
+       // if((FirstName.getAttribute("ng-model")).equalsIgnoreCase(fName))
+        if((FirstName.getAttribute("ng-model")).contains(fName))
+        {
+
+       isFirstNameDisplayed = true;
+
+        }
+        return isFirstNameDisplayed;
+    }
+
 
 }
 
