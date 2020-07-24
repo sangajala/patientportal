@@ -2,10 +2,10 @@ package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import pageObjects.*;
-import pageObjects.old.*;
 import utils.BrowserFactory;
 import utils.utilities;
 
+import java.io.IOException;
 import java.util.Properties;
 
 public class baseStepDefs {

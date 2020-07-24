@@ -1,13 +1,12 @@
 
 
-package stepDefinitions.old;
+package stepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import stepDefinitions.baseStepDefs;
 
 public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
@@ -276,7 +275,7 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @When("^Patient enters account credentials who has all the accounts setup$")
     public void patientEntersAccountCredentialsWhoHasAllTheAccountsSetup() {
-        loginpage.loginToDoctorPortal();
+        loginpage.loginToMeddBase();
     }
 
 

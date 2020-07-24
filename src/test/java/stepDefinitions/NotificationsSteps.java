@@ -1,11 +1,10 @@
-package stepDefinitions.old;
+package stepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import stepDefinitions.baseStepDefs;
 
 public class NotificationsSteps extends baseStepDefs {
 
@@ -19,7 +18,7 @@ public class NotificationsSteps extends baseStepDefs {
     public void patient_was_on_homepage() throws Throwable {
 
         loginpage.NavigateToUrl();
-        loginpage.loginToDoctorPortal();
+        loginpage.loginToMeddBase();
         Assert.assertTrue(loginpage.isUserLoggedIn());
     }
 

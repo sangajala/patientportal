@@ -11,9 +11,12 @@ Feature: Login to medd base with valid credentials
     And I click on Submit button
     Then I should be directed to home page
 
+
+
+
     Examples:
 
 
-      | LoginUsername                 | Password   |
-      | lellasreelakshmiabc@gmail.com | Aanya@2016 |
-      | yashwantrsunkara@gmail.com    | Aanya@2016 |
+|LoginUsername|Password|
+|lellasreelakshmiabc@gmail.com|Aanya@2016|
+|yashwantrsunkara@gmail.com|Aanya@2016|

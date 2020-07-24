@@ -5,7 +5,7 @@
 //import cucumber.api.java.en.Given;
 //import cucumber.api.java.en.Then;
 //import cucumber.api.java.en.When;
-//import pageObjects.old.medicalHistoryPage;
+//import pageObjects.medicalHistoryPage;
 //import utils.Base;
 //
 //public class medicalHistorySteps extends Base {
@@ -108,14 +108,14 @@
 //}
 //
 //=======
-package stepDefinitions.old;
+package stepDefinitions;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
-import stepDefinitions.baseStepDefs;
+import utils.basePage;
 
 import java.util.List;
 
@@ -198,7 +198,7 @@ public class MedicalHistorySteps extends baseStepDefs {
 
     @Given("^patient with all full medical history logs into the portal$")
     public void patientWithAllFullMedicalHistoryLogsIntoThePortal() {
-        loginpage.loginToDoctorPortal(prop.getProperty("full_medical_history_username"), prop.getProperty("full_medical_history_password"));
+        loginpage.loginToMeddBase(prop.getProperty("full_medical_history_username"), prop.getProperty("full_medical_history_password"));
     }
 
     @Then("^the medical history page should have below options$")

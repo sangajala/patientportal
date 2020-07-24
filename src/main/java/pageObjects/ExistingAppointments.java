@@ -1,4 +1,4 @@
-package pageObjects.old;
+package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import utils.basePage;
