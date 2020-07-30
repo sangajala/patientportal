@@ -7,6 +7,7 @@ import org.testng.Assert;
 import utils.basePage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class invoicePage extends basePage {
 
@@ -27,6 +28,16 @@ public class invoicePage extends basePage {
     WebElement invoicebutton;
     public @FindBy(xpath = "*//div[@class='page ng-scope']/div[4]/div/button[2]")
     WebElement unpaidinvoice;
+
+   // public @FindBy(xpath = "//li[contains(@class,'list-group-item ng-binding ng-scope')][3]")
+     public @FindBy(xpath = "//li[contains(text(),'1649')]")
+            WebElement membershipinvoice;
+
+    private @FindBy(xpath = "//div[@ng-repeat = 'item in invoice.Items']")
+    WebElement invoiceDetails;
+
+    public @FindBy(xpath = "//div[@class='ng-binding ng-scope']")
+    List<WebElement> invoiceItemDetails;
 
 
 
@@ -110,7 +121,36 @@ public class invoicePage extends basePage {
             e.printStackTrace();
         }
         unpaidinvoice.click();
-
     }
+
+
+    public boolean areInvoiceItemDetailsDisplayed(String text) {
+
+        for (WebElement element : invoiceItemDetails) {
+            System.out.println("WebElement   "+element.getText());
+            if (element.getText().contains(text)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void patientclicksonsecondinvoice() {
+
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        membershipinvoice.click();
+    }
+
+    public void isMembershipinvoiceDisplayed()
+    {
+        membershipinvoice.isDisplayed();
+        Assert.assertTrue(membershipinvoice.isDisplayed(),"invoicenotdisplayed");
+    }
+
 
 }

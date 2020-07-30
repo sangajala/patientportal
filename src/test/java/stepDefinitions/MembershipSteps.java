@@ -1,12 +1,15 @@
 package stepDefinitions;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.testng.Assert;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -60,8 +63,8 @@ public class MembershipSteps extends baseStepDefs {
     }
 
     @Then("^Patient should be navigated to disclaimer page with \"([^\"]*)\" and \"([^\"]*)\"$")
-    public void patientShouldBeNavigatedToDisclaimerPageWithAnd(String arg0, String arg1) throws Throwable {
-        Assert.assertTrue(membershipenrollment.isDisclaimerPageDisplayed(arg0, arg1));
+    public void patientShouldBeNavigatedToDisclaimerPageWithAnd(String disclaimer, String fees) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isDisclaimerPageDisplayed(disclaimer, fees));
     }
 
     @When("^Patient accept conditions and click on Apply for Membership$")
@@ -76,7 +79,7 @@ public class MembershipSteps extends baseStepDefs {
 
     @Then("^provide below details for registration$")
     public void provide_below_details_for_registration(DataTable datatable) throws Throwable {
-        Map<String, String> testdata = datatable.asMap(String.class, String.class);
+         Map<String, String> testdata = datatable.asMap(String.class, String.class);
 
         for (Map.Entry<String, String> entry : testdata.entrySet()) {
 
@@ -95,8 +98,8 @@ public class MembershipSteps extends baseStepDefs {
 
 
     @Then("^he should be able to view the following details with title \"([^\"]*)\"$")
-    public void heShouldBeAbleToViewTheFollowingDetailsWithTitle(String arg0, List<String> dataTable) throws Throwable {
-       Assert.assertTrue(membershipspage.isCurrentMembershipDisplayed(arg0));
+    public void heShouldBeAbleToViewTheFollowingDetailsWithTitle(String currentMembership, List<String> dataTable) throws Throwable {
+       Assert.assertTrue(membershipspage.isCurrentMembershipDisplayed(currentMembership));
 
 
         boolean flag = false;
@@ -105,8 +108,75 @@ public class MembershipSteps extends baseStepDefs {
                 flag = true;
             }
             Assert.assertTrue(flag);
+
+
+
         }
 
+    }
+
+
+    @And("^Patient should be able to view monthly and annual schemes \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void patientShouldBeAbleToViewMonthlyAndAnnualSchemesAnd(String monthly, String annual) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isMembershipSchemesDisplayed(monthly,annual));
+    }
+
+    @When("^patient logged in using new patient login credentials$")
+    public void patientLoggedInUsingNewPatientLoginCredentials() {
+        loginpage.loginAsNewPatient();
+    }
+
+    @Then("^patient should be in home page$")
+    public void patientShouldBeInHomePage() throws InterruptedException {
+        Assert.assertTrue(homepage.userIconDisplayed());
+    }
+
+    @When("^Patient clicks on Invoices in left menu$")
+    public void patientClicksOnInvoicesInLeftMenu() throws InterruptedException {
+        homepage.clickInvoicesLink();
+    }
+
+    @Then("^Patient should be able to view new invoice in his invoices list$")
+    public void patientShouldBeAbleToViewNewInvoiceInHisInvoicesList() {
+        invoicepage.isMembershipinvoiceDisplayed();
+    }
+
+    @When("^click on first invoice$")
+    public void clickOnFirstInvoice() {
+        invoicepage.patientclicksonsecondinvoice();
+    }
+
+    @Then("^patient should be able to view the following details of invoice as$")
+    public void patientShouldBeAbleToViewTheFollowingDetailsOfInvoiceAs(List<String> dataTable) {
+        boolean flag = false;
+        for (String data : dataTable) {
+            if (invoicepage.areInvoiceItemDetailsDisplayed(data)) {
+
+                flag = true;
+            }
+            Assert.assertTrue(flag);
+        }
+
+    }
+
+    @When("^patient looged in using login credentials$")
+    public void patientLoogedInUsingLoginCredentials() {
+        loginpage.loginToMeddBase();
+    }
+
+    @When("^patient click on back button$")
+    public void patientClickOnBackButton() {
+        homepage.goBackToSigninpage();
+    }
+
+    @Then("^patient should be in signin page$")
+    public void patientShouldBeInSigninPage() {
+        Assert.assertTrue(loginpage.isUserinSigninPage());
+    }
+
+    @And("^a message \"([^\"]*)\" should be displayed$")
+    public void aMessageShouldBeDisplayed(String noMembershipmsg) throws Throwable {
+        Assert.assertTrue(membershipenrollment.isNoMembershipMessageDisplayed(noMembershipmsg));
     }
 
 

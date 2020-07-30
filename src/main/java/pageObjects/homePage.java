@@ -52,6 +52,12 @@ public class homePage extends basePage {
     private @FindBy(css = "span.badge.badge-danger.up.ng-binding")
     WebElement NotificationIconNumber;
 
+    public @FindBy(xpath = "//a[contains(text(),'Back')]")
+    WebElement backButton;
+
+    private @FindBy(linkText = "Invoices")
+    WebElement invoicesLink;
+
     public boolean isAppntnotificationDisplayed(String appmnt, String appmntType) {
         WebElement text = driver.findElement(By.xpath("//a[1]/div/div[2]/div[contains(text(),\"Appointment '" + appmntType + "' is due soon\")]"));
         utils.waitForElementVisibility(driver, text);
@@ -169,5 +175,23 @@ public class homePage extends basePage {
         utils.reload(driver);
     }
 
+    public boolean userIconDisplayed() throws InterruptedException {
+        utils.waitToLoad();
+        return backButton.isDisplayed();
+    }
 
+    public void goBackToSigninpage()
+    {
+        utils.click(driver,backButton);
+
+    }
+
+
+    public void clickInvoicesLink() throws InterruptedException {
+        Waitfor.waitForElementClick(invoicesLink);
+
+        new Actions(driver).moveToElement(invoicesLink).click().build().perform();
+
+
+    }
 }

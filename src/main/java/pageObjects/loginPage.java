@@ -27,8 +27,15 @@ public class loginPage extends basePage {
 	private WebElement signupButton;
 
 	private @FindBy(xpath = "//img[@alt='Your account']")  WebElement myAccounticon;
-utilities util=new utilities();
-	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']") WebElement confirm;
+
+	public @FindBy(xpath = "//button[@class='btn btn-primary btn-block ng-scope']")
+	WebElement confirm;
+	public @FindBy(xpath = "//h3[contains(text(),'Sign in')]")
+	WebElement signInHeader;
+	//public @FindBy(xpath = "//h3[@class='font-size-24 ng-binding']")
+	//WebElement signInHeader1;
+
+	utilities util=new utilities();
 	
 	public loginPage() {
 		super();
@@ -132,9 +139,18 @@ utilities util=new utilities();
 		utils.waitForElementPresence(driver,By.xpath("//button[@class='btn btn-primary btn-block ng-scope']"));
 		return confirm.isDisplayed();
 	}
-	
-	
-	
+
+
+	public boolean isUserinSigninPage()
+	{
+		utils.reload(driver);
+		return signInHeader.isDisplayed();
+	}
+
+	public void loginAsNewPatient() {
+
+		loginToMeddBase(prop.getProperty("new_patient_username"),prop.getProperty("new_patient_password"));
+	}
 	
 
 	

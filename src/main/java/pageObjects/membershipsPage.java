@@ -17,11 +17,15 @@ public class membershipsPage extends basePage {
     private @FindBy(xpath = "//div[@class='panel-body']/span")
     List<WebElement> membershipDetails;
 
+    private @FindBy(xpath = "//h5[@class='ng-binding']")
+    WebElement monthlySchemeTitle;
+
     public boolean areMembershipDetailsDisplayed(String text) {
 
         for (WebElement element : membershipDetails) {
             if (element.getText().equals(text)) {
                 return true;
+
             }
         }
 
@@ -30,7 +34,8 @@ public class membershipsPage extends basePage {
 
 
     public boolean isCurrentMembershipDisplayed(String text) {
-        utils.waitForElementVisibility(driver,currentMembershipTitle);
-        return currentMembershipTitle.isDisplayed();
+        utils.waitForElementVisibility(driver, currentMembershipTitle);
+     return  currentMembershipTitle.isDisplayed();
+
     }
 }

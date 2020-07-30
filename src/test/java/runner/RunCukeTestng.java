@@ -27,13 +27,11 @@ import utils.utilities;
 
 
 @CucumberOptions(
-
-       // features = {"src/test/java/features/bookAppointment.feature"},
+       // features = {"src/test/java/features"},
+        features = {"src/test/java/features/membership.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-      //  tags = {"@smoke"},
-
-
+        tags = {"@madhavi"},
 
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
         //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}

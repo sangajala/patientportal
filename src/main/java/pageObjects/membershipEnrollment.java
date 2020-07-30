@@ -12,6 +12,18 @@ public class membershipEnrollment extends basePage {
     WebElement membershipTitle;
     private @FindBy(xpath = "//*[@ng-repeat='type in membership']")
     WebElement LGPSchemeButton;
+
+    private @FindBy(xpath = "//*[@ng-repeat='type in membership']")
+    WebElement LGPSchemes;
+    private @FindBy(xpath = "//li[contains(text(),'LGP_MonthlyScheme')]")
+    WebElement LGPMonthlySchemes;
+    private @FindBy(xpath = "//li[contains(text(),'LGP_AnnualScheme')]")
+    WebElement LGPAnnualSchemes;
+    private @FindBy(xpath = "//p[@ng-show='showMembershipData']/span")
+    WebElement monthlySchemeDetails;
+    private @FindBy(xpath = "//p[@ng-show='showMembershipData']/span")
+    WebElement annualSchemeDetails;
+
     private @FindBy(xpath = "//span[contains(text(),'Billing frequency: Monthly')]")
     WebElement monthlySchemeOption;
     private @FindBy(xpath = "//button[contains(text(),'Apply for Membership')]")
@@ -30,6 +42,10 @@ public class membershipEnrollment extends basePage {
     //'marketing' and @class='ng-pristine ng-valid ng-empty ng-touched']")
     private @FindBy(xpath = "//h3[contains(text(),'Register')]")
     WebElement RegisterTitle;
+    private @FindBy(xpath = "//div[contains(text(),'There are no membership schemes available.')]")
+    WebElement noMembershipschemeMessage;
+
+
 
     public boolean isSeeOurMembershipSchemeButtonDisplayed() {
 
@@ -98,7 +114,24 @@ public class membershipEnrollment extends basePage {
     public void clickonLGPScheme() {
         LGPSchemeButton.click();
 
+    }
 
+    public boolean isMembershipSchemesDisplayed(String txt1, String txt2)
+    {
+        utils.reload(driver);
+        // LGPSchemes.isDisplayed();
+        if(LGPMonthlySchemes.getText().equals(txt1))
+        {if(LGPAnnualSchemes.getText().equals(txt2))
+        {
+            return true;
+        }}
+        return false;
+    }
+
+    public boolean isNoMembershipMessageDisplayed(String text)
+    {
+
+        return  noMembershipschemeMessage.isDisplayed();
     }
 
 }
