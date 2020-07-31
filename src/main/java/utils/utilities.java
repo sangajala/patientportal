@@ -309,5 +309,10 @@ public class utilities {
 
         return prop;
     }
+
+    public boolean IsElementExist(WebDriver driver) throws Exception {
+        return getElement(driver, By.xpath("//div[@class='page-content container-fluid ng-scope']//div[@class='alert alert-info alert-icon ng-scope']//h4")).isDisplayed();
+
+    }
 }
 

@@ -110,6 +110,7 @@
 //=======
 package stepDefinitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -233,6 +234,36 @@ public class MedicalHistorySteps extends baseStepDefs {
             Assert.assertTrue(medicalHistoryPage.checkRecordExist(detail));
         }
     }
+
+    @Then("^Patient will see no records message$")
+    public void patientWillSeeNoRecordsMessage()throws Throwable
+    {
+        Assert.assertTrue(medicalHistoryPage.isNorecordsTextExist());
+    }
+
+
+    @Then("^the medical history page should have \"([^\"]*)\"$")
+    public void theMedicalHistoryPageShouldHave(String medtitle) throws Throwable {
+        Assert.assertTrue(medicalHistoryPage.isOptionAvailable(medtitle));
+
+    }
+    @And("^Patient should not see the \"([^\"]*)\"$")
+    public void patientShouldNotSeeThe(String medtitle) throws Throwable
+    {
+        Assert.assertFalse(medicalHistoryPage.isOptionAvailable(medtitle));
+    }
+
+    @When("^Patient navigate to \"([^\"]*)\" page$")
+    public void patientNavigateToPage(String menu) throws Throwable {
+        navbarpage.gotoMenu(menu);
+    }
+
+    @And("^Patient signin to portal$")
+    public void patientSigninToPortal()
+    {
+        loginpage.ClickOnSignin();
+    }
+
 }
 
 

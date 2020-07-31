@@ -20,13 +20,8 @@ public class navbarPage extends basePage {
     public @FindBy(xpath = "//span[text()='Book Appointment']")
     WebElement bookappointment;
 
-
     public @FindBy(xpath = "//span[contains(text(),'Existing Appointments')]")
     WebElement existingappointments;
-
-
-
-
 
     public void ClickBookAppointment() {
 
@@ -34,15 +29,11 @@ public class navbarPage extends basePage {
 
     }
 
-
     public void ClickExistingAppointments() {
 
         existingappointments.click();
 
     }
-
-
-
 
     public navbarPage()  {
 

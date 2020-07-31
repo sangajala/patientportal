@@ -275,6 +275,6 @@ public class bookAppointment extends basePage {
             Assert.fail("Menu link not present "+menu);
         }*/
 
-}
+//}
 
 

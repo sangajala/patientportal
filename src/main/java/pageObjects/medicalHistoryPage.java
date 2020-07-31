@@ -7,7 +7,8 @@ import utils.basePage;
 import java.io.IOException;
 import java.util.List;
 
-public class medicalHistoryPage extends basePage {
+public class medicalHistoryPage extends basePage
+{
     public @FindBy(xpath = "//a[contains(text(),'Home')]")
     WebElement homelink;
     //public @FindBy(xpath = " //div[@class='alert alert-info alert-icon ng-scope']")
@@ -23,6 +24,8 @@ public class medicalHistoryPage extends basePage {
 
     public @FindBy(xpath = "//span[@ng-bind-html='medicalHistoryItem.Label']")
     List<WebElement> options;
+
+
 
     public medicalHistoryPage()  {
         super();
@@ -68,7 +71,8 @@ public class medicalHistoryPage extends basePage {
    }
    }
 
-    public boolean isOptionAvailable(String option) {
+
+      public boolean isOptionAvailable(String option) {
         for(WebElement element:options){
             if(element.getText().equals(option)){
                 return true;
@@ -87,14 +91,15 @@ public class medicalHistoryPage extends basePage {
     }
 
 
-
     public boolean checkLinkExist(String link) throws Exception {
             return utils.checkLinkWithTextExists(driver,link);
     }
-
-
-
+    public boolean isNorecordsTextExist() throws Exception {
+        return utils.IsElementExist(driver);
     }
+
+
+}
 
 
 
