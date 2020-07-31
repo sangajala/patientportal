@@ -24,16 +24,13 @@ import utils.BrowserFactory;
 
 import utils.utilities;
 
-
-
 @CucumberOptions(
 
-       // features = {"src/test/java/features/bookAppointment.feature"},
+       features = {"src/test/java/features/medicalHistory.feature"},
         glue = {"stepDefinitions"},
         monochrome = true,
-      //  tags = {"@smoke"},
-
-
+      // tags = {"@valar"},
+        //tags = {"@test"},
 
         plugin = {"pretty", "html:target/cucumber", "com.cucumber.listener.ExtentCucumberFormatter", "json:target/cucumber.json"}
         //plugin = {"pretty","html:target/cucumber","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber/report.html"}
