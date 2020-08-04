@@ -71,7 +71,7 @@ Feature: End to end functions of booking and viewing Appointments in patient por
     Then Cancel Info Page with a message "Cancellation fee" should be displayed
     When Patient clicks on Cancel Appointment button on Cancel Info page
     Then Appointment successfully cancelled message "successfully cancelled"should be displayed
-
+    @sayma27
   @chkForIncreaseinCountOfExistingApptmntAndCountOfUpcomingAppointmentsAfterBookApptmt
   Scenario Outline: To check the existing appointments count increases once a new appointment is booked
     When Patient clicks on Online Portal
@@ -151,3 +151,36 @@ Feature: End to end functions of booking and viewing Appointments in patient por
       | Patient    | Video Conference   | Product      | Gloves                      |
       | Patient    | Video Conference   | Test         | Eye Test                    |
       | Patient    | Video Conference   | Vaccinations | Flu Vaccination  [2]        |
+
+@sayma4
+
+    Scenario Outline:  Verify that whether patient can book the same slot again
+      When Patient clicks on Book Appointment
+      And  chooses Payer Type as "<Payer type>"
+      And  Appointment Type as "<Appointment type>"
+      Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
+      When Patient clicks on Search button
+      Then Appointment search Results should be displayed
+      When Patient clicks on "1" available existing Appointment details
+      And Patient clicks on Book Appointment button on Details Page
+      Then Appointment Booking Complete confirmation message "was successfully completed" should be displayed
+      Then Patient will click on go back to the main menu
+      When Patient clicks on Book Appointment
+      And chooses Payer Type as "<Payer type>"
+      And Appointment Type as "<Appointment type>"
+      Then Patient should be navigated to Appointment filters page and see a message "Please use the filters if you wish to refine your search"
+      When Patient clicks on Search button
+      Then Appointment search Results should be displayed
+      And  New slot will be available to book
+  Examples:
+    | Payer type | Appointment type |
+    | Patient    | Consultation     |
+
+     @sayma2
+    Scenario: Verify that site map is visible in existing appointment
+      When Patient clicks on Existing Appointments
+      Then Patient should be able to view recently Booked Appointments with a message "In the list below you will find your existing appointments. Click on the appointment for more details. If you are able to cancel the appointment, a cancel button will be displayed."
+      When Patient clicks on "1" available existing Appointment details
+      Then Show site on map button should be visible
+      When Patient clicks Show site on map button
+      Then The site map is visible

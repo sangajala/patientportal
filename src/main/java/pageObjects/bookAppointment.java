@@ -76,11 +76,33 @@ public class bookAppointment extends basePage {
     private @FindBy(xpath = "//button[contains(text(), 'Next')]")
     WebElement nextBtn;
 
+    private @FindBy(xpath = "//button[@class='btn btn-primary ng-scope']")
+    WebElement backtomainmenubutton;
+
+    private @FindBy(xpath="//button[@class='btn btn-secondary ng-scope']")
+    WebElement showsiteonmapbutton;
+
+    private @FindBy(xpath = "//span[@class='ng-binding ng-scope']")
+    WebElement showmap;
+
+    public WebElement getShowmap(){
+        return showmap;
+    }
+
+    public WebElement getShowsiteonmapbutton(){
+        return showsiteonmapbutton;
+    }
+
+    public void Clicktomainmenubutton() {
+        backtomainmenubutton.click();
+    }
 
 
     //Getters for  Page objects
     public WebElement getBookingCompleteMsg() {
+
         return bookingCompleteMsg;
+
     }
 
     public WebElement getSearchBtn() {
@@ -89,6 +111,7 @@ public class bookAppointment extends basePage {
 
     public WebElement getApptmtDetMsg() {
         return apptmtDetMsg;
+
     }
     /////
     public WebElement getServiceMessage(){ return serviceMessage; }
@@ -275,6 +298,6 @@ public class bookAppointment extends basePage {
             Assert.fail("Menu link not present "+menu);
         }*/
 
-}
+//}
 
 

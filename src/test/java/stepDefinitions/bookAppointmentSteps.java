@@ -6,7 +6,12 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
+import org.testng.asserts.Assertion;
 
 public class bookAppointmentSteps extends baseStepDefs {
     int countOfExistingAppointments,countOfUpcomingApptmt;
@@ -103,9 +108,11 @@ public class bookAppointmentSteps extends baseStepDefs {
 
 
     @Then("^Appointment Booking Complete confirmation message \"([^\"]*)\" should be displayed$")
-    public void appointmentBookingCompleteConfirmationMessageShouldBeDisplayed(String arg0) throws Throwable {
+    public void appointmentBookingCompleteConfirmationMessage1ShouldBeDisplayed(String arg0) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.navigateApp(arg0,bookappointment.getBookingCompleteMsg());
+        String ConfirmationMsg = driver.findElement(By.xpath("//p[@class='ng-binding']")).getText();
+        System.out.print(ConfirmationMsg);
 
     }
 
@@ -120,8 +127,6 @@ public class bookAppointmentSteps extends baseStepDefs {
         // Write code here that turns the phrase above into concrete actions
         bookappointment.navigateApp(arg0,bookappointment.getExistingApptmtMsg());
 
-
-
     }
 
     @When("^Patient clicks on \"([^\"]*)\" available existing Appointment details$")
@@ -129,6 +134,7 @@ public class bookAppointmentSteps extends baseStepDefs {
         // Write code here that turns the phrase above into concrete actions
         int pos=Integer.parseInt(arg0);
         bookappointment.clickOnSpecificAvailableAppointment(pos);
+
     }
 
     @Then("^Cancel Appointment button should be visible$")
@@ -242,9 +248,9 @@ public class bookAppointmentSteps extends baseStepDefs {
 
     @Then("^the count of upcoming appointments should increase$")
     public void theCountOfUpcomingAppointmentsShouldIncrease() {
-        int incrementedCountApp=homepage.getNoOfRowsInTable(driver);
-        System.out.println("incremented CountApp :"+incrementedCountApp);
-        Assert.assertTrue(incrementedCountApp>countOfUpcomingApptmt);
+        int incrementedCount=homepage.getNoOfRowsInTable(driver);
+        System.out.println("incremented CountApp :"+incrementedCount);
+        Assert.assertTrue(incrementedCount>countOfUpcomingApptmt);
 
     }
 
@@ -252,7 +258,7 @@ public class bookAppointmentSteps extends baseStepDefs {
     public void theCountOfUpcomingAppointmentsShouldDecrease() {
         int decrementedCountApp=homepage.getNoOfRowsInTable(driver);
         System.out.println("decremented CountApp :"+decrementedCountApp);
-        Assert.assertTrue(decrementedCountApp<countOfUpcomingApptmt);
+        Assert.assertTrue(decrementedCountApp>countOfUpcomingApptmt);
 
     }
 
@@ -279,8 +285,37 @@ public class bookAppointmentSteps extends baseStepDefs {
     }
 
 
+    @Then("^Patient will click on go back to the main menu$")
+    public void patientWillClickOnGoBackToTheMainMenu()
+    {
+        bookappointment.Clicktomainmenubutton();
 
+    }
 
-    
+    @Then("^Show site on map button should be visible$")
+    public void showSiteOnMapButtonShouldBeVisible()
+    {
+        Assert.assertTrue(bookappointment.getShowsiteonmapbutton().isDisplayed());
+    }
+
+    @When("^Patient clicks Show site on map button$")
+    public void patientClicksShowSiteOnMapButton()
+    {
+        bookappointment.getShowsiteonmapbutton().click();
+    }
+
+    @Then("^The site map is visible$")
+    public void theSiteMapIsVisible()
+    {
+        Assert.assertTrue(bookappointment.getShowmap().isDisplayed());
+    }
+
+    @And("^New slot will be available to book$")
+    public void newSlotWillBeAvailableToBook()
+    {
+        String newslot = driver.findElement(By.xpath("(//h5[@class='ng-binding'])[1]")).getText();
+        System.out.print(newslot);
+    }
+
 }
 
