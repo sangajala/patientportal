@@ -127,7 +127,6 @@ public class invoicePage extends basePage {
     public boolean areInvoiceItemDetailsDisplayed(String text) {
 
         for (WebElement element : invoiceItemDetails) {
-            System.out.println("WebElement   "+element.getText());
             if (element.getText().contains(text)) {
                 return true;
             }
