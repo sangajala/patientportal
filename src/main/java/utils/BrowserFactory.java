@@ -58,6 +58,7 @@ public class BrowserFactory {
         if (HOST.equalsIgnoreCase("browserstack")) {
             try {
 
+
             DesiredCapabilities caps = new DesiredCapabilities();
             if (BROWSER.equalsIgnoreCase("CHROME")) {
 
