@@ -32,7 +32,7 @@ import utils.utilities;
         glue = {"stepDefinitions"},
         monochrome = true,
       //  tags = {"@smoke"},
-       // tags = {"@sayma27"},
+        tags = {"@sayma28"},
 
 
 

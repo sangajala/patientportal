@@ -218,13 +218,15 @@ public class bookAppointmentSteps extends baseStepDefs {
         countOfExistingAppointments=bookappointment.getsearchResults().size();
         System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
 
-    @Then("^the count of existing appointments should increase$")
+   /* @Then("^the count of existing appointments should increase$")
     public void theCountOfExistingAppointmentsShouldIncrease() {
         int incrementedCount=bookappointment.getsearchResults().size();
         System.out.println("incremented Count :"+incrementedCount);
 
-           // Assert.assertTrue(incrementedCount>countOfExistingAppointments);
+        Assert.assertTrue(incrementedCount>countOfExistingAppointments);
         }
+
+
 
 
     @Then("^the count of existing appointments should decrease$")
@@ -232,9 +234,11 @@ public class bookAppointmentSteps extends baseStepDefs {
         int decrementedCount=bookappointment.getsearchResults().size();
         System.out.println("decremented Count :"+decrementedCount);
 
-        //Assert.assertTrue(decrementedCount<countOfExistingAppointments);
+        Assert.assertTrue(decrementedCount<countOfExistingAppointments);
 
     }
+
+    */
 
     @When("^Patient clicks on Online Portal$")
     public void patientClicksOnOnlinePortal() {
