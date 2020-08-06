@@ -150,24 +150,35 @@ public class AccountdetailsPage extends basePage {
         return errorMessage.getText();
     }
 
-    public boolean getFirstName(String fName) throws InterruptedException {
-        //utils.waitToLoad();
+    public String getFirstName() throws InterruptedException {
+        //utils.waitToLoad();String fName
         //return FirstName.getText();
-        boolean isFirstNameDisplayed= false;
-       System.out.println("getText()");
+       // boolean isFirstNameDisplayed= false;
+
        // System.out.println(FirstName.getText());
-        System.out.println(FirstName.getAttribute("value"));
+       //System.out.println(FirstName.getAttribute("value"));
+       String txtfname= driver.findElement(By.xpath("(//input[@type='text'])[2]")).getAttribute("value");
+        System.out.println(txtfname);
+        return txtfname;
+
 
        // if((FirstName.getAttribute("ng-model")).equalsIgnoreCase(fName))
-        if((FirstName.getAttribute("ng-model")).contains(fName))
-        {
+       // if((FirstName.getAttribute("ng-model")).contains(fName))
+        //if(txtfname.contains(fName))
+       // {
 
-       isFirstNameDisplayed = true;
+       //isFirstNameDisplayed = true;
 
-        }
-        return isFirstNameDisplayed;
+       // }
+       // return isFirstNameDisplayed;
     }
+public String getLastName()
+{
+    String txtLname=SurName.getAttribute("value");
+    System.out.println(txtLname);
+    return txtLname;
 
+}
 
 }
 

@@ -25,14 +25,19 @@ Feature: Patient Portal MyAccount Features
     And Patient in my account page enters Password
     And select Save Changes button
     Then Message is displayed Account Updated Successfully
+    Then patient should see the account page firstname updated as "<Firstname>"
+    And Patient should see the account page surname updated as "<Surname>"
     Then patient is logggedout
     When patient logged in back
-    Then patient should see the account page being updated as "<Firstname>"
+    Then patient should see the account page firstname updated as "<Firstname>"
+    And Patient should see the account page surname updated as "<Surname>"
+
+
    # Then data updated should be "<Firstname>,<Surname>,<Relationship>,<Address1>,<City>,<Country>,<Postcode>"
 
     Examples:
       | Firstname | Surname |NameOfKin|SurnameOfKin| Relationship  | TelephoneNumber | Address1        | City   | Country | Postcode |Day |Month| Year  |Mobile Number|PatientTelephoneNumber|
-      | sadaf     | hashim  | Anita   |    Dhirde  |Mother         | 0789789789      | 1 colyton close | London | UK      | HA0 2HG  |01 |Mar   |2012  |07553678095  |07911 123456          |
+      | Aman     | hashim  | Anita   |    Dhirde  |Mother         | 0789789789      | 1 colyton close | London | UK      | HA0 2HG  |01 |Mar   |2012  |07553678095  |07911 123456          |
 
 
   @Nam

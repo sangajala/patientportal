@@ -161,14 +161,25 @@ public class MyAccount extends baseStepDefs {
 
     @Then("^Patient should be able to see the error message \"([^\"]*)\"$")
     public void patientShouldBeAbleToSeeTheErrorMessage(String errormessage) throws Throwable {
+       // Thread.sleep(3000);
         Assert.assertTrue(accountdetailspage.getErrorMessage().contains(errormessage));
     }
 
 
-    @Then("^patient should see the account page being updated as \"([^\"]*)\"$")
-    public void patientShouldSeeTheAccountPageBeingUpdatedAs(String FirstName) throws Throwable {
-       boolean isFirstNameDisplayed = accountdetailspage.getFirstName(FirstName);
-        Assert.assertTrue(isFirstNameDisplayed);
+    @Then("^patient should see the account page firstname updated as \"([^\"]*)\"$")
+    public void patientShouldSeeTheAccountPagefirstnameUpdatedAs(String FirstName) throws Throwable {
+      // boolean isFirstNameDisplayed = accountdetailspage.getFirstName(FirstName);
+      //  Assert.assertTrue(isFirstNameDisplayed);
+        Thread.sleep(3000);
+        Assert.assertTrue(accountdetailspage.getFirstName().contains(FirstName));
+    }
+
+
+    @And("^Patient should see the account page surname updated as \"([^\"]*)\"$")
+    public void patientShouldSeeTheAccountPageSurnameUpdatedAs(String SurName) throws Throwable {
+
+        Assert.assertTrue(accountdetailspage.getLastName().contains(SurName));
+
     }
 }
 
