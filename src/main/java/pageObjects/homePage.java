@@ -31,7 +31,7 @@ public class homePage extends basePage {
     WebElement OnlinePortalLink;
     private @FindBy(xpath = "//h3[contains(text(),'Your upcoming appointments')]")
     WebElement homePageApptmtNotificationTitle;
-    private @FindBy(xpath = "//div[@class='panel-body']/table")
+    private @FindBy(xpath = "//h3[@class='panel-title pt-1']")
     WebElement homePageApptmtNotificationDet;
     public @FindBy(xpath = "" + "//a[contains(text(),'My account')]")
     WebElement myAccounticon;

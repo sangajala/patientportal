@@ -218,15 +218,13 @@ public class bookAppointmentSteps extends baseStepDefs {
         countOfExistingAppointments=bookappointment.getsearchResults().size();
         System.out.println("Count of existing Appointments :"+countOfExistingAppointments);}
 
-   /* @Then("^the count of existing appointments should increase$")
+    @Then("^the count of existing appointments should increase$")
     public void theCountOfExistingAppointmentsShouldIncrease() {
         int incrementedCount=bookappointment.getsearchResults().size();
         System.out.println("incremented Count :"+incrementedCount);
 
         Assert.assertTrue(incrementedCount>countOfExistingAppointments);
         }
-
-
 
 
     @Then("^the count of existing appointments should decrease$")
@@ -237,8 +235,6 @@ public class bookAppointmentSteps extends baseStepDefs {
         Assert.assertTrue(decrementedCount<countOfExistingAppointments);
 
     }
-
-    */
 
     @When("^Patient clicks on Online Portal$")
     public void patientClicksOnOnlinePortal() {
@@ -253,7 +249,7 @@ public class bookAppointmentSteps extends baseStepDefs {
         countOfUpcomingApptmt=homepage.getNoOfRowsInTable(driver);
     }
 
-    @Then("^the count of upcoming appointments should increase$")
+   /* @Then("^the count of upcoming appointments should increase$")
     public void theCountOfUpcomingAppointmentsShouldIncrease() {
         int incrementedCount=homepage.getNoOfRowsInTable(driver);
         System.out.println("incremented CountApp :"+incrementedCount);
@@ -268,6 +264,8 @@ public class bookAppointmentSteps extends baseStepDefs {
         Assert.assertTrue(decrementedCountApp>countOfUpcomingApptmt);
 
     }
+
+    */
 
     @Then("^Patient should be navigated to Service filters and see a message \"([^\"]*)\"$")
     public void patientShouldBeNavigatedToServiceFiltersAndSeeAMessage(String arg0)  {
